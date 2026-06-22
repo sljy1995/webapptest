@@ -347,7 +347,7 @@ html, body {
 
 /* ─── MONTH NAV ─────────────────────────────────────────────────── */
 .month-nav {
-  width: 140px;
+  width: 150px;
   flex-shrink: 0;
   background: var(--bg-dark);
   border-right: 1px solid var(--border);
@@ -356,7 +356,7 @@ html, body {
 }
 .month-nav ul { list-style: none; }
 .month-nav li {
-  padding: 10px 18px;
+  padding: 10px 18px 10px 20px;
   font-family: 'Arial', sans-serif;
   font-size: 13px;
   color: var(--text-muted);
@@ -384,7 +384,7 @@ html, body {
 
 .article-inner {
   width: 100%;
-  max-width: 720px;
+  max-width: 900px;
 }
 
 .theatre-badge {
@@ -529,75 +529,9 @@ html, body {
   overflow: hidden;
 }
 
-/* Left nav */
-.digest-nav {
-  width: 160px;
-  flex-shrink: 0;
-  background: var(--bg-dark);
-  border-right: 1px solid var(--border);
-  padding: 16px 10px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-}
+/* digest-content reuses article-panel styles — no extra class needed */
 
-.digest-nav-label {
-  font-family: ui-monospace, Menlo, Consolas, monospace;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-dim);
-  padding: 0 8px;
-  margin-bottom: 6px;
-}
-
-.digest-nav-group {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-/* Cap tabs and sec tabs — both use same pill style as theatre tabs */
-.cap-tab, .sec-tab {
-  background: #1e2e3e;
-  border: 1px solid #2a3e50;
-  color: var(--text-muted);
-  padding: 7px 12px;
-  font-family: 'Arial', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 0.15s;
-  letter-spacing: 0.02em;
-  text-align: left;
-  width: 100%;
-}
-.cap-tab:hover, .sec-tab:hover { border-color: var(--gold); color: var(--gold-light); }
-.cap-tab.active, .sec-tab.active {
-  background: #0b1820;
-  border-color: var(--gold);
-  color: var(--gold-light);
-}
-
-/* Right content panel — mirrors article-panel style */
-.digest-content {
-  flex: 1;
-  overflow-y: auto;
-  padding: 28px 24px;
-  background: var(--bg-dark);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.digest-content-inner {
-  width: 100%;
-  max-width: 720px;
-}
-
-/* Section header inside content */
+/* Section header badge inside content */
 .digest-section-header {
   font-family: ui-monospace, Menlo, Consolas, monospace;
   font-size: 10px;
@@ -612,7 +546,6 @@ html, body {
   margin-bottom: 14px;
 }
 
-/* "What Changed" uses article-block styling */
 .digest-changed-text {
   background: #111827;
   border: 1px solid #1e2a3f;
@@ -624,7 +557,6 @@ html, body {
   line-height: 1.75;
 }
 
-/* Opportunity / Vulnerability / CapDev cards */
 .digest-card {
   background: #111827;
   border: 1px solid #1e2a3f;
@@ -632,19 +564,19 @@ html, body {
   padding: 18px 22px;
   margin-bottom: 12px;
 }
-.digest-card-title {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 8px;
-}
 .digest-card-number {
   font-family: ui-monospace, Menlo, Consolas, monospace;
   font-size: 10px;
   color: var(--gold);
   margin-bottom: 4px;
   letter-spacing: 0.1em;
+}
+.digest-card-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
 }
 .digest-card-body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
