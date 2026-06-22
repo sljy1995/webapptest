@@ -106,15 +106,15 @@ html, body {
 /* ─── THEATRE / CAP TABS ─────────────────────────────────────────── */
 .theatre-tabs {
   display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 10px; padding: 14px 20px;
+  gap: 12px; padding: 16px 24px;
   background: var(--bg); border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
 .theatre-tab {
   background: #1a2a3a; border: 1px solid #2a3e52;
   color: var(--text-muted);
-  padding: 9px 24px;
-  font-size: 14px; font-weight: 600;
+  padding: 10px 28px;
+  font-size: 14.5px; font-weight: 600;
   border-radius: 4px; cursor: pointer;
   transition: all 0.15s; letter-spacing: 0.02em;
 }
@@ -181,48 +181,42 @@ html, body {
   min-width: 200px;
 }
 
-/* ─── MONTH NAV BAR — horizontal pill strip below theatre tabs ───── */
+/* ─── MONTH NAV BAR ──────────────────────────────────────────────── */
 .month-nav-bar {
   background: var(--bg);
   border-bottom: 1px solid var(--border);
-  padding: 10px 20px;
+  padding: 12px 28px;
   flex-shrink: 0;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  display: flex;
-  justify-content: center;
 }
 .month-nav-bar::-webkit-scrollbar { display: none; }
 .month-nav-bar ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px;
 }
 .month-nav-bar li {
-  background: #1a2a3a;
-  border: 1px solid #2a3e52;
+  background: #1a2a3a; border: 1px solid #2a3e52;
   color: var(--text-muted);
-  padding: 9px 24px;
-  font-size: 14px; font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.15s;
-  white-space: nowrap;
-  user-select: none;
-  letter-spacing: 0.02em;
+  padding: 10px 28px;
+  font-size: 14.5px; font-weight: 600;
+  border-radius: 4px; cursor: pointer;
+  transition: all 0.15s; white-space: nowrap;
+  user-select: none; letter-spacing: 0.02em;
 }
 .month-nav-bar li:hover { border-color: var(--gold); color: var(--gold-light); }
 .month-nav-bar li.active { background: #0c1820; border-color: var(--gold); color: var(--gold-light); }
 
 /* ─── SIDE NAV (digest sections only) ───────────────────────────── */
 .side-nav {
-  width: 175px; flex-shrink: 0;
+  width: 185px; flex-shrink: 0;
   background: var(--bg);
-  border-right: 1px solid var(--border);
-  padding: 20px 14px 20px 20px;
+  border-right: none;
+  padding: 20px 12px 20px 28px;
   overflow-y: auto;
   display: flex; flex-direction: column; gap: 4px;
 }
@@ -250,7 +244,6 @@ html, body {
 /* ─── CONTENT BODY / DIGEST LAYOUT ──────────────────────────────── */
 .content-body {
   display: flex; flex: 1; overflow: hidden;
-  border-top: 1px solid var(--border);
 }
 .digest-layout {
   display: flex; flex: 1; overflow: hidden;
