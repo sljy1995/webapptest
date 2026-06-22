@@ -174,17 +174,19 @@ function closeSidebar() {
 // ── VIEW SWITCHING ─────────────────────────────────────────────────────────────
 function showView(view) {
   currentView = view;
-  const weekliesView = document.getElementById("weekliesView");
-  const digestView   = document.getElementById("digestView");
-  const theatreTabs  = document.getElementById("theatreTabs");
-  const weekWrap     = document.getElementById("weekSelectorWrap");
+  const weekliesView    = document.getElementById("weekliesView");
+  const digestView      = document.getElementById("digestView");
+  const theatreTabs     = document.getElementById("theatreTabs");
+  const weekWrap        = document.getElementById("weekSelectorWrap");
+  const statusBarWrap   = document.getElementById("statusBarWrap");
 
   if (view === "digest") {
     weekliesView.classList.add("hidden");
     digestView.classList.remove("hidden");
     theatreTabs.style.display = "none";
     weekWrap.style.display = "none";
-    // Load latest digest for the current month if not loaded
+    if (statusBarWrap) statusBarWrap.style.display = "none";
+    // Load latest digest if not yet loaded
     if (!currentDigestFile && manifest && manifest.digests.length > 0) {
       loadDigest(manifest.digests[manifest.digests.length - 1]);
     } else {
@@ -195,6 +197,7 @@ function showView(view) {
     weekliesView.classList.remove("hidden");
     theatreTabs.style.display = "";
     weekWrap.style.display = "";
+    if (statusBarWrap) statusBarWrap.style.display = "";
     renderArticles();
   }
 }
@@ -270,6 +273,13 @@ function renderArticle(a) {
 }
 
 // ── DIGEST ────────────────────────────────────────────────────────────────────
+function toggleDigestChanged() {
+  const panel = document.getElementById("digestChangedPanel");
+  const arrow = document.getElementById("digestChangedArrow");
+  panel.classList.toggle("open");
+  arrow.classList.toggle("open");
+}
+
 function selectCap(btn) {
   document.querySelectorAll(".cap-tab").forEach(t => t.classList.remove("active"));
   btn.classList.add("active");
@@ -279,11 +289,17 @@ function selectCap(btn) {
 
 function renderDigest() {
   if (!currentDigestFile || !digestCache[currentDigestFile]) return;
-  const d = digestCache[currentDigestFile].capabilities[currentCap];
+  const digestData = digestCache[currentDigestFile];
+  const d = digestData.capabilities[currentCap];
   if (!d) return;
 
+  // Update "What Changed" label with month
+  const label = document.getElementById("digestChangedMonthLabel");
+  if (label && digestData.label) label.textContent = `What Changed — ${digestData.label}`;
+
+  // Populate changed panel
   document.getElementById("digestChanged").innerHTML =
-    `<p style="font-family:Georgia,serif;font-size:13.5px;color:var(--text-muted);line-height:1.75;">${d.changed}</p>`;
+    `<p>${d.changed}</p>`;
 
   document.getElementById("digestOpportunities").innerHTML =
     d.opportunities.map((o, i) => `
