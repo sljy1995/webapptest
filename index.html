@@ -33,14 +33,7 @@
       <h1 class="site-title">Conflict Studies and Insights</h1>
       <a href="#" class="digest-cta" onclick="showView('digest')">Click here for June's Digest</a>
     </div>
-    <div class="topbar-right" id="weekSelectorWrap">
-      <select class="week-selector" id="weekSelector">
-        <option>Week of 22 Jun 2026</option>
-        <option>Week of 15 Jun 2026</option>
-        <option>Week of 8 Jun 2026</option>
-        <option>Week of 1 Jun 2026</option>
-      </select>
-    </div>
+    <div class="topbar-right-spacer"></div>
   </header>
 
   <!-- THEATRE TABS -->
@@ -53,14 +46,21 @@
   </div>
 
   <!-- CONFLICT STATUS CHART ACCORDION -->
-  <div class="status-bar" id="statusBar" onclick="toggleStatusChart()">
-    <span>Conflict Status Chart</span>
-    <span class="status-arrow" id="statusArrow">&#9660;</span>
-  </div>
-  <div class="status-chart-panel" id="statusChartPanel">
-    <div class="status-chart-grid" id="statusChartGrid">
-      <!-- populated by JS -->
+  <div class="status-bar-wrap">
+    <div class="status-bar" id="statusBar" onclick="toggleStatusChart()">
+      <span>Conflict Status Chart</span>
+      <span class="status-arrow" id="statusArrow">&#9660;</span>
     </div>
+    <div class="status-chart-panel" id="statusChartPanel">
+      <div class="status-chart-grid" id="statusChartGrid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEK SELECTOR (below status chart, weeklies only) -->
+  <div class="week-selector-bar" id="weekSelectorWrap">
+    <select class="week-selector" id="weekSelector"></select>
   </div>
 
   <!-- WEEKLIES VIEW -->
