@@ -1,0 +1,51 @@
+name: Auto-update manifest
+
+on:
+  push:
+    paths:
+      - 'content/weeklies/**.json'
+      - 'content/digests/**.json'
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild manifest.json
+        run: |
+          python3 - << 'PYEOF'
+          import json, os, re
+
+          weeklies_dir = "content/weeklies"
+          digests_dir  = "content/digests"
+
+          weeklies = sorted([
+            f.replace(".json", "")
+            for f in os.listdir(weeklies_dir)
+            if re.match(r"\d{4}-\d{2}-\d{2}\.json$", f)
+          ])
+
+          digests = sorted([
+            f.replace(".json", "")
+            for f in os.listdir(digests_dir)
+            if re.match(r"\d{4}-\d{2}\.json$", f)
+          ])
+
+          manifest = {"weeklies": weeklies, "digests": digests, "statusChart": []}
+
+          with open("content/manifest.json", "w") as f:
+            json.dump(manifest, f, indent=2)
+
+          print(f"manifest.json updated: {len(weeklies)} weeklies, {len(digests)} digests")
+          PYEOF
+
+      - name: Commit manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/manifest.json
+          git diff --staged --quiet || git commit -m "Auto-update manifest [skip ci]"
+          git push
