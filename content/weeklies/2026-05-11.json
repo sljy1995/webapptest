@@ -1,0 +1,168 @@
+{
+  "statusChart": [
+    {
+      "theatre": "Russia–Ukraine",
+      "phase": "Active Combat",
+      "trend": "↑ Tense Stalemate",
+      "progress": "Russian offensive momentum stalls; Ukraine advances locally and escalates deep strikes on oil infrastructure while both sides intensify drone and missile attacks on cities and energy targets.isw"
+    },
+    {
+      "theatre": "Israel–Lebanon",
+      "phase": "Ceasefire",
+      "trend": "↑ Escalating",
+      "progress": "45-day ceasefire extension agreed in Washington, but Israel conducts some of its heaviest airstrikes in weeks and Hezbollah expands an FPV-drone campaign including strikes on air-defence assets.bbcaljazeera"
+    },
+    {
+      "theatre": "Israel–Gaza",
+      "phase": "Ceasefire",
+      "trend": "↑ Deteriorating",
+      "progress": "Israeli attacks on Gaza increase by 35% since the Iran ceasefire while IDF maintains a static Yellow Line footprint; low-level violence and demolitions continue amid humanitarian strain.aljazeera"
+    },
+    {
+      "theatre": "Israel–US–Iran",
+      "phase": "Coercive Deterrence",
+      "trend": "↑ Active Posturing",
+      "progress": "After earlier clashes, Iran moves to formalise control over Hormuz via a traffic mechanism, while US forces sustain a forward posture; contest shifts to rules, shipping and narratives.turkiyetoday"
+    },
+    {
+      "theatre": "Thailand–Cambodia",
+      "phase": "Ceasefire",
+      "trend": "→ Holding",
+      "progress": "Along the Thailand–Cambodia border, forces stayed in a tense but contained \"hold and monitor\" posture, with sporadic low-level incidents but no major escalation."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "Theatre 01",
+      "title": "Russia – Ukraine",
+      "subtitle": "Deep-Strike Pressure on Oil &amp; Civil Infrastructure",
+      "articles": [
+        {
+          "tags": [
+            "Sustainment",
+            "Fires &amp; Strikes"
+          ],
+          "headline": "Ukraine intensifies deep-strike pressure on Russia's oil system",
+          "body": "In mid-May, Ukraine expanded its long-range strike campaign against Russian energy infrastructure, aiming to turn refineries and fuel facilities into a war-sustaining vulnerability. <span class='hl'>ISW's 13 May assessment</span> highlighted that Ukrainian long-range drone attacks against Russian oil infrastructure were increasing in range and frequency, \"exploiting overstretched Russian air defences\" and hitting refineries and energy facilities critical to Moscow's war-financing base. These deep strikes came as Russian forces launched large-scale drone and missile barrages against Ukrainian cities, including a <span class='hl'>14 May attack on Kyiv that killed at least 12 civilians</span> and wounded dozens, underscoring a mid-May pattern in which both sides targeted each other's critical civil-economic infrastructure as well as military objectives.<span>aljazeera</span><span>nyt</span><span>youtube</span></span> On 7 May, <span class='hl'>three drones entered Latvian airspace</span>, likely Ukrainian UAVs bound for targets in Russia whose signals were jammed, with one crashing on land and another hitting an empty oil storage facility near Rezekne. The incident triggered a political crisis in Latvia: PM Evika Siliņa dismissed her defence minister over the response, his party left the coalition, and she subsequently resigned, collapsing the government just months before elections.</span>",
+          "sources": [
+            "isw",
+            "aljazeera",
+            "nyt",
+            "youtube",
+            "bbc"
+          ],
+          "implicationLabel": "",
+          "implications": [
+            "Ukraine's deep-strike campaign against Russian oil facilities shows how targeting war-sustaining systems at range can offset disadvantage in mass and manoeuvre. This reinforces that a credible defence posture must treat fuel, energy, and key industrial nodes—not just combat units—as centres of gravity in both our own and an adversary's campaign design. For divisions and brigades, it underscores the need to train and plan for operations in an environment where long-range, low-cost strike (drones, stand-off weapons) can quickly degrade logistics and infrastructure in depth, not just front-line units. There is a clear lesson in protecting dispersed sustainment networks, maintaining redundancy in fuel and ammunition distribution, and rehearsing fight-through plans under sustained disruption of the national support base.",
+            "On 7 May, three drones entered Latvian airspace, likely Ukrainian UAVs bound for targets in Russia whose signals were jammed, with one crashing on land and another hitting an empty oil storage facility near Rezekne. The incident triggered a political crisis in Latvia: PM Evika Siliņa dismissed her defence minister over the response, his party left the coalition, and she subsequently resigned, collapsing the government just months before elections.bbc",
+            "The Latvian case shows how even wayward drones from a friendly state can generate serious political and security repercussions for neighbours of a major war. This underlines the need to plan for airspace incursions, deconfliction and public communication in any scenario where partners conduct long-range strikes across the broader region."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "Theatre 02",
+      "title": "Israel – Lebanon",
+      "subtitle": "Airstrike Tempo &amp; FPV Drone Threat",
+      "articles": [
+        {
+          "tags": [
+            "ISR",
+            "Fires &amp; Strikes",
+            "Protection"
+          ],
+          "headline": "FPV drones strike Iron Dome as Israeli airstrike tempo climbs",
+          "body": "In mid-May, the Israel–Lebanon theatre featured both some of the heaviest Israeli strikes in weeks and visible evolution in Hezbollah's FPV-drone campaign against Israeli forces and air defences. Israel \"ramped up\" attacks ahead of and after US-mediated talks, striking vehicles and buildings around Srifa, hitting a civil-defence centre in Harou that killed three paramedics, and launching further strikes on villages such as Tayr al-Jasl and Haboush. By 15 May, Lebanon's health ministry reported 22 dead that week, including eight children, with bombardment still ongoing. At the same time, <span class='hl'>BBC Verify confirmed that Hezbollah has conducted dozens of FPV-drone attacks</span> since late March, including a <span class='hl'>two-stage FPV strike on an Iron Dome battery</span> and its crew near the border — fibre-optic-tethered drones designed to evade Israeli electronic-warfare defences.<span>timesofisrael</span></span>",
+          "sources": [
+            "bbc",
+            "timesofisrael"
+          ],
+          "implicationLabel": "",
+          "implications": [
+            "Hezbollah's ability to hit an Iron Dome battery and small IDF positions with cheap FPV drones that defeat EW is a warning for any force that relies on high-value sensors and shooters in a dense littoral or urban environment. For air-defence and manoeuvre formations, this highlights that survivability of GBAD, C2 nodes and engineers cannot rest on electronic warfare alone; physical protection, deception, dispersion and close-in counters (small arms, SHORAD, counter-UAS) must be designed into concepts and training. Divisions and brigades should assume that adversaries will study and target choke points such as key road junctions, launchers, bridging assets and field HQs with FPVs, and must exercise under realistic drone and loitering-munition attack play. The lesson is that unmanned precision fires at platoon-level cost can rapidly create operational-level protection problems, making counter-UAS and signature management a core, not niche, requirement."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "Theatre 03",
+      "title": "Israel – Gaza",
+      "subtitle": "Strike Tempo Climbs Despite Nominal Ceasefire",
+      "articles": [
+        {
+          "tags": [
+            "Fires &amp; Strikes",
+            "Civil-Military"
+          ],
+          "headline": "Gaza strike tempo climbs despite a nominal ceasefire",
+          "body": "By mid-May, Israel had increased its attacks on Gaza even as the ceasefire that followed the Iran conflict was supposed to consolidate calm. A mid-May report highlighted that <span class='hl'>Israeli attacks on Gaza had risen by 35% since the Iran ceasefire</span>, suggesting an escalation in air and artillery strikes rather than de-escalation. Terrorism-monitoring updates for 5–12 May reported that IDF forces continued operations within the Yellow Line, demolishing structures and striking militant targets while Palestinian factions maintained sporadic fire toward Israel. These operations added to the destruction of already devastated neighbourhoods and infrastructure, prompting humanitarian sources to warn that <span class='hl'>the ceasefire had not delivered the expected surge in aid access or reconstruction benefits</span>.<span>safa</span></span>",
+          "sources": [
+            "aljazeera",
+            "safa"
+          ],
+          "implicationLabel": "",
+          "implications": [
+            "Gaza's experience of a \"ceasefire-in-name-only\" under a static control line shows how quickly force-protection logic can dominate and crowd out the political and humanitarian aims of an operation. For formations tasked with urban operations or HADR/StabOps in the region, the lesson is that holding terrain with a heavy footprint while maintaining a high rate of fires can generate long-term friction with civilians and partners, even if tactically effective. Division and brigade planners should integrate civil-military and humanitarian considerations into operational design from the outset: mapping how demolitions, movement controls and fires affect legitimacy, aid access and local governance over weeks and months, not just days."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "Theatre 04",
+      "title": "Israel – US – Iran",
+      "subtitle": "From Missiles to Maritime Rules",
+      "articles": [
+        {
+          "tags": [
+            "Manoeuvre",
+            "Information Ops"
+          ],
+          "headline": "Iran shifts from missile salvos to setting the rules in Hormuz",
+          "body": "In the week of 11–18 May, Iran moved to formalise its control of the Strait of Hormuz, shifting the Israel–US–Iran confrontation from immediate fires toward rules and leverage over sea lines of communication. On 15 May, Ebrahim Azizi announced that <span class='hl'>Tehran had prepared a \"professional mechanism\" to manage traffic in the Strait of Hormuz</span> along a defined route, to be announced soon. He stated that only commercial vessels and parties cooperating with Iran would benefit, while the route would be closed to operators of the US \"freedom project,\" explicitly targeting US-aligned shipping. Iranian outlets reported that the mechanism would include fees for specialised services and that European countries were already in talks over ship transit, tying maritime control to revenue and diplomatic bargaining. This came days after <span class='hl'>ISW assessed that Iranian leaders were trying to dictate the terms for ending the war</span>, underscoring Tehran's view that formalised control over Hormuz is central to its end-state, not a side issue.<span>isw</span></span> Reuters reporting (carried by CNA and others) revealed that <span class='hl'>Saudi Arabia launched multiple covert airstrikes inside Iran in late March</span> in response to Iranian attacks on Saudi territory, marking Riyadh's first known direct strikes on Iranian soil. <span class='hl'>The same reporting and follow-on analysis say the UAE also carried out secret strikes on Iranian targets</span>, indicating that the war has effectively widened into a multi-state confrontation, with Gulf monarchies shifting from indirect support to active combat roles.<span>businesstimes</span></span>",
+          "sources": [
+            "turkiyetoday",
+            "isw",
+            "cna",
+            "businesstimes"
+          ],
+          "implicationLabel": "",
+          "implications": [
+            "Iran's move to set rules and fees for traffic through Hormuz is a live example of turning chokepoint control into a coercive instrument short of open war. Divisions and formations that depend on seaborne sustainment should plan for scenarios where access is constrained not only by mines or missiles but by \"administrative\" mechanisms—fees, inspections, routing rules—that favour or penalise particular states. For commanders and staff colleges, there is value in war-gaming how to operate in an environment where a regional actor uses a Hormuz-style regime nearby, and how to combine diplomacy, presence and information operations to uphold freedom of navigation while avoiding uncontrolled escalation.",
+            "Reuters reporting (carried by CNA and others) revealed that Saudi Arabia launched multiple covert airstrikes inside Iran in late March in response to Iranian attacks on Saudi territory, marking Riyadh's first known direct strikes on Iranian soil. The same reporting and follow-on analysis say the UAE also carried out secret strikes on Iranian targets, indicating that the war has effectively widened into a multi-state confrontation, with Gulf monarchies shifting from indirect support to active combat roles.cnabusinesstimes",
+            "The war's spillover into Saudi and Emirati covert strikes and its impact on energy and shipping markets underline that states can be indirect victims of distant conflicts, even when not parties to the fighting. For planners, this reinforces that defence strategy must integrate energy and SLOC resilience: stockpiles, diversified suppliers, and plans for operating with constrained fuel or disrupted maritime flows, not just traditional kinetic threats. At the formation and division level, it argues for exercising core missions under assumptions of prolonged high fuel prices, shipping delays, and economic stress at home, rather than assuming a benign global backdrop. For campaign planners there is a clear case for incorporating these regional-spillover scenarios into campaign design and war-games — treating Iran-style conflicts as drivers of strategic friction in Southeast Asia's economy and logistics, even if no shot is fired in our neighbourhood."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "Theatre 05",
+      "title": "Thailand – Cambodia",
+      "subtitle": "Tense but Contained Border Posture",
+      "articles": [
+        {
+          "tags": [
+            "Civil-Military",
+            "Protection"
+          ],
+          "headline": "Ceasefire holds but Thai–Cambodia border 'heats up' at the margins",
+          "body": "Along the Thailand–Cambodia border, both sides stayed in a tense but contained \"hold and monitor\" posture: <span class='hl'>Thai units reported two Cambodian provocations near O'Smach/Chong Chom on 13 May</span> — foreigners and Cambodian troops approaching the wire and later <span class='hl'>11 shots fired from the Cambodian side</span> — prompting 24-hour Thai surveillance but no return fire or new military push.<span>thestar</span></span>",
+          "sources": [
+            "thairath",
+            "thestar"
+          ],
+          "implicationLabel": "",
+          "implications": [
+            "For military planners and commanders, this underlines the importance of being able to sustain forward security postures, physical barriers and controlled crossings over long periods while carefully managing escalation when probes or warning shots occur. It also illustrates that decisions such as building new fences carry civil–military trade-offs — affecting local livelihoods and perceptions — which must be factored into planning for any future border-security or stabilisation missions."
+          ]
+        }
+      ]
+    }
+  ],
+  "week": "2026-05-11",
+  "label": "Week of 11 May 2026"
+}
