@@ -1,0 +1,137 @@
+{
+  "week": "YYYY-MM-DD",
+  "label": "Week of DD Mon YYYY",
+  "statusChart": [
+    {
+      "theatre": "Russia\u2013Ukraine",
+      "phase": "Attritional War",
+      "trend": "\u2191 Escalating",
+      "progress": "One or two sentences summarising the key development this week and its current status."
+    },
+    {
+      "theatre": "Israel\u2013Lebanon",
+      "phase": "Ceasefire",
+      "trend": "\u2192 Holding",
+      "progress": "One or two sentences summarising the key development this week and its current status."
+    },
+    {
+      "theatre": "Israel\u2013Gaza",
+      "phase": "Ceasefire",
+      "trend": "\u2192 Holding",
+      "progress": "One or two sentences summarising the key development this week and its current status."
+    },
+    {
+      "theatre": "Israel\u2013US\u2013Iran",
+      "phase": "Elevated Tension",
+      "trend": "\u2191 Escalating",
+      "progress": "One or two sentences summarising the key development this week and its current status."
+    },
+    {
+      "theatre": "Thailand\u2013Cambodia",
+      "phase": "Ceasefire",
+      "trend": "\u2192 Holding",
+      "progress": "One or two sentences summarising the key development this week and its current status."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "THEATRE 01",
+      "title": "Russia \u2013 Ukraine",
+      "subtitle": "Short subtitle describing this week\u2019s dominant theme",
+      "articles": [
+        {
+          "tags": ["CATEGORY TAG", "SECOND TAG"],
+          "headline": "Concise headline for this story update",
+          "body": "Body text of the update. To highlight key facts in orange, wrap them like this: <span class='hl'>highlighted text here</span>. Write in plain prose. Multiple sentences are fine.",
+          "sources": ["sourcename1", "sourcename2"],
+          "implicationLabel": "DOMAIN \u00b7 DOMAIN \u00b7 DOMAIN",
+          "implications": [
+            "<strong>Bold lead-in phrase for implication one</strong> \u2014 Explanation of the implication in one to three sentences.",
+            "<strong>Bold lead-in phrase for implication two</strong> \u2014 Explanation of the implication in one to three sentences."
+          ]
+        },
+        {
+          "tags": ["CATEGORY TAG"],
+          "headline": "Second story headline for this theatre (delete if only one story)",
+          "body": "Body text for second story. <span class='hl'>Key facts highlighted in orange.</span>",
+          "sources": ["sourcename"],
+          "implicationLabel": "",
+          "implications": []
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "THEATRE 02",
+      "title": "Israel \u2013 Lebanon",
+      "subtitle": "Short subtitle describing this week\u2019s dominant theme",
+      "articles": [
+        {
+          "tags": ["CATEGORY TAG"],
+          "headline": "Headline for this theatre\u2019s main story",
+          "body": "Body text. <span class='hl'>Key facts in orange.</span> Continue as needed.",
+          "sources": ["sourcename"],
+          "implicationLabel": "DOMAIN \u00b7 DOMAIN",
+          "implications": [
+            "<strong>Bold lead-in</strong> \u2014 Implication text."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "THEATRE 03",
+      "title": "Israel \u2013 Gaza",
+      "subtitle": "Short subtitle describing this week\u2019s dominant theme",
+      "articles": [
+        {
+          "tags": ["CATEGORY TAG"],
+          "headline": "Headline for this theatre\u2019s main story",
+          "body": "Body text. <span class='hl'>Key facts in orange.</span>",
+          "sources": ["sourcename"],
+          "implicationLabel": "DOMAIN \u00b7 DOMAIN",
+          "implications": [
+            "<strong>Bold lead-in</strong> \u2014 Implication text."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "THEATRE 04",
+      "title": "Israel \u2013 US \u2013 Iran",
+      "subtitle": "Short subtitle describing this week\u2019s dominant theme",
+      "articles": [
+        {
+          "tags": ["CATEGORY TAG"],
+          "headline": "Headline for this theatre\u2019s main story",
+          "body": "Body text. <span class='hl'>Key facts in orange.</span>",
+          "sources": ["sourcename"],
+          "implicationLabel": "DOMAIN \u00b7 DOMAIN",
+          "implications": [
+            "<strong>Bold lead-in</strong> \u2014 Implication text."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "THEATRE 05",
+      "title": "Thailand \u2013 Cambodia",
+      "subtitle": "Short subtitle describing this week\u2019s dominant theme",
+      "articles": [
+        {
+          "tags": ["CATEGORY TAG"],
+          "headline": "Headline for this theatre\u2019s main story",
+          "body": "Body text. <span class='hl'>Key facts in orange.</span>",
+          "sources": ["sourcename"],
+          "implicationLabel": "DOMAIN \u00b7 DOMAIN",
+          "implications": [
+            "<strong>Bold lead-in</strong> \u2014 Implication text."
+          ]
+        }
+      ]
+    }
+  ]
+}
