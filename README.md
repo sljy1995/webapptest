@@ -1,200 +1,136 @@
 # Conflict Studies & Insights — Webapp
 
-A dark-themed intelligence brief webapp displaying weekly conflict updates and monthly digests across five theatres. Content is driven entirely by JSON files — no code changes needed for regular updates.
+**Live site:** https://sljy1995.github.io/webapptest
+
+A weekly intelligence brief webapp covering five conflict theatres, plus monthly capability digests. All content is JSON files — no code changes ever needed.
+
+---
+
+## How to add a new weekly update
+
+1. Upload the week's HTML brief file to Claude in a new chat
+2. Paste this prompt:
+
+> Convert the attached HTML brief to a weekly JSON file for the CS&I webapp and push it to GitHub repo `sljy1995/webapptest`. My GitHub token is `[YOUR TOKEN]`.
+
+That's it. Claude converts the HTML, creates `content/weeklies/YYYY-MM-DD.json`, pushes it, and the manifest auto-updates via GitHub Actions within ~30 seconds.
+
+---
+
+## How to add a new monthly digest
+
+1. Prepare the digest content (see format below)
+2. Paste this prompt:
+
+> Create a monthly digest JSON for [Month YYYY] for the CS&I webapp and push it to GitHub repo `sljy1995/webapptest`. My GitHub token is `[YOUR TOKEN]`. Here's the content: [paste content]
+
+Claude creates `content/digests/YYYY-MM.json` and pushes it.
+
+---
+
+## Weekly JSON format
+
+**Filename:** `content/weeklies/YYYY-MM-DD.json` — use the Monday start date of the week.
+
+```json
+{
+  "week": "2026-06-29",
+  "label": "Week of 29 Jun 2026",
+  "statusChart": [
+    {
+      "theatre": "Russia–Ukraine",
+      "phase": "Attritional War",
+      "trend": "↑ Escalating",
+      "progress": "1–2 sentence summary of this week's status."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "THEATRE 01",
+      "title": "Russia – Ukraine",
+      "subtitle": "One-line theme for this week",
+      "articles": [
+        {
+          "tags": ["FIRES & STRIKES"],
+          "headline": "Headline for this story",
+          "body": "Body text. Wrap key facts in <span class='hl'>highlighted text</span> to show them in orange.",
+          "sources": ["isw", "reuters"],
+          "implicationLabel": "FIRES · GBAD",
+          "implications": [
+            "<strong>Bold lead-in</strong> — Explanation sentence."
+          ]
+        }
+      ]
+    }
+  ]
+}
+```
+
+**How cards work:** Each object inside `articles` becomes one card on screen. One article = one card. Add more objects to the array to get more cards for that theatre.
+
+**All five theatre IDs** (use exactly these):
+- `russia-ukraine` — THEATRE 01
+- `israel-lebanon` — THEATRE 02
+- `israel-gaza` — THEATRE 03
+- `israel-us-iran` — THEATRE 04
+- `thailand-cambodia` — THEATRE 05
+
+**Status chart trend values:** `↑ Escalating` / `→ Holding` / `↓ De-escalating`
+
+---
+
+## Monthly digest JSON format
+
+**Filename:** `content/digests/YYYY-MM.json`
+
+```json
+{
+  "month": "2026-07",
+  "label": "July 2026",
+  "capabilities": {
+    "manoeuvre": {
+      "changed": "2–4 sentence summary of what changed in Manoeuvre this month.",
+      "opportunities": [
+        { "title": "Title", "body": "Explanation." }
+      ],
+      "vulnerabilities": [
+        { "title": "Title", "body": "Explanation." }
+      ],
+      "capdevs": [
+        { "title": "Title", "body": "Explanation." }
+      ]
+    },
+    "sense-strike": { "changed": "...", "opportunities": [], "vulnerabilities": [], "capdevs": [] },
+    "combat-support": { "changed": "...", "opportunities": [], "vulnerabilities": [], "capdevs": [] },
+    "expeditionary": { "changed": "...", "opportunities": [], "vulnerabilities": [], "capdevs": [] },
+    "unmanned": { "changed": "...", "opportunities": [], "vulnerabilities": [], "capdevs": [] }
+  }
+}
+```
+
+---
+
+## Manifest — fully automatic
+
+`content/manifest.json` is rebuilt automatically by a GitHub Actions workflow every time you push a weekly or digest JSON. **You never need to edit it manually.**
+
+If the workflow hasn't run yet (first upload), you can trigger it manually: repo → Actions tab → "Auto-update manifest" → Run workflow.
+
+---
+
+## GitHub token
+
+Needs `public_repo` scope. Generate at [github.com/settings/tokens](https://github.com/settings/tokens). Share the token with Claude when running update prompts.
 
 ---
 
 ## Repo structure
 
 ```
-/
-├── index.html                  # App shell (do not edit)
-├── style.css                   # Styling (do not edit)
-├── app.js                      # App logic (do not edit)
-├── apple-touch-icon.png        # Tab icon + sidebar logo
-├── data.js                     # Legacy stub (do not edit)
-│
-└── content/
-    ├── manifest.json           # ← EDIT THIS every update
-    ├── methodology.png         # Default infographic (fallback for all weeks)
-    │
-    ├── weeklies/
-    │   ├── YYYY-MM-DD.json     # One file per week
-    │   └── ...
-    │
-    ├── digests/
-    │   ├── YYYY-MM.json        # One file per month
-    │   └── ...
-    │
-    └── infographics/           # Optional week-specific infographics
-        ├── YYYY-MM-DD.png      # Named to match weekly date
-        └── ...
+content/
+  weeklies/       ← one YYYY-MM-DD.json per week
+  digests/        ← one YYYY-MM.json per month
+  manifest.json   ← auto-generated, do not edit
+  methodology.png ← infographic shown in About
 ```
-
----
-
-## What to do each week
-
-### Step 1 — Create the weekly JSON file
-
-Copy `content/weeklies/_TEMPLATE_weekly.json`, rename it to `content/weeklies/YYYY-MM-DD.json` (use the **Monday start date** of the week, e.g. `2026-06-29.json`), and fill in the content.
-
-Upload it to the repo at `content/weeklies/YYYY-MM-DD.json`.
-
-### Step 2 — Update the manifest
-
-Open `content/manifest.json`. Add the new date string to the `"weeklies"` array **in chronological order** (oldest first):
-
-```json
-"weeklies": [
-  "2026-04-20",
-  "2026-04-27",
-  ...
-  "2026-06-22",
-  "2026-06-29"   ← add here
-]
-```
-
-Upload the updated `manifest.json`.
-
-### Step 3 — Upload the infographic (optional)
-
-If you have a week-specific infographic, upload it as `content/infographics/YYYY-MM-DD.png` using the same date as the weekly JSON. If no file is found for that week, the app automatically falls back to `content/methodology.png`.
-
-That's it. The app auto-populates the week selector, month nav, and status chart from the files.
-
----
-
-## What to do each month
-
-### Step 1 — Create the monthly digest JSON file
-
-Copy `content/digests/_TEMPLATE_digest.json`, rename it to `content/digests/YYYY-MM.json` (e.g. `2026-07.json`), and fill in the content.
-
-Upload it to the repo at `content/digests/YYYY-MM.json`.
-
-### Step 2 — Update the manifest
-
-Open `content/manifest.json`. Add the new month string to the `"digests"` array:
-
-```json
-"digests": [
-  "2026-06",
-  "2026-07"   ← add here
-]
-```
-
-Upload the updated `manifest.json`.
-
-### Step 3 — Update the "Click here for [Month]'s Digest" button (optional)
-
-Open `index.html`, find line 35, and update the button text:
-
-```html
-<a href="#" class="digest-cta" onclick="showView('digest')">Click here for July's Digest</a>
-```
-
----
-
-## Using Claude to generate content
-
-The fastest workflow is to feed Claude the raw HTML brief file and ask it to convert it. Use this prompt:
-
-> I'm attaching this week's HTML brief. Please convert it to the weekly JSON format for my CS&I webapp and upload it to my GitHub repo at `sljy1995/webapptest` as `content/weeklies/YYYY-MM-DD.json`, then update `content/manifest.json` to include the new date. Use the same GitHub token as before.
-
-Claude will:
-1. Parse all five theatres, status chart rows, articles, tags, highlighted text, sources, and implications
-2. Write the correctly formatted JSON
-3. Push it directly to GitHub
-4. Update the manifest
-
-For the monthly digest, use:
-
-> Please convert the attached monthly digest content into the digest JSON format for my CS&I webapp and upload it to `content/digests/YYYY-MM.json`, then update the manifest.
-
----
-
-## Formatting rules for JSON content
-
-### Highlighted text (orange on screen)
-Wrap text in `<span class='hl'>...</span>`:
-```
-"body": "Russia launched <span class='hl'>656 drones and 73 missiles</span> in the largest assault of the war."
-```
-
-### Bold text in implications
-Use `<strong>...</strong>` for the bold lead-in:
-```
-"<strong>Volume saturation defeats point defence</strong> — 992 simultaneous tracks overwhelm any single-layer GBAD architecture."
-```
-
-### Sources
-List source names as short lowercase strings (no URLs needed — they're display-only labels):
-```
-"sources": ["isw", "reuters", "bbc"]
-```
-
-### Empty theatres
-If a theatre has no update this week, include the theatre object with an empty `articles` array. The app will show a "no content" message gracefully:
-```json
-{
-  "id": "thailand-cambodia",
-  "theatreNum": "THEATRE 05",
-  "title": "Thailand – Cambodia",
-  "subtitle": "",
-  "articles": []
-}
-```
-
----
-
-## Status chart trend values
-
-Use these exact strings for the `trend` field so the correct colour renders:
-
-| Trend | String |
-|---|---|
-| Escalating | `↑ Escalating` |
-| Holding | `→ Holding` |
-| De-escalating | `↓ De-escalating` |
-
-Phase pill colours are assigned automatically:
-- **Red** — any phase containing "active", "attritional", or "collapsed"
-- **Cyan** — any phase containing "ceasefire" or "holding"
-- **Amber** — everything else
-
----
-
-## Manifest reference
-
-`content/manifest.json` is the only file the app reads to know what content exists. Keep it in sync with the files you upload.
-
-```json
-{
-  "weeklies": [
-    "2026-04-20",
-    "2026-04-27"
-  ],
-  "digests": [
-    "2026-06"
-  ],
-  "statusChart": []
-}
-```
-
-`statusChart` at the top level is a legacy field — leave it as `[]`. Each weekly file carries its own status chart data.
-
----
-
-## GitHub token
-
-The GitHub Personal Access Token (PAT) required for Claude to push files directly needs the `public_repo` scope (or `repo` for a private repo). It expires based on what you set when you created it. If Claude reports auth errors, generate a new PAT at [github.com/settings/tokens](https://github.com/settings/tokens) and share the new token.
-
----
-
-## Live site
-
-The app is served via GitHub Pages at:
-**https://sljy1995.github.io/webapptest**
-
-To enable GitHub Pages (if not already on): repo Settings → Pages → Source: `main` branch, `/ (root)`.
