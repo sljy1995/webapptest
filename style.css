@@ -284,7 +284,7 @@ html, body {
 /* ─── ARTICLE PANEL (shared by weeklies and digest) ─────────────── */
 .article-panel {
   flex: 1; overflow-y: auto;
-  padding: 24px 28px;
+  padding: 24px 20px;
   background: var(--bg);
   display: flex; flex-direction: column; align-items: center;
 }
