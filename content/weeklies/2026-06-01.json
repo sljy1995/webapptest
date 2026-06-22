@@ -1,6 +1,38 @@
 {
   "week": "2026-06-01",
   "label": "Week of 1 Jun 2026",
+  "statusChart": [
+    {
+      "theatre": "Russia\u2013Ukraine",
+      "phase": "Attritional War",
+      "trend": "\u2191 Escalating",
+      "progress": "Russia's largest-ever aerial assault 2 Jun; Ukraine struck St. Petersburg twice; Zelenskyy direct-talks offer rejected by Putin 5 Jun; Crimea fuel crisis confirmed."
+    },
+    {
+      "theatre": "Israel\u2013Lebanon",
+      "phase": "Ceasefire",
+      "trend": "\u2191 Escalating",
+      "progress": "Joint US\u2013Israel\u2013Lebanon statement 3 Jun; Hezbollah rejected same day; strikes continued; next talks 22 Jun."
+    },
+    {
+      "theatre": "Israel\u2013Gaza",
+      "phase": "Ceasefire",
+      "trend": "\u2192 Holding",
+      "progress": "Cairo talks 6\u20137 Jun concluded in \u201cpositive atmosphere\u201d; Hamas engaged; talks to resume within days; IDF now controls 64% of Gaza."
+    },
+    {
+      "theatre": "Israel\u2013US\u2013Iran",
+      "phase": "Ceasefire Collapsed",
+      "trend": "\u2191 Escalating",
+      "progress": "Iran fires missiles at Israel 7 Jun (first since Apr 8); Israel strikes Tehran, Isfahan, Tabriz 8 Jun; Houthis re-enter, Red Sea ban declared; MOU talks suspended; Hormuz entering 4th month of restriction."
+    },
+    {
+      "theatre": "Thailand\u2013Cambodia",
+      "phase": "Ceasefire",
+      "trend": "\u2192 Holding",
+      "progress": "Cambodia filed UNCLOS compulsory conciliation 2 Jun; Thailand joined process 4\u20135 Jun, suspended all other bilateral talks; borders closed."
+    }
+  ],
   "theatres": [
     {
       "id": "russia-ukraine",
