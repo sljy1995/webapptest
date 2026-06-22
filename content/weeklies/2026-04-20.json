@@ -1,0 +1,125 @@
+{
+  "statusChart": [
+    {
+      "theatre": "Ukraine–Russia",
+      "phase": "Active Combat",
+      "trend": "↑ Escalating",
+      "progress": "Mass strike cycle: Russia launched 600+ drones/missiles on 25 April; Ukraine conducting deep strikes (1,700 km) into the Urals. Ground advances in Pokrovsk (RU) vs. Kostyantynivka (UA)."
+    },
+    {
+      "theatre": "Israel–Lebanon",
+      "phase": "Fragile Ceasefire",
+      "trend": "→ Holding",
+      "progress": "10-day US-brokered truce active since 16 April; direct peace talks initiated. Israel maintains southern footprint while Hezbollah monitors from north of the Litani."
+    },
+    {
+      "theatre": "US–Israel–Iran",
+      "phase": "Fragile Ceasefire",
+      "trend": "→ Holding",
+      "progress": "Two-week Pakistan-mediated ceasefire in effect. Strait of Hormuz partially reopened after 400M-barrel oil supply shock. High damage to UAE energy infrastructure."
+    },
+    {
+      "theatre": "Israel–Gaza",
+      "phase": "Fragile Ceasefire",
+      "trend": "→ Holding",
+      "progress": "Active ceasefire line established (Israel controls 54%, Hamas 46%). Interim \"Board of Peace\" governance active. Reconstruction at 0.5% due to Feb–April border closures."
+    },
+    {
+      "theatre": "Thailand–Cambodia",
+      "phase": "Fragile Ceasefire",
+      "trend": "↑ Escalating",
+      "progress": "Diplomatic protests following Thai construction of observation posts near Preah Vihear. ASEAN Observer Team (AOT) deploying to monitor 2025 \"Special GBC\" terms."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "Theatre 01",
+      "title": "Russia – Ukraine",
+      "subtitle": "Mass Strikes &amp; Symbolic Diplomacy",
+      "articles": [
+        {
+          "tags": [
+            "Manoeuvre"
+          ],
+          "headline": "Chornobyl Frame &amp; POW Swap",
+          "body": "High-intensity combat peaked at 161 engagements in 24 hours (26–27 April), centered on Pokrovsk. Russian forces utilized poor weather and low-signature mobility (ATVs/motorcycles) to bypass drone surveillance via small-unit infiltration. Ukraine leveraged the 40th Chornobyl Anniversary to frame Russian drone activity as \"nuclear terrorism.\"<span class=\"cite-num\">1</span> Concurrently, a US/UAE-mediated swap repatriated 193 POWs per side.<span class=\"cite-num\">2</span>",
+          "sources": [],
+          "implicationLabel": "",
+          "implications": [
+            "Highlights the need for lower-tier sensor density to detect small-form-factor mobility in \"blind\" weather, and underscores the role of third-party mediators as essential force multipliers. Ukraine's proactive use of the Chornobyl anniversary demonstrates how symbolic events can be leveraged to galvanize international support and shape the information domain."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "Theatre 02",
+      "title": "Israel – Lebanon",
+      "subtitle": "High-Intensity Friction Despite a Formal Ceasefire Extension",
+      "articles": []
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "Theatre 03",
+      "title": "US – Israel – Iran",
+      "subtitle": "Forward Deterrence",
+      "articles": [
+        {
+          "tags": [
+            "Forward Deterrence"
+          ],
+          "headline": "Bilateral Defense Move",
+          "body": "In a major doctrinal shift, Israel deployed an Iron Dome battery and IDF personnel to the UAE on 26 April. This bilateral defense move aims to neutralize residual Iranian-linked drone and missile threats to Abu Dhabi.<span class=\"cite-num\">4</span>",
+          "sources": [],
+          "implicationLabel": "",
+          "implications": [
+            "Forward-deploying deterrence capabilities to regional partners prevents neighbours from being used as proxy staging grounds. Serves as a model for how Singapore could enhance regional security through niche technological exports."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "Theatre 04",
+      "title": "Israel – Gaza / West Bank",
+      "subtitle": "Multi-Front Operations",
+      "articles": [
+        {
+          "tags": [
+            "Manoeuvre / Intel"
+          ],
+          "headline": "Nur Shams Mop-Up",
+          "body": "While Gaza remained the primary focus, the IDF executed a 50-hour \"mop-up\" operation in the Nur Shams Refugee Camp (West Bank). The operation utilized specialized reconnaissance (Haruv) and special forces (Duvdevan) to neutralize localized insurgent infrastructure.<span class=\"cite-num\">5</span>",
+          "sources": [],
+          "implicationLabel": "",
+          "implications": [
+            "Proves the necessity of maintaining dual-track capability — pivoting resources between conventional defense and high-intensity counter-insurgency simultaneously while ensuring high readiness without hollowing out specialized assets."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "Theatre 05",
+      "title": "Thailand – Cambodia",
+      "subtitle": "Hardening Borders",
+      "articles": [
+        {
+          "tags": [
+            "Protection"
+          ],
+          "headline": "Border Fence Project",
+          "body": "Thailand transitioned from \"mobile patrols\" to \"area protection\" via a physical Border Fence Project announced on 24 April. Notably, the project is partially funded by the public (Hathaitip Fund), raising over 200 million baht to combat \"grey-zone\" threats like smuggling and infiltration.<span class=\"cite-num\">6</span>",
+          "sources": [],
+          "implicationLabel": "",
+          "implications": [
+            "This is Total Defence in practice. Physical hardening reduces the complexity of border security while the funding model builds public psychological resilience. Reinforces that military infrastructure must provide \"peace of mind\" for the civilian population to ensure long-term mission legitimacy."
+          ]
+        }
+      ]
+    }
+  ],
+  "week": "2026-04-20",
+  "label": "Week of 20 Apr 2026"
+}
