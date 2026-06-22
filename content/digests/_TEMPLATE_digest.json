@@ -1,0 +1,99 @@
+{
+  "month": "YYYY-MM",
+  "label": "Month YYYY",
+  "capabilities": {
+    "manoeuvre": {
+      "changed": "Two to four sentences summarising what changed in the Manoeuvre domain this month across all theatres. This is the free-text paragraph that appears in the collapsible 'What Changed this Month' bar. Write it as a direct brief to the reader \u2014 what they need to know, why it matters, what changed from last month.",
+      "opportunities": [
+        {
+          "title": "Short title for Opportunity 1",
+          "body": "One to three sentences explaining the opportunity. Be specific \u2014 name the tactic, technique, or capability and what it enables."
+        },
+        {
+          "title": "Short title for Opportunity 2",
+          "body": "Explanation."
+        },
+        {
+          "title": "Short title for Opportunity 3",
+          "body": "Explanation."
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "title": "Short title for Vulnerability 1",
+          "body": "One to three sentences explaining the vulnerability. Name the gap, the threat, and the implication for planning."
+        },
+        {
+          "title": "Short title for Vulnerability 2",
+          "body": "Explanation."
+        },
+        {
+          "title": "Short title for Vulnerability 3",
+          "body": "Explanation."
+        }
+      ],
+      "capdevs": [
+        {
+          "title": "Short title for Capability Development 1",
+          "body": "One to three sentences describing the capability development \u2014 what it is, who fielded it, what it does, and why it matters."
+        },
+        {
+          "title": "Short title for Capability Development 2",
+          "body": "Explanation."
+        },
+        {
+          "title": "Short title for Capability Development 3",
+          "body": "Explanation."
+        }
+      ]
+    },
+    "sense-strike": {
+      "changed": "What changed in the Sense-Strike domain this month.",
+      "opportunities": [
+        { "title": "Opportunity title", "body": "Explanation." }
+      ],
+      "vulnerabilities": [
+        { "title": "Vulnerability title", "body": "Explanation." }
+      ],
+      "capdevs": [
+        { "title": "CapDev title", "body": "Explanation." }
+      ]
+    },
+    "combat-support": {
+      "changed": "What changed in the Combat Support domain this month.",
+      "opportunities": [
+        { "title": "Opportunity title", "body": "Explanation." }
+      ],
+      "vulnerabilities": [
+        { "title": "Vulnerability title", "body": "Explanation." }
+      ],
+      "capdevs": [
+        { "title": "CapDev title", "body": "Explanation." }
+      ]
+    },
+    "expeditionary": {
+      "changed": "What changed in the Expeditionary domain this month.",
+      "opportunities": [
+        { "title": "Opportunity title", "body": "Explanation." }
+      ],
+      "vulnerabilities": [
+        { "title": "Vulnerability title", "body": "Explanation." }
+      ],
+      "capdevs": [
+        { "title": "CapDev title", "body": "Explanation." }
+      ]
+    },
+    "unmanned": {
+      "changed": "What changed in the Unmanned Systems domain this month.",
+      "opportunities": [
+        { "title": "Opportunity title", "body": "Explanation." }
+      ],
+      "vulnerabilities": [
+        { "title": "Vulnerability title", "body": "Explanation." }
+      ],
+      "capdevs": [
+        { "title": "CapDev title", "body": "Explanation." }
+      ]
+    }
+  }
+}
