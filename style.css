@@ -183,11 +183,11 @@ html, body {
 
 /* ─── WEEKLY LEFT SIDEBAR ────────────────────────────────────────── */
 .weekly-sidebar {
-  width: 190px;
+  width: 170px;
   flex-shrink: 0;
   background: var(--bg);
   border-right: none;
-  padding: 20px 8px 20px 40px;
+  padding: 20px 12px 20px 20px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -215,12 +215,40 @@ html, body {
   width: 100%;
 }
 
+/* Status chart inline inside sidebar */
+.status-bar-inline {
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--teal); padding: 9px 12px;
+  font-size: 12px; font-weight: 600;
+  cursor: pointer; border-radius: 4px; user-select: none;
+  color: var(--text);
+}
+.status-bar-inline:hover { background: #1f4558; }
+
+.status-chart-panel-inline {
+  overflow: hidden; max-height: 0;
+  transition: max-height 0.3s ease;
+  background: var(--bg-panel);
+  border: 0 solid transparent;
+  overflow-x: auto;
+}
+.status-chart-panel-inline.open {
+  max-height: 600px;
+  border: 1px solid var(--border); border-top: none;
+  overflow-y: auto;
+}
+.status-chart-panel-inline .status-table { min-width: 480px; font-size: 11px; }
+.status-chart-panel-inline .st-theatre,
+.status-chart-panel-inline .st-phase,
+.status-chart-panel-inline .st-trend,
+.status-chart-panel-inline .st-progress { padding: 6px 9px; }
+
 /* ─── SIDE NAV (digest sections only) ───────────────────────────── */
 .side-nav {
-  width: 185px; flex-shrink: 0;
+  width: 170px; flex-shrink: 0;
   background: var(--bg);
   border-right: none;
-  padding: 20px 8px 20px 40px;
+  padding: 20px 12px 20px 20px;
   overflow-y: auto;
   display: flex; flex-direction: column; gap: 4px;
 }
@@ -253,14 +281,14 @@ html, body {
   display: flex; flex: 1; overflow: hidden;
 }
 
-/* ─── ARTICLE PANEL ──────────────────────────────────────────────── */
+/* ─── ARTICLE PANEL (shared by weeklies and digest) ─────────────── */
 .article-panel {
   flex: 1; overflow-y: auto;
-  padding: 24px 28px;
+  padding: 24px 28px 24px 20px;
   background: var(--bg);
   display: flex; flex-direction: column; align-items: center;
 }
-.article-inner { width: 100%; max-width: 900px; }
+.article-inner { width: 100%; max-width: 860px; }
 
 .article-theatre-header {
   margin-bottom: 16px;
@@ -410,6 +438,7 @@ html, body {
   .weekly-month-list li { flex-shrink: 0; padding: 8px 16px; font-size: 12.5px; }
   .week-selector-inline { width: 100%; }
   .weekly-sidebar-section { gap: 4px; }
+  .status-chart-panel-inline.open { max-height: 400px; overflow-x: auto; }
 
   /* Side nav (digest): horizontal scroll strip */
   .side-nav {
