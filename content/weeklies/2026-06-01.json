@@ -1,0 +1,123 @@
+{
+  "week": "2026-06-01",
+  "label": "Week of 1 Jun 2026",
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "THEATRE 01",
+      "title": "Russia \u2013 Ukraine",
+      "subtitle": "Largest Aerial Assault & 24-Hour Sensor-to-Shooter Strikes",
+      "articles": [
+        {
+          "tags": ["FIRES & STRIKES"],
+          "headline": "Russia\u2019s largest combined aerial assault of the war",
+          "body": "On 2 June, Russia launched <span class='hl'>656 drones and 73 missiles \u2014 the largest combined aerial assault of the war</span> \u2014 killing 22 civilians (including children) and injuring 130+ across eight oblasts. ISW assessed Russia\u2019s mass strike was deliberately timed to exploit Ukraine\u2019s Patriot interceptor shortage. Ukraine intercepted the vast majority of cruise missiles and drones but only 27% of ballistic missiles. Ukraine struck back: on 3 June Ukrainian forces hit the St. Petersburg oil terminal and the Corvette Boyki in Kronstadt dry dock hours before Putin opened the St. Petersburg International Economic Forum, with smoke visible to arriving guests. On 6 June, a second \u201cunprecedented\u201d wave struck the Kronstadt naval arsenal, the Petergofskaya oil depot, the Neste terminal in Lomonosov, a logistics centre in Bolshaya Izhora, and oil infrastructure in Krasnodar Krai; 144 drones were intercepted.",
+          "sources": ["isw", "abcnews"],
+          "implicationLabel": "FIRES & STRIKES \u00b7 INTELLIGENCE / ISR",
+          "implications": [
+            "<strong>Ukraine\u2019s 27% ballistic intercept rate against a 180\u2013250 missile reserve is a hard GBAD performance benchmark.</strong> Layered architectures effective against cruise missiles and drones can remain critically insufficient against saturating ballistic barrages.",
+            "<strong>The SBU disruption of a GRU laser-designation network is relevant to counter-intelligence and installation protection planning</strong> \u2014 particularly for hardened facilities and C2 nodes. ISR-to-strike integration at the Kronstadt 24-hour sensor-to-shooter cycle sets the benchmark for what we must both execute and defend against."
+          ]
+        },
+        {
+          "tags": ["INTELLIGENCE / ISR"],
+          "headline": "Ukraine\u2019s precise 24-hour sensor-to-shooter strikes",
+          "body": "Ukraine\u2019s Security Service (SBU) disrupted a Russian GRU ground-based laser-designation network in Kyiv Oblast tasked with cuing ballistic missiles for the 2 June mass assault. Ukrainian ISR confirmed the <span class='hl'>Corvette Boyki\u2019s position in Kronstadt dry dock prior to the 3 June strike, enabling a 24-hour sensor-to-shooter cycle.</span> ISW confirmed Ukraine struck Russian oil infrastructure in Krasnodar Krai and military assets in Russian border regions on 6 June, demonstrating persistent long-range ISR coverage. Russian troops in the Mariupol\u2013Berdyansk corridor are now disguising military vehicles as civilian transport (changing awning colours, repainting trucks white) to evade Ukrainian drone targeting.",
+          "sources": ["reuters", "charter97"],
+          "implicationLabel": "",
+          "implications": []
+        },
+        {
+          "tags": ["STRATEGIC NARRATIVE CONTESTATION"],
+          "headline": "Synchronising kinetic strikes with high-visibility events",
+          "body": "Ukraine\u2019s 3 June St. Petersburg strike \u2014 timed to coincide with Putin opening Russia\u2019s premier investment forum before 4,000 foreign guests \u2014 was designed to undercut his \u201cbusiness as usual\u201d narrative. <span class='hl'>Striking Putin\u2019s home city during a flagship investment forum hosting 4,000 foreign dignitaries served as a stark visual refutation of Russian stability.</span> President Zelenskyy reinforced this kinetic disruption by publishing an open letter that structurally reframed the conflict not as a geopolitical necessity, but as Putin\u2019s personal governance failure, aiming to fracture international tolerance for the war.",
+          "sources": ["isw", "washingtontimes"],
+          "implicationLabel": "",
+          "implications": []
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "THEATRE 02",
+      "title": "Israel \u2013 Lebanon",
+      "subtitle": "Conditional Ceasefire & Thermal FPV Adaptation",
+      "articles": [
+        {
+          "tags": ["CEASEFIRE & DIPLOMATIC FRICTION"],
+          "headline": "US\u2013Israel\u2013Lebanon conditional ceasefire announced, rejected same day",
+          "body": "The joint US\u2013Israel\u2013Lebanon statement of 3 June announced a conditional ceasefire contingent on Hezbollah completely halting fire, withdrawing south of the Litani, and the establishment of LAF-exclusive pilot zones. <span class='hl'>Hezbollah leader Naim Qassem publicly rejected the agreement the same day</span>, calling it \u201ca roadmap for the annihilation of a section of the Lebanese people\u201d. Both sides agreed the next talks will take place in Washington the week of 22 June. Iran explicitly linked Lebanon\u2019s ceasefire to any comprehensive US\u2013Iran MOU \u2014 requiring it to be addressed in the same agreement, structurally coupling the two theatres.",
+          "sources": ["reuters"],
+          "implicationLabel": "DOCTRINE & ADAPTATION",
+          "implications": [
+            "<strong>Just as the Middle East theatres are coupled, planners must anticipate that a conflict in one part of Southeast Asia could be used as leverage or a \u201clinked\u201d bargaining chip in another.</strong> The defence is not just about firepower; it requires understanding complex diplomatic webs as well as ballistics.",
+            "<strong>The cycle of adaptation demonstrates that technical superiority is transient.</strong> An adversary\u2019s piloting skills and technological integration \u2014 such as un-jammable fibre-optic guided variants carrying thermal payloads \u2014 require a continuous, rapid development cycle."
+          ]
+        },
+        {
+          "tags": ["EMERGING TACTICS", "PROTECTION"],
+          "headline": "Hezbollah FPV thermal drone restores night time ISR advantage",
+          "body": "Hezbollah has been using <span class='hl'>FPV drones equipped with thermal cameras to conduct night time attacks targeting Israeli forces in southern Lebanon</span> \u2014 adopted since at least 23 May to counter IDF night-movement adaptation. IDF shifted some ground forces to operate at night to avoid standard FPV drone reconnaissance, and Hezbollah adapted by adding thermal cameras, restoring night time ISR advantage.",
+          "sources": ["isw"],
+          "implicationLabel": "",
+          "implications": []
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "THEATRE 03",
+      "title": "Israel \u2013 Gaza",
+      "subtitle": "Phase 2 Diplomacy amid Expanding IDF Control",
+      "articles": [
+        {
+          "tags": ["DIPLOMATIC\u2013KINETIC DIVERGENCE"],
+          "headline": "Cairo talks engage Phase 2 as IDF expands to 64% of Gaza",
+          "body": "Against the backdrop of expanding military boundaries, international mediators launched a major push to rescue the failing political process. A high-level summit convened in Cairo from <span class='hl'>6\u20137 June featuring mediators from Egypt, Qatar, and Turkey</span>, alongside representatives from various Palestinian factions, concluded in a \u201cpositive atmosphere\u201d with Hamas engaging on Phase 2 disarmament and international stabilisation force proposals \u2014 representing the most substantive Gaza diplomatic engagement since 31 May. However, IDF simultaneous expansion from <span class='hl'>53% to 64% control, with direction to reach 70%</span>, creates ground facts that narrow Hamas\u2019s leverage with each session.",
+          "sources": ["anadolu", "wafa"],
+          "implicationLabel": "STRATEGIC PLANNERS",
+          "implications": [
+            "<strong>Israel\u2019s territorial consolidation strategy generates enduring civil-military complexity long after kinetic pauses.</strong> Humanitarian governance burdens created during combat operations must be planned for from the outset, not treated as post-conflict problems.",
+            "<strong>The Egyptian mediation model \u2014 engaging non-state actors and all factions in parallel with state-level diplomacy \u2014 is the more effective model for Gaza compared to Lebanon\u2019s exclusionary framework</strong>, and offers a structural reference for CIMIC planning in environments involving non-state armed groups."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "THEATRE 04",
+      "title": "Israel \u2013 US \u2013 Iran",
+      "subtitle": "Direct State-on-State Strikes; Mediation Collapses",
+      "articles": [
+        {
+          "tags": ["FIRES & STRIKES", "DIPLOMACY"],
+          "headline": "Direct Iran\u2013Israel exchanges; Houthis re-enter; GCC states struck",
+          "body": "Iran fired multiple waves of missiles at northern Israel on 7 June \u2014 <span class='hl'>the first direct Iranian missile attack since the April 8 ceasefire</span> \u2014 citing Israel\u2019s Dahieh strikes in Beirut. Israel struck Iran on 8 June with air-launched ballistic missiles; explosions reported in four cities. Saudi Arabia activated missile alert sirens in Al Kharj governorate (home to Prince Sultan Air Base hosting US forces) \u2014 the threat subsided. Simultaneously, a Houthi ballistic missile was launched toward Israel from Yemen \u2014 the first Houthi launch of the current war cycle \u2014 and the Houthis declared a complete and total ban on Israeli shipping in the Red Sea. Kuwait and Bahrain were struck by Iranian ballistic missiles on 3 June following US strikes on Iranian radar installations. <span class='hl'>Trump\u2019s explicit request to Netanyahu not to retaliate \u2014 publicly defied</span> \u2014 confirms that US C2 over Israeli operations is now visibly broken. The MOU negotiating track is suspended; the back-channel (Pakistan) is the only functioning communications link remaining.",
+          "sources": ["npr", "cnn", "guardian"],
+          "implicationLabel": "MULTI-AXIS ESCALATION",
+          "implications": [
+            "<strong>The kinetic strikes on GCC hosts like Bahrain and Kuwait demonstrate that multi-national command centres are no longer insulated, non-kinetic rear areas.</strong> This expanded regional missile threat invalidates traditional force-protection assumptions, requiring a recalibration of any active-theatre footprint or forward-deployed personnel."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "THEATRE 05",
+      "title": "Thailand \u2013 Cambodia",
+      "subtitle": "Cultural Asset Weaponised for Military Holding",
+      "articles": [
+        {
+          "tags": ["INFORMATION OPERATIONS"],
+          "headline": "Thailand uses cultural asset to consolidate military holding",
+          "body": "On 6 June, Thai authorities selectively reopened the ancient <span class='hl'>Prasat Ta Khwai temple complex and Hill 350 in Surin province for a \u201cborder heritage weekend\u201d.</span> This highly controlled opening allowed civilian access to the Khmer ruins while masking the ongoing heavy Thai military presence dug in behind the heritage perimeter. By allowing civilians and tourists to photograph themselves at a disputed historical site, Thailand projected a narrative of absolute stability, control, and normalcy to the international community. This public display of calm directly undercut Cambodia\u2019s diplomatic efforts at the United Nations: while Cambodia pursued emergency UNCLOS actions to draw international arbitrators into the conflict, Thailand used tourism to show the world that the situation on the ground was \u201cperfectly managed and safe,\u201d painting Cambodia\u2019s legal manoeuvres as alarmist. Behind the thin veil of controlled tourism, the Royal Thai Army successfully maintained and reinforced its heavy defensive footprint at Hill 350 and the temple ruins without drawing regional condemnation. Opposing Cambodian forces cannot easily launch a tactical counter-incursion or fire on Thai positions when the area is actively populated by civilian tourists.",
+          "sources": ["khaosod"],
+          "implicationLabel": "INFORMATION OPERATIONS",
+          "implications": [
+            "<strong>The reopening of Prasat Ta Khwai should not be read as an act of de-escalation, but rather as kinetic restraint paired with aggressive narrative dominance.</strong> Thailand successfully weaponised a cultural asset to achieve a military holding objective, demonstrating how civilian activities can be synchronised with forward-defence tasks to outflank an adversary psychologically and diplomatically."
+          ]
+        }
+      ]
+    }
+  ]
+}
