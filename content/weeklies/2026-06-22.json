@@ -1,0 +1,112 @@
+{
+  "week": "2026-06-22",
+  "label": "Week of 22 Jun 2026",
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "THEATRE 01",
+      "title": "Russia \u2013 Ukraine",
+      "subtitle": "992-Drone Moscow Strike & Asia Spillover",
+      "articles": [
+        {
+          "tags": ["FIRES & STRIKES", "INFORMATION OPERATIONS"],
+          "headline": "Ukraine\u2019s 992-drone Moscow strike: the war\u2019s first strategic fires-as-IO operation at national scale",
+          "body": "Ukraine\u2019s record overnight campaign on 17\u201318 June \u2014 <span class='hl'>992 drones, Moscow refinery hit for the second time in a week, 18 apartment buildings damaged, airport evacuations, one child killed</span> \u2014 was simultaneously the largest drone military operation of the war and a precision information operation. G7 leaders, simultaneously at \u00c9vian, committed to expanded air defence and sanctions in direct response to the preceding Lavra strike.",
+          "sources": ["opb", "trtworld"],
+          "implicationLabel": "FIRES \u00b7 INFORMATION OPERATIONS \u00b7 GBAD \u00b7 C2",
+          "implications": [
+            "<strong>Redundancy-through-volume is a proven strategic fires doctrine</strong> \u2014 992 launches guaranteeing decisive hits against hardened national air defence is replicable by any military with drone industrial capacity. GBAD and installation protection planning must be stress-tested against volume saturation.",
+            "<strong>Kinetic actions timed to diplomatic windows generate compounding strategic effects</strong> \u2014 the Lavra strike at G7 opening generated a political commitment; the Moscow retaliation at G7 closing generated a Russian escalation pledge. Timing of kinetic and diplomatic actions relative to each other is a core operational planning variable."
+          ]
+        },
+        {
+          "tags": ["REGIONAL SPILLOVER", "ASIA"],
+          "headline": "Taiwan launches civilian drone training programme",
+          "body": "Taiwan\u2019s civil defence NGO, Kuma Academy, has launched its first civilian drone training programme, directly inspired by the war in Ukraine. The fully booked programme trains about <span class='hl'>75 diverse citizens monthly \u2014 mostly women, spanning teenagers to seniors</span> \u2014 to fly small, GPS-free, Taiwanese-made drones manually to bypass electronic jamming.",
+          "sources": ["newswall"],
+          "implicationLabel": "INSTALLATION PROTECTION \u00b7 CIVIL-MILITARY \u00b7 MOBILISATION READINESS \u00b7 C-UAS",
+          "implications": [
+            "<strong>Civilian drone literacy as a mobilisation multiplier</strong> \u2014 Taiwan\u2019s model demonstrates that pre-trained civilian drone operators constitute a scalable ISR and civil defence force multiplier that does not require military manpower.",
+            "<strong>GPS-denial is now a baseline training assumption</strong> \u2014 the explicit focus on manual flight skills in GPS-denied environments signals that state and non-state actors in the region are planning for contested electromagnetic environments as the norm, not the exception."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "THEATRE 02",
+      "title": "Israel \u2013 Lebanon",
+      "subtitle": "IDF Nabatieh Advance & Hezbollah FPV Employment",
+      "articles": [
+        {
+          "tags": ["MANOEUVRE", "C-UAS", "UNMANNED SYSTEMS"],
+          "headline": "IDF reaches Nabatieh; Hezbollah fibre-optic FPV employment negates EW protection",
+          "body": "IDF reached Nabatieh by 30 May, but <span class='hl'>Hezbollah fired fibre-optic FPVs (6 kg HEAT, 30\u201350 km range, no RF signature to jam) from stand-off distances</span>, so electronic warfare alone no longer protects armour on the advance.",
+          "sources": ["timesofisrael", "jpost"],
+          "implicationLabel": "C-UAS \u00b7 EW \u00b7 ARMOUR PROTECTION",
+          "implications": [
+            "<strong>Fibre-optic FPVs represent a categorical defeat of RF-based C-UAS</strong> \u2014 no emissions means no detection, no jamming, and no warning. Defeat requires kinetic intercept or pre-launch action against operators and logistics.",
+            "<strong>EW overmatch is no longer a guarantee of armour survivability</strong> \u2014 forces planning armoured operations must now assume a C-UAS threat envelope that EW cannot address, requiring integrated hard-kill systems as a baseline."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "THEATRE 03",
+      "title": "Israel \u2013 Gaza",
+      "subtitle": "Rafah Operations & Humanitarian Corridor Dynamics",
+      "articles": [
+        {
+          "tags": ["URBAN OPERATIONS", "CIVIL-MILITARY"],
+          "headline": "IDF corridor operations in Rafah: lessons in urban clearance under international scrutiny",
+          "body": "IDF Rafah operations in June have established a corridor model that attempts to separate civilian movement from tactical clearance zones. <span class='hl'>Population displacement estimated at 1.2 million civilians across the southern corridor</span>, with aid entry constrained to two functional crossings operating at 40% capacity.",
+          "sources": ["unrwa", "bbc"],
+          "implicationLabel": "URBAN OPS \u00b7 CIVIL-MILITARY \u00b7 LOGISTICS",
+          "implications": [
+            "<strong>Corridor operations at this scale require dedicated C2 separate from tactical manoeuvre</strong> \u2014 the complexity of managing population flow, aid entry, and tactical clearance simultaneously has created command friction that has slowed operational tempo.",
+            "<strong>Crossing throughput is a strategic constraint, not a tactical variable</strong> \u2014 international pressure is now directly linked to crossing capacity, making humanitarian logistics a shaping operation rather than a supporting one."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "THEATRE 04",
+      "title": "Israel \u2013 US \u2013 Iran",
+      "subtitle": "Nuclear Negotiations & Strike Threat Calculus",
+      "articles": [
+        {
+          "tags": ["INFORMATION OPERATIONS", "STRATEGIC"],
+          "headline": "Iran nuclear talks: strategic ambiguity as deterrence and its limits",
+          "body": "June negotiations in Vienna have produced no framework agreement. <span class='hl'>Iran\u2019s enrichment level remains at 60% U-235, with 12 kg of near-weapons-grade material estimated by IAEA</span>. US carrier presence in the Gulf has been maintained at two CSGs, signalling continued strike readiness.",
+          "sources": ["reuters", "iaea"],
+          "implicationLabel": "DETERRENCE \u00b7 STRATEGIC \u00b7 NUCLEAR",
+          "implications": [
+            "<strong>Dual CSG presence is a sustained deterrence signal, not a crisis posture</strong> \u2014 the normalisation of two-carrier Gulf presence reduces its escalatory signalling value over time, requiring calibrated adjustment to maintain credibility.",
+            "<strong>60% enrichment with 12 kg stockpile is a threshold management problem</strong> \u2014 the gap between current enrichment and weapons-grade has compressed to a matter of weeks of decision, fundamentally altering the strike timeline calculus."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "THEATRE 05",
+      "title": "Thailand \u2013 Cambodia",
+      "subtitle": "Border Skirmish Escalation & ASEAN Mediation",
+      "articles": [
+        {
+          "tags": ["MANOEUVRE", "REGIONAL"],
+          "headline": "Thai-Cambodian border incidents: low-intensity escalation pattern and ASEAN response",
+          "body": "June has seen <span class='hl'>three separate border incidents in the Ta Phraya district, with two Thai soldiers wounded and one Cambodian border post destroyed</span>. ASEAN has convened an emergency consultative meeting, with Malaysia as chair attempting to broker a ceasefire.",
+          "sources": ["bangkokpost", "phnompenpost"],
+          "implicationLabel": "BORDER SECURITY \u00b7 REGIONAL \u00b7 ESCALATION",
+          "implications": [
+            "<strong>Low-intensity border incidents with no clear trigger create escalation ambiguity</strong> \u2014 the absence of a single precipitating event makes de-escalation harder to anchor, as neither side can credibly agree on what to roll back.",
+            "<strong>ASEAN mediation effectiveness is constrained by non-interference norms</strong> \u2014 the consultative mechanism is structurally limited in its ability to impose solutions, making bilateral back-channels the most likely de-escalation path."
+          ]
+        }
+      ]
+    }
+  ]
+}
