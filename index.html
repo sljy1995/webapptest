@@ -83,7 +83,16 @@
 
   <!-- MONTHLY DIGEST VIEW -->
   <div class="digest-view hidden" id="digestView">
-    <!-- "What Changed this Month" bar — mirrors status chart position -->
+    <!-- Capability tabs — centred, same style as theatre tabs -->
+    <div class="cap-tabs">
+      <button class="cap-tab active" data-cap="manoeuvre" onclick="selectCap(this)">Manoeuvre</button>
+      <button class="cap-tab" data-cap="sense-strike" onclick="selectCap(this)">Sense-Strike</button>
+      <button class="cap-tab" data-cap="combat-support" onclick="selectCap(this)">Combat Support</button>
+      <button class="cap-tab" data-cap="expeditionary" onclick="selectCap(this)">Expeditionary</button>
+      <button class="cap-tab" data-cap="unmanned" onclick="selectCap(this)">Unmanned Systems</button>
+    </div>
+
+    <!-- "What Changed this Month" bar — below buttons -->
     <div class="digest-changed-bar" id="digestChangedBar">
       <div class="digest-changed-header" onclick="toggleDigestChanged()">
         <span id="digestChangedMonthLabel">What Changed this Month</span>
@@ -94,16 +103,7 @@
       </div>
     </div>
 
-    <!-- Capability tabs — centred, same style as theatre tabs -->
-    <div class="cap-tabs">
-      <button class="cap-tab active" data-cap="manoeuvre" onclick="selectCap(this)">Manoeuvre</button>
-      <button class="cap-tab" data-cap="sense-strike" onclick="selectCap(this)">Sense-Strike</button>
-      <button class="cap-tab" data-cap="combat-support" onclick="selectCap(this)">Combat Support</button>
-      <button class="cap-tab" data-cap="expeditionary" onclick="selectCap(this)">Expeditionary</button>
-      <button class="cap-tab" data-cap="unmanned" onclick="selectCap(this)">Unmanned Systems</button>
-    </div>
-
-    <!-- Digest sub-sections (no What Changed here) -->
+    <!-- Digest sub-sections -->
     <div class="digest-sections">
       <div class="digest-section">
         <div class="digest-section-label">Opportunities</div>
