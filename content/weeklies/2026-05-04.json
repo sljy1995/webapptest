@@ -1,0 +1,138 @@
+{
+  "statusChart": [
+    {
+      "theatre": "Russia–Ukraine",
+      "phase": "Active Combat",
+      "trend": "↑ Escalating",
+      "progress": "Russian advances stalled to 2.9 sq km/day average for first four months of 2026; net loss of territory in April. Ukrainian forces advanced in northern Kharkiv Oblast and the Borova direction. Russian forces no longer hold positions in central Kupyansk."
+    },
+    {
+      "theatre": "Israel–Lebanon",
+      "phase": "Ceasefire-in-Name",
+      "trend": "↑ Deteriorating",
+      "progress": "Israeli ground forces issued evacuation orders for villages beyond the declared 10-km buffer zone (e.g., Deir Ames), effectively extending the de facto controlled area without resuming full-scale offensive."
+    },
+    {
+      "theatre": "Israel–Gaza",
+      "phase": "Fragile Ceasefire",
+      "trend": "↑ Consolidating",
+      "progress": "Israeli territorial control reached approximately 60 per cent of Gaza (Yellow Line + 11 per cent extra). Movement of the de facto control line continues during nominal ceasefire."
+    },
+    {
+      "theatre": "Israel–US–Iran",
+      "phase": "Coercive Deterrence",
+      "trend": "↑ Tense Stalemate",
+      "progress": "The US–Israel–Iran conflict remains at a fragile impasse: Trump paused \"Project Freedom\" for diplomacy but rejected Iran's 10 May counterproposal and threatened renewed strikes. Israel meanwhile insists the war cannot end unless Iran's enriched uranium capability is neutralised."
+    },
+    {
+      "theatre": "Thailand–Cambodia",
+      "phase": "Hold &amp; Monitor",
+      "trend": "→ Holding",
+      "progress": "PMs Anutin and Hun Manet met at the ASEAN summit (7 May) and agreed to \"confidence-building measures.\" Ceasefire holding since December. Tens of thousands still in displacement camps; border demarcation unresolved."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "Theatre 01",
+      "title": "Russia – Ukraine",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "ISR &amp; Surveillance"
+          ],
+          "headline": "A Ceasefire Window is When Adversary Repositioning is Most Observable",
+          "body": "<span class='hl'>Russia used the first day of its self-declared ceasefire for rotations, reinforcements, logistics, and redeployments</span> in preparation for imminent future offensive operations. The pattern is visible on both adversary and friendly sides of the line. A ceasefire is the period when adversary supply convoys, troop rotations, and equipment redeployments are at their most observable — they use roads in daylight, often in larger formations, with reduced concealment. The Critical Requirement for the defending side is increased ISR and surveillance posture during the ceasefire window; the Critical Vulnerability is the false assumption that the pause permits relaxation.",
+          "sources": [],
+          "implicationLabel": "ISR Persistence",
+          "implications": [
+            "For units rotating into line-of-contact roles during ceasefire periods, training must include the recognition pattern for adversary repositioning. ISR posture during ceasefire windows must increase, not decrease. The goal is to map the new \"Post-Ceasefire Order of Battle\" before the shooting resumes."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "Theatre 02",
+      "title": "Israel – Lebanon",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Manoeuvre"
+          ],
+          "headline": "\"Security Zone\" Expands Beyond 10-km Limit via \"Evacuate → Strike → Occupy\"",
+          "body": "As of 4 May 2026, the <span class='hl'>IDF issued urgent evacuation warnings for four additional villages</span>: Qana, Debaal, Qaaqaait al-Jisr, and Srifa. These locations sit significantly deeper than the original buffer, indicating a \"creeping annexation\" of tactical depth designed to deny Hezbollah launch sites for precision-guided munitions. This was followed by a <span class='hl'>second wave of orders on 11 May</span>, targeting nine additional villages further north toward the Nabatieh province. These developments confirm that despite a ceasefire extension, the IDF is expanding its \"fire-control zone\" through incremental evacuation notices.",
+          "sources": [],
+          "implicationLabel": "Information Ops",
+          "implications": [
+            "The IDF justifies these creeps as out of concern for civilian safety. We must be prepared to frame these moves as \"Tactical Encroachment\" to international observers. If our boundary is being moved, we must highlight that the removal of civilians is a precursor to permanent military infrastructure, not a temporary humanitarian measure."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "Theatre 03",
+      "title": "Israel – Gaza",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Relevant Case Study"
+          ],
+          "headline": "Why Ambitious Stabilisation Frameworks Fail in Practice",
+          "body": "The Israel–Gaza conflict has since emerged as a key case study in why ambitious stabilisation frameworks fail in practice. Despite extensive institutional architecture — including UNSCR 2803, the Board of Peace, NCAG, the US-led ISF, and a 45-country CENTCOM forum — the framework remains operationally ineffective eight months on. The Gaza case therefore provides one of the clearest contemporary examples of the failure modes future SAF contributions to UN, ASEAN, or coalition stabilisation operations should be designed against.",
+          "sources": [],
+          "implicationLabel": "",
+          "implications": [
+            "Chatham House, \"The Iran war has left Gaza neglected\" (9 May 2026) — diagnoses the structural reasons the Phase Two framework has stalled and the Yellow Line consolidation has begun to harden into de facto partition."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "Theatre 04",
+      "title": "Israel – US – Iran",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Multi-Domain Attack"
+          ],
+          "headline": "Iran Multi-Domain Saturation Attack",
+          "body": "Following the launch of Project Freedom on 4 May, <span class='hl'>Iran executed a coordinated multi-domain saturation attack</span> within 24 hours, successfully forcing the suspension of the US naval escort mission in the Strait of Hormuz. The attack demonstrated Iran's ability to synchronize asymmetric sea-surface maneuvers with sophisticated aerial and cyber strikes, overwhelming traditional defensive layers.",
+          "sources": [],
+          "implicationLabel": "Multi-Domain Saturation",
+          "implications": [
+            "GBAD must evolve from countering isolated threats to defeating coordinated, multi-domain saturation attacks, as seen in Iran's combined use of maritime swarms, ballistic missiles, and drones/cruise missiles. The conflict also exposed the \"cost-curve\" challenge of expensive interceptors against sustained low-cost attacks, reinforcing the need for layered defences and training focused on high-complexity, multi-axis saturation scenarios."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "Theatre 05",
+      "title": "Thailand – Cambodia",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Ops Planning"
+          ],
+          "headline": "A Ceasefire is Not a Withdrawal — the \"Transition to Monitoring\" Phase Needs Deliberate Design",
+          "body": "The current Thailand-Cambodia theatre demonstrates that a ceasefire is not a withdrawal; rather, it is a unique operational state where high-intensity fortification, legal \"Lawfare,\" and diplomatic maneuvering coexist with a kinetic pause.",
+          "sources": [],
+          "implicationLabel": "Ops Planning",
+          "implications": [
+            "The \"Transition to Monitoring\" phase in ceasefire operations must be deliberately planned rather than treated as an administrative drawdown. Forces holding contested terrain must remain combat-ready while simultaneously being patient, disciplined, and capable of measured response. Frontline troops will require explicit ROE and training on how to interact with third-party monitors — defining whether the relationship is cooperative (facilitating access) or restrictive (protecting OPSEC of fortifications)."
+          ]
+        }
+      ]
+    }
+  ],
+  "week": "2026-05-04",
+  "label": "Week of 4 May 2026"
+}
