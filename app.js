@@ -218,11 +218,13 @@ function showView(view) {
   const weekliesView  = document.getElementById("weekliesView");
   const digestView    = document.getElementById("digestView");
   const theatreTabs   = document.getElementById("theatreTabs");
+  const statusBarWrap = document.getElementById("statusBarWrap");
 
   if (view === "digest") {
     weekliesView.classList.add("hidden");
     digestView.classList.remove("hidden");
     theatreTabs.style.display = "none";
+    if (statusBarWrap) statusBarWrap.style.display = "none";
     if (!currentDigestFile && manifest && manifest.digests.length > 0) {
       loadDigest(manifest.digests[manifest.digests.length - 1]);
     } else {
@@ -232,6 +234,7 @@ function showView(view) {
     digestView.classList.add("hidden");
     weekliesView.classList.remove("hidden");
     theatreTabs.style.display = "";
+    if (statusBarWrap) statusBarWrap.style.display = "";
     renderArticles();
   }
 }
