@@ -51,15 +51,13 @@ async function loadManifest() {
 // ── BUILD WEEK SELECTOR ───────────────────────────────────────────────────────
 function buildWeekSelector() {
   const sel = document.getElementById("weekSelector");
-  sel.innerHTML = "";
-  // Show most recent first
-  const sorted = [...manifest.weeklies].reverse();
-  sorted.forEach(w => {
-    const opt = document.createElement("option");
-    opt.value = w;
-    opt.textContent = formatWeekLabel(w);
-    sel.appendChild(opt);
-  });
+  // Default to latest month
+  const latestWeek = manifest.weeklies[manifest.weeklies.length - 1];
+  const latestYM = latestWeek.slice(0, 7);
+  const weeksInMonth = manifest.weeklies.filter(w => w.startsWith(latestYM)).reverse();
+  sel.innerHTML = weeksInMonth.map(w =>
+    `<option value="${w}">${formatWeekLabel(w)}</option>`
+  ).join("");
   sel.addEventListener("change", async () => {
     await loadWeekly(sel.value);
   });
@@ -115,15 +113,19 @@ async function loadWeekly(dateStr) {
     }
   }
 
-  // Sync week selector
-  const sel = document.getElementById("weekSelector");
-  sel.value = dateStr;
-
-  // Sync month nav
   const ym = dateStr.slice(0, 7);
-  document.querySelectorAll(".month-nav li").forEach(li => {
+
+  // Sync month nav active state
+  document.querySelectorAll("#weekliesView .month-nav li").forEach(li => {
     li.classList.toggle("active", li.dataset.ym === ym);
   });
+
+  // Rebuild week selector to show this month's weeks, select current
+  const sel = document.getElementById("weekSelector");
+  const weeksInMonth = manifest.weeklies.filter(w => w.startsWith(ym)).reverse();
+  sel.innerHTML = weeksInMonth.map(w =>
+    `<option value="${w}"${w === dateStr ? " selected" : ""}>${formatWeekLabel(w)}</option>`
+  ).join("");
 
   renderStatusChart();
   renderArticles();
@@ -251,14 +253,19 @@ function selectTheatre(btn) {
 
 // ── MONTH NAV ─────────────────────────────────────────────────────────────────
 async function selectMonth(el, ym) {
-  document.querySelectorAll(".month-nav li").forEach(li => li.classList.remove("active"));
+  document.querySelectorAll("#weekliesView .month-nav li").forEach(li => li.classList.remove("active"));
   el.classList.add("active");
 
-  // Find the most recent weekly for this month
-  const weeksInMonth = manifest.weeklies.filter(w => w.startsWith(ym));
+  // Filter week selector to only show weeks from this month
+  const sel = document.getElementById("weekSelector");
+  const weeksInMonth = manifest.weeklies.filter(w => w.startsWith(ym)).reverse();
+  sel.innerHTML = weeksInMonth.map(w =>
+    `<option value="${w}">${formatWeekLabel(w)}</option>`
+  ).join("");
+
+  // Load the most recent week of that month
   if (weeksInMonth.length > 0) {
-    const latest = weeksInMonth[weeksInMonth.length - 1];
-    await loadWeekly(latest);
+    await loadWeekly(weeksInMonth[0]);
   }
 }
 
@@ -317,16 +324,18 @@ function renderArticle(a) {
 
 // ── DIGEST ────────────────────────────────────────────────────────────────────
 function selectCap(btn) {
-  document.querySelectorAll(".cap-tab").forEach(t => t.classList.remove("active"));
+  // cap tabs live inside #capTabsRow and use .theatre-tab class
+  document.querySelectorAll("#capTabsRow .theatre-tab").forEach(t => t.classList.remove("active"));
   btn.classList.add("active");
   currentCap = btn.dataset.cap;
   renderDigest();
 }
 
-function selectSec(btn) {
-  document.querySelectorAll(".sec-tab").forEach(t => t.classList.remove("active"));
-  btn.classList.add("active");
-  currentSec = btn.dataset.sec;
+function selectSec(el) {
+  // sec buttons are <li> inside digest .month-nav
+  document.querySelectorAll("#digestView .month-nav li").forEach(li => li.classList.remove("active"));
+  el.classList.add("active");
+  currentSec = el.dataset.sec;
   renderDigest();
 }
 
@@ -344,7 +353,7 @@ function renderDigest() {
     capdevs:         "Capability Developments"
   };
 
-  let html = `<div class="digest-content-inner">`;
+  let html = `<div class="article-inner">`;
   html += `<div class="digest-section-header">${secLabels[currentSec] || currentSec}</div>`;
 
   if (currentSec === "changed") {
