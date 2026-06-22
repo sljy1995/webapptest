@@ -419,3 +419,131 @@ html, body {
 
   #digestContent { padding: 14px 12px; overflow: visible; }
 }
+
+/* ═══ ADDITIONS / OVERRIDES ════════════════════════════════════════ */
+
+/* Remove right border from side-nav and bottom border from status-bar-wrap */
+.side-nav { border-right: none; }
+.status-bar-wrap { border-bottom: none; }
+
+/* Side-nav: more margin from edge, bigger font */
+.side-nav {
+  width: 175px;
+  padding: 20px 12px 20px 18px;
+}
+.side-nav li {
+  font-size: 13.5px;
+  padding: 11px 14px;
+}
+.side-nav-label { font-size: 10.5px; padding: 0 6px 10px; }
+
+/* Vertical separator line between side-nav and content */
+.digest-layout { border-top: 1px solid var(--border); }
+.content-body  { border-top: 1px solid var(--border); }
+
+/* ── MONTH NAV BAR (replaces side-nav for weeklies) ─────────────── */
+.month-nav-bar {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 8px 20px;
+  flex-shrink: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.month-nav-bar::-webkit-scrollbar { display: none; }
+.month-nav-bar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: max-content;
+}
+.month-nav-bar li {
+  background: #1a2a3a;
+  border: 1px solid #2a3e52;
+  color: var(--text-muted);
+  padding: 8px 20px;
+  font-size: 13px; font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  user-select: none;
+}
+.month-nav-bar li:hover { border-color: var(--gold); color: var(--gold-light); }
+.month-nav-bar li.active {
+  background: #0c1820;
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+/* Weeklies view has no side-nav now — just the article panel */
+#weekliesView { border-top: none; }
+
+/* ── ABOUT MODAL ────────────────────────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 300;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.hidden { display: none; }
+
+.modal {
+  background: #111827;
+  border: 1px solid #1e2a3f;
+  border-radius: 12px;
+  padding: 32px 28px 28px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal-close {
+  position: absolute; top: 14px; right: 16px;
+  background: none; border: none;
+  color: var(--text-dim); font-size: 18px;
+  cursor: pointer; padding: 4px 8px;
+  border-radius: 4px; transition: color 0.15s;
+}
+.modal-close:hover { color: var(--text); }
+
+.modal-logo {
+  display: flex; justify-content: center;
+  margin-bottom: 18px;
+}
+.modal-logo img {
+  width: 64px; height: 64px;
+  border-radius: 10px; object-fit: cover;
+}
+.modal-title {
+  font-family: 'Barlow Condensed', 'Agency FB', Arial, sans-serif;
+  font-size: 22px; font-weight: 700;
+  color: #fff; text-align: center;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.modal-body {
+  font-size: 13.5px; color: #cbd5e1;
+  line-height: 1.75; margin-bottom: 14px;
+}
+.modal-infographic-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #1a2a3a; border: 1px solid #2a3e52;
+  border-radius: 6px; padding: 10px 16px;
+  color: var(--text-muted); text-decoration: none;
+  font-size: 13px; font-weight: 500;
+  transition: border-color 0.15s, color 0.15s;
+  margin-top: 4px;
+}
+.modal-infographic-link:hover { border-color: var(--gold); color: var(--gold-light); }
+
+/* Mobile modal */
+@media (max-width: 600px) {
+  .modal { padding: 24px 18px 22px; }
+  .month-nav-bar ul { flex-wrap: nowrap; }
+  .month-nav-bar { padding: 8px 12px; }
+}
