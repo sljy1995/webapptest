@@ -1,0 +1,170 @@
+{
+  "statusChart": [
+    {
+      "theatre": "Russia–Ukraine",
+      "phase": "Attritional War",
+      "trend": "↑ Escalating",
+      "progress": "Frontlines largely static; Russian forces infiltrating Kostiantynivka (123–125 troops inside city); Ukraine controls the air-strike initiative — 992-drone record strike this week. No peace talks scheduled. G7 Évian commitments to expanded AD and sanctions in implementation."
+    },
+    {
+      "theatre": "Israel–Lebanon",
+      "phase": "Ceasefire",
+      "trend": "→ Critically Fragile",
+      "progress": "Ceasefire notionally in effect since Apr 16 extension but violated daily; 15 killed 19 Jun before emergency ceasefire restored same day. 5th-round Washington talks opening today. IDF security zone in S. Lebanon still occupied. Hezbollah outside talks."
+    },
+    {
+      "theatre": "Israel–Gaza",
+      "phase": "Ceasefire",
+      "trend": "→ Contested",
+      "progress": "IDF controls ~64% of Gaza. Phase 1 ceasefire holding technically; 990+ Palestinians killed since ceasefire began. Phase 2 disarmament clauses (weapons restrictions, ISF) unresolved. Cairo talks resumed 19–20 Jun with \"positive atmosphere\" but no breakthrough."
+    },
+    {
+      "theatre": "Israel–US–Iran",
+      "phase": "Ceasefire",
+      "trend": "↓ De-escalating (Fragile)",
+      "progress": "MOU signed Geneva 19 Jun. Hormuz operationally open but restricted — 25 ships/day vs. 70 pre-war baseline; 80 mines uncleared in central channel; Iran's 48-hr permit layer active; ~600 vessels backlogged in Gulf. 60-day nuclear talks clock running (expires ~19 Aug)."
+    },
+    {
+      "theatre": "Thailand–Cambodia",
+      "phase": "Ceasefire",
+      "trend": "→ Stable",
+      "progress": "Dec 25 ceasefire line intact; no kinetic incidents. UNCLOS conciliation formally activated — Thailand appointed conciliators 16 Jun; 30-day chairperson election clock running. Land border economically severed by Hun Sen decree. ASEAN Observer Team monitoring but unable to publish findings."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "Theatre 01",
+      "title": "Russia – Ukraine",
+      "subtitle": "992-Drone Moscow Strike &amp; Asia Spillover",
+      "articles": [
+        {
+          "tags": [
+            "Fires &amp; Strikes",
+            "Information Operations"
+          ],
+          "headline": "Ukraine's 992-drone Moscow strike: the war's first strategic fires-as-IO operation at national scale",
+          "body": "Ukraine's record overnight campaign on 17–18 June — <span class='hl'>992 drones, Moscow refinery hit for the second time in a week, 18 apartment buildings damaged, airport evacuations, one child killed</span> — was simultaneously the largest drone military operation of the war and a precision information operation. G7 leaders, simultaneously at Évian, committed to expanded air defence and sanctions in direct response to the preceding Lavra strike.<span>trtworld</span></span> <span class='hl'>Taiwan's civil defence NGO, Kuma Academy, has launched its first civilian drone training programme</span>, directly inspired by the war in Ukraine. The fully booked programme trains about 75 diverse citizens monthly — mostly women, spanning teenagers to seniors — to fly small, GPS-free, Taiwanese-made drones manually to bypass electronic jamming. The goal is civil resilience rather than combat, turning citizens into active observers who can gather and share risk information. This initiative comes as Taiwan lowers its drone registration age to 14 (with over 39,000 registered drones nationwide), and Ukrainian firms actively market combat-proven drone systems to Asian militaries amid rising China–Taiwan tensions.</span>",
+          "sources": [
+            "opb",
+            "trtworld",
+            "newswall"
+          ],
+          "implicationLabel": "Fires · Information Operations · GBAD · C2",
+          "implications": [
+            "<strong>Redundancy-through-volume is a proven strategic fires doctrine</strong> — 992 launches guaranteeing decisive hits against hardened national air defence is replicable by any military with drone industrial capacity. GBAD and installation protection planning must be stress-tested against volume saturation.",
+            "<strong>Kinetic actions timed to diplomatic windows generate compounding strategic effects</strong> — the Lavra strike at G7 opening generated a political commitment; the Moscow retaliation at G7 closing generated a Russian escalation pledge. Timing of kinetic and diplomatic actions relative to each other is a core operational planning variable.",
+            "<strong>Civilian drone literacy as a mobilisation multiplier</strong> — Taiwan's model demonstrates that pre-trained civilian drone operators constitute a scalable ISR and civil-defence force-multiplier that does not require military manpower. A structured civilian drone-literacy programme — integrated with reserve or civil defence architecture — could provide a reserve ISR and RSTA layer at low cost.",
+            "<strong>GPS-free, jamming-resistant training as doctrinal baseline</strong> — Taiwan's deliberate exclusion of GPS and autonomous modes from training, specifically to prepare for EW environments, is a direct doctrinal lesson. Drone training programmes should include non-GPS manual flight as a standing proficiency requirement, not an advanced module.",
+            "<strong>Ukrainian drone firms marketing to Asian militaries</strong> — the active commercial outreach by Ukrainian manufacturers confirms that combat-proven UAS platforms and doctrine are now accessible at procurement scale. Procurement planners should track these offerings as potential rapid-fielding options for gap-filling C-UAS and ISR capabilities."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "Theatre 02",
+      "title": "Israel – Lebanon",
+      "subtitle": "Hezbollah Destroys Three Merkavas; IDF Retaliates with 150 Strikes",
+      "articles": [
+        {
+          "tags": [
+            "Manoeuvre",
+            "Fires",
+            "Protection"
+          ],
+          "headline": "Ambush tactics: Hezbollah destroys Israeli tanks; IDF retaliates with 150 strikes killing 47",
+          "body": "Hezbollah ambush: Hezbollah forces ambushed an advancing Israeli armoured element attempting to reach the northern side of the hilltop. <span class='hl'>Utilising guided anti-tank missiles and explosive drones, Hezbollah destroyed three Merkava tanks and killed four Israeli soldiers (including a Lieutenant Colonel)</span>, marking one of the costliest single incidents for the IDF since the March escalation.</span> Israeli retaliation: <span class='hl'>The IDF responded on Friday with a massive wave of approximately 150 retaliatory airstrikes</span> targeting Hezbollah infrastructure across the Nabatiyeh area and the Bekaa Valley (including the village of Douris). According to the Lebanese Health Ministry, the strikes killed at least 47 people and wounded 97 others.</span>",
+          "sources": [
+            "yenisafak",
+            "reuters"
+          ],
+          "implicationLabel": "Manoeuvre · Fires · Protection",
+          "implications": [
+            "<strong>Predictable traps</strong> — Hezbollah used persistent ISR to monitor the advancing Israeli force, selected a chokepoint at the northern approach to Ali al-Taher Heights, and pre-emplaced anti-tank guided missiles and explosive drones in a coordinated ambush. The kill zone was not improvised — it was prepared against a predictable axis. Armoured and mechanised formations must assume that any predictable approach axis into restrictive or elevated terrain has been pre-surveyed and pre-wired by a capable adversary. Route selection, advance-guard density, and counter-ISR measures (thermal screening, smoke, deception moves) are not optional in this environment.",
+            "<strong>Double-layer attacks</strong> — guided ATGMs and explosive drones as the combined anti-armour system. Hezbollah employed both simultaneously — ATGMs for initial tank kills, explosive drones for the evacuation force. This is a dual-layer anti-armour employment doctrine: destroy the lead vehicles, then attack the recovery element when it moves predictably to the kill zone. Planners should review whether crew extraction and casualty evacuation drills are sufficiently protected against drone engagement of the recovery force — a vulnerability this event confirms is being deliberately exploited.",
+            "<strong>Heavy losses</strong> — a platoon losing three of its tanks in a single ambush represents a tactical formation rendered combat-ineffective in minutes. For armoured formations, combat viability criteria and decision triggers for withdrawal or re-tasking must be pre-defined and pre-delegated — waiting for higher command authority in a fast-moving ambush environment is not viable."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "Theatre 03",
+      "title": "Israel – Gaza",
+      "subtitle": "Governance Transfer Without Disarmament",
+      "articles": [
+        {
+          "tags": [
+            "C2",
+            "CIMIC"
+          ],
+          "headline": "Hamas offers a \"Transitional Committee\" without weapons surrender",
+          "body": "Hamas's offer of a National Transitional Committee — governance transfer without weapons surrender — separates the governance track from the security track, offering political progress while retaining the military track as a separate negotiation. UN envoy Mladenov's Clauses 8 and 9 presentation on 18 June was Hamas's first direct engagement with the disarmament text.",
+          "sources": [],
+          "implicationLabel": "CIMIC · C2 · Mobilisation Readiness",
+          "implications": [
+            "Hamas's model — governance transfer without disarmament — is the most common partial-compliance pattern in post-conflict stabilisation and has precedent in Lebanon, Kosovo, and Afghanistan. Peacekeeping and stabilisation forces will likely deploy into areas where the political rulers have changed, but the main militant group is still fully armed. Peacekeepers must plan for how to operate effectively in this exact scenario."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "Theatre 04",
+      "title": "Israel – US – Iran",
+      "subtitle": "MOU Signed, Same-Day Re-Closure; Apache Downed by Shahed",
+      "articles": [
+        {
+          "tags": [
+            "Diplomacy",
+            "SLOC"
+          ],
+          "headline": "Lebanon leverage and the 19 June re-closure",
+          "body": "On 17 June, a Pakistani and Qatari-mediated accord was signed by the US and Iran, establishing a 60-day roadmap to end active state-on-state hostilities. In compliance, the US formally lifted its naval blockade on Iranian ports on 18 June. Despite the peace track, Iran moved to institutionalise its strategic gains by establishing the Iranian-controlled Persian Gulf Strait Authority (PGSA) on 18 June. All commercial transit through the Strait of Hormuz is now subjected to strict Iranian clearance, route assignments, and scheduling. <span class='hl'>The treaty nearly collapsed on 19 June following intense Israel–Hezbollah kinetic clashes</span>. Iran briefly re-declared the Strait of Hormuz closed on 20 June to pressure the US into restraining Israel. De-escalation was achieved by 22 June via a newly established tripartite US–Iran–Lebanon de-confliction cell to insulate the peace roadmap.</span> <span class='hl'>Based on Military Times analysis published 18 June</span> — drawing on the Stimson Center, CSIS, and Pentagon sources — the 8 June downing of a US Army AH-64 Apache by an Iranian Shahed drone near the Strait of Hormuz represents a watershed moment in aerial warfare. The Shahed was likely employed as an anti-helicopter weapon — not an air-defence system — with analysts assessing proximity-fuse detonation or intentional intercept as the most plausible mechanism, noting that both crew survived and made a controlled water landing, arguing against direct warhead detonation. The cost asymmetry is stark: a $20,000–$50,000 Shahed brought down a $33–$65 million Apache. Both crew members were rescued by a US Navy Corsair unmanned surface vessel operated by Task Force 59 — the first combat drone rescue in US military history. Trump publicly attributed the downing to Iran; US attribution remains under investigation; no confirmed claim.</span>",
+          "sources": [
+            "isw",
+            "militarytimes"
+          ],
+          "implicationLabel": "Sustainment · C2",
+          "implications": [
+            "<strong>Do not treat the MOU signing as a normalisation signal</strong> — the 24-hour collapse confirms that Hormuz reopening is conditional, reversible, and dependent on political compliance by parties who demonstrated same-day non-compliance.",
+            "<strong>Fuel and logistics planning baseline</strong> — supply lines and fuel planning should assume the Strait of Hormuz will face delays, naval mines, and heavy backlogs through the end of 2026.",
+            "<strong>Attack helicopters are no longer apex predators in drone-dense airspace.</strong> Low-altitude armour and 128-target tracking systems no longer guarantee survival against autonomous mass. The loss of an Apache to a $20,000 OWA munition establishes a staggering ~1,000:1 asymmetric deficit that upends traditional aviation planning. Drone-dense airspace must now be treated as a high-threat environment equivalent to MANPADS saturation. Mission planning must enforce identical threat-ring routing, altitude restrictions, and strict escort protocols in all contested theatres.",
+            "<strong>Compressed doctrinal transfer timelines</strong> — the deployment of the Shahed as an anti-helicopter weapon confirms that tactical innovations from Ukraine migrate to secondary theatres within months, not years. Rapid cross-theatre proliferation is now a structural baseline, not a long-term contingency. Intelligence synthesis and capability development must assume that any unmanned tactic validated in one combat zone will achieve immediate, global proliferation among both state actors and proxy adversaries.",
+            "<strong>The end of solo manned operations</strong> — autonomous mass has stripped attack aviation of individual freedom of manoeuvre. Manned rotary assets can no longer operate in isolation; they require close mutual support and multi-aircraft sections to survive terminal drone-saturation zones. Doctrinal frameworks must adapt to mandatory section-level employment, where at least one aircraft is dedicated entirely to counter-UAS overwatch. This shift structurally reduces the organic fires capacity of the aviation package to prioritise platform survival.",
+            "<strong>Unmanned personnel recovery and CASEVAC</strong> — the historic Task Force 59 USV rescue establishes a clear operational precedent: autonomous systems can execute personnel recovery in contested domains without risking additional crewed platforms. For broader force design, this validates a necessary transition toward unmanned forward casualty extraction (CASEVAC). Where extreme drone density renders crewed MEDEVAC helicopters an unacceptable risk, autonomous extraction must become the primary recovery mechanism."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "Theatre 05",
+      "title": "Thailand – Cambodia",
+      "subtitle": "Dual-Track Land-and-Legal Response",
+      "articles": [
+        {
+          "tags": [
+            "C2",
+            "Legal Warfare"
+          ],
+          "headline": "Thailand's anti-drone centre signals dual-track land-and-legal response",
+          "body": "<span class='hl'>Thailand formally entered the UNCLOS legal process by appointing its conciliators</span>, and it approved a national anti-drone centre for border security. <span class='hl'>By setting up the National Anti-Drone Centre specifically targeting border provinces (like Si Sa Ket and Surin) alongside the UNCLOS track</span>, Thailand is signalling that it will engage in the legal process at sea, but will not allow Cambodia to use asymmetric tactics — like the drone swarms seen earlier this year — to gain leverage on the land border while arbitration is underway. Following bilateral breakdowns — where territorial friction led Bangkok to unilaterally scrap the 2001 Overlapping Claims Area (OCA) MOU — the distinct disputes have politically fused.<span>thairath</span></span> At the same time, Cambodia used the 36th UNCLOS States Parties meeting (15–18 June, New York) to publicly explain its case to 171 countries — building international support for its legal position while Thailand was still appointing its conciliators. The bottom line: the physical shooting has stopped, but the real contest has moved to the legal and diplomatic arena.",
+          "sources": [
+            "reuters",
+            "thairath"
+          ],
+          "implicationLabel": "Civil-Military · Protection",
+          "implications": [
+            "<strong>Permanent C-UAS infrastructure over ad-hoc deployments</strong> — rather than buying drones and deploying them case by case, Thailand built a dedicated national centre as standing border-security infrastructure. Consider whether a similar permanent C-UAS structure — rather than ad-hoc platform deployments — makes more sense for key installations and border-adjacent areas.",
+            "<strong>Parallel legal-kinetic tracks</strong> — a ceasefire and a legal dispute can run at the same time, and both can break down. ASEAN contingency planners must track the legal track and the kinetic track as two parallel live wires — a breakdown in court or on the ground can re-escalate the other. They are not sequential steps.",
+            "<strong>International law as a weapon</strong> — Cambodia's presentation to 171 states is a reminder that international law is a weapon. When a dispute goes to a multilateral legal body, every past incident, every rules-of-engagement decision, and every operational action becomes evidence. Legal and CIMIC officers must be fluent in UNCLOS dispute-settlement as a standing competency, not a subject to pick up when a crisis arrives."
+          ]
+        }
+      ]
+    }
+  ],
+  "week": "2026-06-15",
+  "label": "Week of 15 Jun 2026"
+}
