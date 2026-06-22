@@ -183,11 +183,11 @@ html, body {
 
 /* ─── WEEKLY LEFT SIDEBAR ────────────────────────────────────────── */
 .weekly-sidebar {
-  width: 180px;
+  width: 220px;
   flex-shrink: 0;
   background: var(--bg);
   border-right: none;
-  padding: 16px 8px 16px 40px;
+  padding: 16px 12px 16px 60px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -245,10 +245,10 @@ html, body {
 
 /* ─── SIDE NAV (digest sections only) ───────────────────────────── */
 .side-nav {
-  width: 240px; flex-shrink: 0;
+  width: 220px; flex-shrink: 0;
   background: var(--bg);
   border-right: none;
-  padding: 16px 8px 16px 240px;
+  padding: 16px 12px 16px 60px;
   overflow-y: auto;
   display: flex; flex-direction: column; gap: 4px;
 }
@@ -284,7 +284,7 @@ html, body {
 /* ─── ARTICLE PANEL (shared by weeklies and digest) ─────────────── */
 .article-panel {
   flex: 1; overflow-y: auto;
-  padding: 24px 20px;
+  padding: 24px 28px;
   background: var(--bg);
   display: flex; flex-direction: column; align-items: center;
 }
