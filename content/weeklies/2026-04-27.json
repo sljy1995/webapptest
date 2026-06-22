@@ -1,0 +1,138 @@
+{
+  "statusChart": [
+    {
+      "theatre": "Russia–Ukraine",
+      "phase": "Active Combat",
+      "trend": "↑ Escalating",
+      "progress": "Fibre-optic FPV operations routine in Donetsk at 30–50 km. Voronezh strike (29 Apr) on Mi-28/Mi-17 at refuelling stop; Pokrovsk Ka-52 mid-air shoot-down (20 Mar) confirmed rotary-wing in FPV envelope."
+    },
+    {
+      "theatre": "Israel–Lebanon",
+      "phase": "Ceasefire-in-Name",
+      "trend": "↑ Deteriorating",
+      "progress": "Senior IDF commanders publicly state daily friendly casualties from FPV strikes on static positions. Lebanese death toll reached 41 in 24 hours on 2 May. Talks pending; Hezbollah excluded."
+    },
+    {
+      "theatre": "Israel–Gaza",
+      "phase": "Fragile Ceasefire",
+      "trend": "↑ Consolidating",
+      "progress": "\"Yellow line\" advanced 37 km in seven months since 11 Oct 2025 ceasefire. 13 new IDF outposts. ~60% of Gaza now enclosed. \"Orange Line\" formalises the consolidation."
+    },
+    {
+      "theatre": "Israel–US–Iran",
+      "phase": "Coercive Deterrence",
+      "trend": "→ Active Posturing",
+      "progress": "Project Freedom announced 3 May for 4 May execution. CENTCOM force package: DDGs, 100+ aircraft, 15,000 personnel. Iran warns intervention violates ceasefire."
+    },
+    {
+      "theatre": "Thailand–Cambodia",
+      "phase": "Hold &amp; Monitor",
+      "trend": "→ Holding",
+      "progress": "No new direct incidents this week. Thai forces hold O'Smach compound and other terrain. Cambodian response is diplomatic protest combined with selective probing."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "Theatre 01",
+      "title": "Russia – Ukraine",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Protection"
+          ],
+          "headline": "FPV Threat Extends into Rear Areas and Rotary-Wing Operations",
+          "body": "Fibre-optic FPV drones operate routinely in the Donetsk sector at ranges out to 30–50 km, immune to RF jamming and producing high-resolution targeting feeds that have collapsed Ukrainian MEDEVAC and resupply tempos. The <span class='hl'>29 April Voronezh strike on a Mi-28 and Mi-17 at a refuelling stop</span>, together with the <span class='hl'>20 March Pokrovsk Ka-52 mid-air shoot-down</span>, confirm rotary-wing assets are now in the FPV engagement envelope at moments of greatest vulnerability — landing, hover, refuelling, shutdown.",
+          "sources": [],
+          "implicationLabel": "Force Protection",
+          "implications": [
+            "FPV recognition and small-arms anti-air defense must be treated as individual skills rather than specialist functions. CASEVAC concepts predicated on air superiority and unjammed links are no longer valid. This implies that small-unit and platoon-medic training must incorporate immediate-action drills for FPV detection during casualty handling, and that the CASEVAC chain must be treated as an operational planning factor rather than an assured logistical enabler. For unit commanders, the lesson is to treat any pause for repair, casualty collection, or refuelling as a high-risk window requiring active C-UAS posture, not as a tactical break."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "Theatre 02",
+      "title": "Israel – Lebanon",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Campaign Planning"
+          ],
+          "headline": "Enforcement-Poor Ceasefires Create Exposure Without Freedom of Action",
+          "body": "Senior Israeli commanders are publicly stating that the <span class='hl'>ceasefire framework is causing daily casualties</span> because Israeli forces remain in static positions inside the security zone where they are exposed to FPV strikes, while political constraints preclude kinetic retaliation. Concurrently, the Lebanese state lacks the requisite enforcement capacity to neutralize non-state actors, rendering the ceasefire structurally hollow. The <span class='hl'>2 May Lebanese death toll of 41 in 24 hours</span>, against a \"ceasefire\" still nominally in effect, illustrates the pattern.",
+          "sources": [],
+          "implicationLabel": "Campaign Planning",
+          "implications": [
+            "A ceasefire signed without the kinetic conditions for its implementation produces a worst-of-both-worlds posture: forces denied freedom of action but also denied withdrawal. The doctrinal point — ends, ways and means must be sequenced through to a sustainable end-state, not just to cessation — is direct for planners contributing to peacekeeping or stabilisation: ceasefire terms must be assessed against the host nation's actual enforcement capacity, not just the political framework."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "Theatre 03",
+      "title": "Israel – Gaza",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Terrain Shaping"
+          ],
+          "headline": "Static Lines as Active Operational Capability",
+          "body": "The original \"Yellow Line,\" initially a temporary buffer, has expanded 37 km since the 11 Oct 2025 ceasefire, now covering ~60% of Gaza and anchoring 13 Israeli outposts. These positions are no longer temporary — <span class='hl'>satellite imagery shows them hardened, interconnected by road networks, and integrated into a coherent control grid</span>. The emergence of the \"Orange Line\" formalises this shift: static defensive lines are being deliberately used to partition territory and consolidate long-term control.",
+          "sources": [],
+          "implicationLabel": "Campaign Planning",
+          "implications": [
+            "A ceasefire is a phase, not an end-state: the side with greater operational freedom continues shaping the terrain. For hold-and-monitor tasks, passive postures do not preserve the status quo — they allow it to shift. The same logic applies to homeland defence: any \"freeze\" that leaves an adversary holding contested ground (sealine, EEZ, maritime features) incentivises incremental consolidation. Demarcation and enforcement must be built in from the outset, not treated as a follow-on."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "Theatre 04",
+      "title": "Israel – US – Iran",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Strategic Communication"
+          ],
+          "headline": "Project Freedom — Narrative Framing",
+          "body": "On 3 May, President Trump <span class='hl'>announced \"Project Freedom\"</span> — a US military operation to escort stranded foreign-flagged commercial vessels out of the Strait of Hormuz, from 4 May. CENTCOM disclosed the force package the same evening: guided-missile destroyers, 100+ land- and sea-based aircraft, multi-domain unmanned platforms, and 15,000 service members. Adm. Brad Cooper stated the mission is to \"restore freedom of navigation\" and runs alongside the existing US blockade of Iranian ports. Trump framed it as humanitarian while signalling readiness to use force if disrupted, positioning the US as a security provider rather than an escalator and reinforcing coalition legitimacy; by the time Iranian responses emerged, this framing was already dominant in international media.",
+          "sources": [],
+          "implicationLabel": "Information Ops",
+          "implications": [
+            "The communications cycle kept pace ahead of the adversary counter-narrative. The lesson is the integration of operational announcement and same-day capability disclosure — clear, factual, operationally meaningful — paired with framing language (humanitarian, defensive, treaty-compliant) that preserves adversary off-ramps. In homeland defence and contingency response, framing is not adjunct to operations — it shapes their strategic effect."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "Theatre 05",
+      "title": "Thailand – Cambodia",
+      "subtitle": "",
+      "articles": [
+        {
+          "tags": [
+            "Strategic"
+          ],
+          "headline": "Terrain as Operational and Political Leverage",
+          "body": "No new direct military incidents on the land border this week. Thai forces continue to hold strategically and symbolically significant terrain, including the <span class='hl'>O'Smach compound</span>, while bilateral mechanisms play out in the legal-territorial and information domains. Cambodia's response remains diplomatic protest with selective probing. The seized objective functions simultaneously as a tactical asset, IO lever, and bargaining chip.",
+          "sources": [],
+          "implicationLabel": "Sustainment",
+          "implications": [
+            "Force structures must sustain ground holding while political-legal efforts unfold over months. Standard ICT cycles assume short-duration tasks; sustained hold-and-monitor against a near-peer requires partial call-up models, planned active–reserve rotation, and built-in demobilisation triggers from the outset. Welfare, family communications, and civil-military ROE must be designed for prolonged presence — not short, high-intensity operations — and exercised in peacetime."
+          ]
+        }
+      ]
+    }
+  ],
+  "week": "2026-04-27",
+  "label": "Week of 27 Apr 2026"
+}
