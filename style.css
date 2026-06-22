@@ -245,10 +245,10 @@ html, body {
 
 /* ─── SIDE NAV (digest sections only) ───────────────────────────── */
 .side-nav {
-  width: 180px; flex-shrink: 0;
+  width: 240px; flex-shrink: 0;
   background: var(--bg);
   border-right: none;
-  padding: 16px 8px 16px 40px;
+  padding: 16px 8px 16px 240px;
   overflow-y: auto;
   display: flex; flex-direction: column; gap: 4px;
 }
