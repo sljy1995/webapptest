@@ -72,16 +72,15 @@ function formatWeekLabel(dateStr) {
 
 // ── BUILD MONTH NAV ───────────────────────────────────────────────────────────
 function buildMonthNav() {
-  const ul = document.querySelector(".month-nav ul");
+  const ul = document.getElementById("monthStripList");
+  if (!ul) return;
   ul.innerHTML = "";
-  // Group weeklies by month, derive unique months, show most recent first
   const months = [];
   const seen = new Set();
   [...manifest.weeklies].reverse().forEach(w => {
-    const ym = w.slice(0, 7); // "2026-06"
+    const ym = w.slice(0, 7);
     if (!seen.has(ym)) { seen.add(ym); months.push(ym); }
   });
-
   months.forEach((ym, i) => {
     const li = document.createElement("li");
     li.textContent = formatMonthLabel(ym);
@@ -115,8 +114,8 @@ async function loadWeekly(dateStr) {
 
   const ym = dateStr.slice(0, 7);
 
-  // Sync month nav active state
-  document.querySelectorAll("#weekliesView .month-nav li").forEach(li => {
+  // Sync month strip active state
+  document.querySelectorAll("#monthStripList li").forEach(li => {
     li.classList.toggle("active", li.dataset.ym === ym);
   });
 
@@ -216,18 +215,20 @@ function closeSidebar() {
 
 function showView(view) {
   currentView = view;
-  const weekliesView  = document.getElementById("weekliesView");
-  const digestView    = document.getElementById("digestView");
-  const theatreTabs   = document.getElementById("theatreTabs");
-  const weekWrap      = document.getElementById("weekSelectorWrap");
-  const statusBarWrap = document.getElementById("statusBarWrap");
+  const weekliesView   = document.getElementById("weekliesView");
+  const digestView     = document.getElementById("digestView");
+  const theatreTabs    = document.getElementById("theatreTabs");
+  const weekWrap       = document.getElementById("weekSelectorWrap");
+  const statusBarWrap  = document.getElementById("statusBarWrap");
+  const monthStripWrap = document.getElementById("monthStripWrap");
 
   if (view === "digest") {
     weekliesView.classList.add("hidden");
     digestView.classList.remove("hidden");
     theatreTabs.style.display = "none";
     weekWrap.style.display = "none";
-    if (statusBarWrap) statusBarWrap.style.display = "none";
+    if (statusBarWrap)  statusBarWrap.style.display  = "none";
+    if (monthStripWrap) monthStripWrap.style.display = "none";
     if (!currentDigestFile && manifest && manifest.digests.length > 0) {
       loadDigest(manifest.digests[manifest.digests.length - 1]);
     } else {
@@ -238,7 +239,8 @@ function showView(view) {
     weekliesView.classList.remove("hidden");
     theatreTabs.style.display = "";
     weekWrap.style.display = "";
-    if (statusBarWrap) statusBarWrap.style.display = "";
+    if (statusBarWrap)  statusBarWrap.style.display  = "";
+    if (monthStripWrap) monthStripWrap.style.display = "";
     renderArticles();
   }
 }
@@ -253,17 +255,15 @@ function selectTheatre(btn) {
 
 // ── MONTH NAV ─────────────────────────────────────────────────────────────────
 async function selectMonth(el, ym) {
-  document.querySelectorAll("#weekliesView .month-nav li").forEach(li => li.classList.remove("active"));
+  document.querySelectorAll("#monthStripList li").forEach(li => li.classList.remove("active"));
   el.classList.add("active");
 
-  // Filter week selector to only show weeks from this month
   const sel = document.getElementById("weekSelector");
   const weeksInMonth = manifest.weeklies.filter(w => w.startsWith(ym)).reverse();
   sel.innerHTML = weeksInMonth.map(w =>
     `<option value="${w}">${formatWeekLabel(w)}</option>`
   ).join("");
 
-  // Load the most recent week of that month
   if (weeksInMonth.length > 0) {
     await loadWeekly(weeksInMonth[0]);
   }
@@ -336,7 +336,7 @@ function selectCap(btn) {
 }
 
 function selectSec(el) {
-  document.querySelectorAll("#digestView .month-nav li").forEach(li => li.classList.remove("active"));
+  document.querySelectorAll(".digest-sec-strip li").forEach(li => li.classList.remove("active"));
   el.classList.add("active");
   currentSec = el.dataset.sec;
   renderDigest();
