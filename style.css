@@ -338,6 +338,48 @@ html, body {
   min-width: 200px;
 }
 
+/* ─── MONTH STRIP (always horizontal) ──────────────────────────── */
+.month-strip {
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.month-strip::-webkit-scrollbar { display: none; }
+.month-strip ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 14px;
+  gap: 0;
+  min-width: max-content;
+}
+.month-strip li {
+  flex-shrink: 0;
+  padding: 10px 18px;
+  font-family: 'Arial', sans-serif;
+  font-size: 13px;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.15s;
+  white-space: nowrap;
+  user-select: none;
+}
+.month-strip li:hover { color: var(--text-primary); }
+.month-strip li.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--gold);
+}
+
+/* Digest section strip sits above digest layout */
+.digest-sec-strip {
+  border-bottom: 1px solid var(--border);
+}
+.digest-sec-strip ul { padding: 0 14px; }
+
 /* ─── CONTENT BODY ──────────────────────────────────────────────── */
 .content-body {
   display: flex;
@@ -345,30 +387,12 @@ html, body {
   overflow: hidden;
 }
 
-/* ─── MONTH NAV ─────────────────────────────────────────────────── */
-.month-nav {
-  width: 150px;
-  flex-shrink: 0;
-  background: var(--bg-dark);
-  border-right: 1px solid var(--border);
-  padding: 12px 0;
-  overflow-y: auto;
-}
-.month-nav ul { list-style: none; }
-.month-nav li {
-  padding: 10px 18px 10px 20px;
-  font-family: 'Arial', sans-serif;
-  font-size: 13px;
-  color: var(--text-muted);
-  cursor: pointer;
-  border-left: 3px solid transparent;
-  transition: all 0.15s;
-}
-.month-nav li:hover { color: var(--text-primary); background: rgba(255,255,255,0.04); }
-.month-nav li.active {
-  color: var(--text-primary);
-  border-left-color: var(--gold);
-  background: rgba(201,151,58,0.08);
+/* ─── DIGEST LAYOUT (no left sidebar anymore) ───────────────────── */
+.digest-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  flex-direction: column;
 }
 
 /* ─── ARTICLE PANEL ─────────────────────────────────────────────── */
@@ -594,135 +618,69 @@ html, body {
 ::-webkit-scrollbar-thumb { background: #2a3e50; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #3a5060; }
 
+
 /* ═══════════════════════════════════════════════════════════════════
-   MOBILE RESPONSIVE — added after base styles
-   Breakpoints: <600px = phone, 600–900px = tablet, >900px = desktop
-   Strategy: desktop stays 100vh fixed layout; mobile becomes
-   natural-scroll with collapsing chrome
+   MOBILE RESPONSIVE
    ═══════════════════════════════════════════════════════════════════ */
 
-/* ── TABLET: status/week bar go full-width ── */
+/* ── TABLET ── */
 @media (max-width: 900px) {
   .status-bar { width: 90%; }
   .status-chart-panel { width: 90%; }
   .article-inner { max-width: 100%; }
 }
 
-/* ── PHONE: full restructure ── */
+/* ── PHONE ── */
 @media (max-width: 600px) {
-
-  /* Switch app shell from fixed-height to natural scroll */
   html, body { height: auto; min-height: 100%; overflow-x: hidden; }
 
-  .app-shell {
-    height: auto;
-    min-height: 100vh;
-    overflow: visible;
-  }
+  .app-shell { height: auto; min-height: 100vh; overflow: visible; }
 
-  /* Allow content areas to scroll naturally */
   .content-body,
-  .digest-layout {
-    overflow: visible;
-    height: auto;
-  }
-
+  .digest-layout,
   .article-panel,
-  .month-nav {
-    overflow: visible;
-    height: auto;
-  }
+  .digest-view { overflow: visible; height: auto; }
 
-  /* Topbar: stack title smaller, hide CTA button on very small screens */
-  .topbar {
-    padding: 10px 12px;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .site-title { font-size: 18px; letter-spacing: 0.04em; }
-
-  .digest-cta {
-    padding: 6px 16px;
-    font-size: 12px;
-  }
-
+  /* Topbar */
+  .topbar { padding: 10px 12px; gap: 8px; }
+  .site-title { font-size: 18px; letter-spacing: 0.03em; }
+  .digest-cta { padding: 5px 14px; font-size: 12px; }
   .topbar-right-spacer { display: none; }
 
-  /* Theatre tabs: horizontal scroll strip instead of wrap */
+  /* Theatre / cap tabs: horizontal scroll */
   .theatre-tabs {
     flex-wrap: nowrap;
     overflow-x: auto;
     justify-content: flex-start;
-    padding: 8px 12px;
-    gap: 6px;
+    padding: 8px 10px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
   .theatre-tabs::-webkit-scrollbar { display: none; }
+  .theatre-tab { flex-shrink: 0; font-size: 12px; padding: 5px 12px; }
 
-  .theatre-tab {
-    flex-shrink: 0;
-    font-size: 12px;
-    padding: 5px 14px;
-  }
+  /* Month strip smaller on phone */
+  .month-strip li { padding: 8px 14px; font-size: 12px; }
 
   /* Status bar: full width */
   .status-bar { width: 95%; font-size: 13px; padding: 9px 14px; }
   .status-chart-panel { width: 95%; }
   .status-bar-wrap { padding: 8px 0 0; }
 
-  /* Status table: scrollable horizontally */
+  /* Status table scroll */
   .status-chart-grid { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .status-table { min-width: 520px; font-size: 12px; }
-  .st-theatre, .st-phase, .st-trend, .st-progress { padding: 8px 10px; }
+  .st-theatre, .st-phase, .st-trend, .st-progress { padding: 7px 9px; }
 
-  /* Week selector: full width */
+  /* Week selector full width */
   .week-selector-bar { padding: 6px 12px 8px; }
   .week-selector { min-width: 0; width: 100%; }
 
-  /* Month nav: convert to horizontal strip above article */
-  .content-body { flex-direction: column; }
-
-  .month-nav {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    padding: 6px 0;
-  }
-  .month-nav ul {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    gap: 0;
-  }
-  .month-nav ul::-webkit-scrollbar { display: none; }
-  .month-nav li {
-    flex-shrink: 0;
-    padding: 8px 16px;
-    border-left: none;
-    border-bottom: 3px solid transparent;
-    font-size: 12px;
-    white-space: nowrap;
-  }
-  .month-nav li.active {
-    border-left-color: transparent;
-    border-bottom-color: var(--gold);
-  }
-
-  /* Article panel: full width, less padding */
-  .article-panel { padding: 16px 12px; }
+  /* Article panel */
+  .article-panel { padding: 14px 12px; }
   .article-inner { max-width: 100%; }
-
-  .article-block { padding: 16px 14px; }
+  .article-block { padding: 14px 12px; }
   .article-title { font-size: 18px; }
 
-  /* Digest view: same strip treatment for section nav */
-  .digest-view { overflow: visible; }
-  .digest-layout { flex-direction: column; overflow: visible; }
-
-  #digestContent { padding: 16px 12px; overflow: visible; }
-  #digestContent .article-inner { max-width: 100%; }
+  #digestContent { padding: 14px 12px; overflow: visible; }
 }
