@@ -274,28 +274,35 @@ function renderArticles() {
   const panel = document.getElementById("articlePanel");
 
   if (!currentWeekFile || !weeklyCache[currentWeekFile]) {
-    panel.innerHTML = `<div class="article-inner"><div class="empty-state">Loading content…</div></div>`;
+    panel.innerHTML = `<div class="article-inner"><p style="color:var(--text-dim);padding:40px 0;text-align:center;">Loading content…</p></div>`;
     return;
   }
 
   const data = weeklyCache[currentWeekFile];
   const theatreData = data.theatres.find(t => t.id === currentTheatre);
 
-  if (!theatreData) {
-    panel.innerHTML = `<div class="article-inner"><div class="empty-state">No content for this theatre this week.</div></div>`;
+  if (!theatreData || !theatreData.articles.length) {
+    panel.innerHTML = `<div class="article-inner"><p style="color:var(--text-dim);padding:40px 0;text-align:center;">No content for this theatre this week.</p></div>`;
     return;
   }
 
+  // Infographic link — check for week-specific file, fall back to methodology.png
+  const infraLink = `
+    <a href="content/methodology.png" target="_blank" class="infographic-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+      View Infographic
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:0.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+    </a>
+  `;
+
   panel.innerHTML = `
     <div class="article-inner">
-      <div class="theatre-badge">${theatreData.theatreNum}</div>
-      <div class="article-block">
-        <div class="article-header">
-          <div class="article-title">${theatreData.title}</div>
-          <div class="article-subtitle">${theatreData.subtitle}</div>
-        </div>
-        ${theatreData.articles.map(a => renderArticle(a)).join("")}
+      ${infraLink}
+      <div class="article-theatre-header">
+        <div class="article-title">${theatreData.title}</div>
+        ${theatreData.subtitle ? `<div class="article-subtitle">${theatreData.subtitle}</div>` : ''}
       </div>
+      ${theatreData.articles.map(a => renderArticle(a)).join("")}
     </div>
   `;
 }
@@ -313,8 +320,8 @@ function renderArticle(a) {
   ` : "";
 
   return `
-    <div class="story-block">
-      <div class="article-tags">${tags}</div>
+    <div class="story-card">
+      <div class="story-card-tags">${tags}</div>
       <div class="story-label">${a.headline}</div>
       <div class="story-body">${a.body} ${sources}</div>
       ${implications}
@@ -336,7 +343,7 @@ function selectCap(btn) {
 }
 
 function selectSec(el) {
-  document.querySelectorAll(".digest-sec-strip li").forEach(li => li.classList.remove("active"));
+  document.querySelectorAll("#digestView .side-nav li").forEach(li => li.classList.remove("active"));
   el.classList.add("active");
   currentSec = el.dataset.sec;
   renderDigest();
