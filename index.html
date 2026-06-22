@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conflict Studies & Insights</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SIDEBAR OVERLAY -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+<!-- SLIDE-OUT SIDEBAR -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <div class="logo-circle">CS&amp;I</div>
+  </div>
+  <ul class="sidebar-nav">
+    <li><a href="#" onclick="showView('weeklies'); closeSidebar()">Weeklies</a></li>
+    <li><a href="#" onclick="showView('digest'); closeSidebar()">Monthly Digests</a></li>
+    <li><a href="#" class="feedback-link">Have Feedback?</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN LAYOUT -->
+<div class="app-shell">
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <button class="hamburger" onclick="toggleSidebar()" aria-label="Menu">&#9776;</button>
+    <div class="topbar-center">
+      <h1 class="site-title">Conflict Studies and Insights</h1>
+      <a href="#" class="digest-cta" onclick="showView('digest')">Click here for June's Digest</a>
+    </div>
+    <div class="topbar-right" id="weekSelectorWrap">
+      <select class="week-selector" id="weekSelector">
+        <option>Week of 22 Jun 2026</option>
+        <option>Week of 15 Jun 2026</option>
+        <option>Week of 8 Jun 2026</option>
+        <option>Week of 1 Jun 2026</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- THEATRE TABS -->
+  <div class="theatre-tabs" id="theatreTabs">
+    <button class="theatre-tab active" data-theatre="russia-ukraine" onclick="selectTheatre(this)">Russia–Ukraine</button>
+    <button class="theatre-tab" data-theatre="israel-lebanon" onclick="selectTheatre(this)">Israel–Lebanon</button>
+    <button class="theatre-tab" data-theatre="israel-gaza" onclick="selectTheatre(this)">Israel–Gaza</button>
+    <button class="theatre-tab" data-theatre="israel-us-iran" onclick="selectTheatre(this)">Israel–US–Iran</button>
+    <button class="theatre-tab" data-theatre="thailand-cambodia" onclick="selectTheatre(this)">Thailand–Cambodia</button>
+  </div>
+
+  <!-- CONFLICT STATUS CHART ACCORDION -->
+  <div class="status-bar" id="statusBar" onclick="toggleStatusChart()">
+    <span>Conflict Status Chart</span>
+    <span class="status-arrow" id="statusArrow">&#9660;</span>
+  </div>
+  <div class="status-chart-panel" id="statusChartPanel">
+    <div class="status-chart-grid" id="statusChartGrid">
+      <!-- populated by JS -->
+    </div>
+  </div>
+
+  <!-- WEEKLIES VIEW -->
+  <div class="content-body" id="weekliesView">
+    <!-- LEFT: Month nav -->
+    <aside class="month-nav">
+      <ul>
+        <li class="active" onclick="selectMonth(this, 'jun2026')">June 2026</li>
+        <li onclick="selectMonth(this, 'may2026')">May 2026</li>
+        <li onclick="selectMonth(this, 'apr2026')">April 2026</li>
+        <li onclick="selectMonth(this, 'mar2026')">March 2026</li>
+      </ul>
+    </aside>
+
+    <!-- MAIN ARTICLE PANEL -->
+    <main class="article-panel" id="articlePanel">
+      <!-- populated by JS -->
+    </main>
+  </div>
+
+  <!-- MONTHLY DIGEST VIEW -->
+  <div class="digest-view hidden" id="digestView">
+    <!-- Capability tabs -->
+    <div class="cap-tabs">
+      <button class="cap-tab active" data-cap="manoeuvre" onclick="selectCap(this)">Manoeuvre</button>
+      <button class="cap-tab" data-cap="sense-strike" onclick="selectCap(this)">Sense-Strike</button>
+      <button class="cap-tab" data-cap="combat-support" onclick="selectCap(this)">Combat Support</button>
+      <button class="cap-tab" data-cap="expeditionary" onclick="selectCap(this)">Expeditionary</button>
+      <button class="cap-tab" data-cap="unmanned" onclick="selectCap(this)">Unmanned Systems</button>
+    </div>
+    <!-- Digest sub-sections -->
+    <div class="digest-sections">
+      <div class="digest-section">
+        <div class="digest-section-label">What Changed this Month</div>
+        <div class="digest-section-body" id="digestChanged"></div>
+      </div>
+      <div class="digest-section">
+        <div class="digest-section-label">Opportunities</div>
+        <div class="digest-section-body" id="digestOpportunities"></div>
+      </div>
+      <div class="digest-section">
+        <div class="digest-section-label">Vulnerabilities</div>
+        <div class="digest-section-body" id="digestVulnerabilities"></div>
+      </div>
+      <div class="digest-section">
+        <div class="digest-section-label">Capability Developments</div>
+        <div class="digest-section-body" id="digestCapdev"></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end app-shell -->
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
