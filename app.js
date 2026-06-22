@@ -124,6 +124,7 @@ async function loadWeekly(dateStr) {
     li.classList.toggle("active", li.dataset.ym === ym);
   });
 
+  renderStatusChart();
   renderArticles();
 }
 
@@ -146,14 +147,53 @@ async function loadDigest(ym) {
 
 // ── STATUS CHART ──────────────────────────────────────────────────────────────
 function renderStatusChart() {
-  if (!manifest) return;
   const grid = document.getElementById("statusChartGrid");
-  grid.innerHTML = manifest.statusChart.map(item => `
-    <div class="status-item">
-      <div class="status-dot ${item.status}"></div>
-      <span><strong>${item.theatre}</strong> — ${item.label}</span>
-    </div>
-  `).join("");
+
+  // Use current week's status data if available, else fall back to manifest
+  let rows = null;
+  if (currentWeekFile && weeklyCache[currentWeekFile] && weeklyCache[currentWeekFile].statusChart) {
+    rows = weeklyCache[currentWeekFile].statusChart;
+  } else if (manifest && manifest.statusChart) {
+    rows = manifest.statusChart;
+  }
+
+  if (!rows) { grid.innerHTML = ""; return; }
+
+  // Render as a proper table matching the reference design
+  const phaseClass = (phase) => {
+    const p = phase.toLowerCase();
+    if (p.includes('collapsed') || p.includes('active') || p.includes('attritional')) return 'ph-active';
+    if (p.includes('ceasefire') || p.includes('holding')) return 'ph-cease';
+    return 'ph-pause';
+  };
+  const trendColor = (trend) => {
+    if (trend.includes('↑')) return '#ef4444';
+    if (trend.includes('→')) return '#94a3b8';
+    return '#f59e0b';
+  };
+
+  grid.innerHTML = `
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th>Theatre</th>
+          <th>Phase</th>
+          <th>Trend</th>
+          <th>Progress to date</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rows.map(r => `
+          <tr>
+            <td class="st-theatre">${r.theatre}</td>
+            <td class="st-phase"><span class="st-pill ${phaseClass(r.phase)}">${r.phase}</span></td>
+            <td class="st-trend" style="color:${trendColor(r.trend)}">${r.trend}</td>
+            <td class="st-progress">${r.progress}</td>
+          </tr>
+        `).join("")}
+      </tbody>
+    </table>
+  `;
 }
 
 function toggleStatusChart() {
@@ -228,7 +268,7 @@ function renderArticles() {
   const panel = document.getElementById("articlePanel");
 
   if (!currentWeekFile || !weeklyCache[currentWeekFile]) {
-    panel.innerHTML = `<div class="empty-state">Loading content…</div>`;
+    panel.innerHTML = `<div class="article-inner"><div class="empty-state">Loading content…</div></div>`;
     return;
   }
 
@@ -236,16 +276,20 @@ function renderArticles() {
   const theatreData = data.theatres.find(t => t.id === currentTheatre);
 
   if (!theatreData) {
-    panel.innerHTML = `<div class="empty-state">No content for this theatre this week.</div>`;
+    panel.innerHTML = `<div class="article-inner"><div class="empty-state">No content for this theatre this week.</div></div>`;
     return;
   }
 
   panel.innerHTML = `
-    <div class="theatre-badge">${theatreData.theatreNum}</div>
-    <div class="article-block">
-      <div class="article-title">${theatreData.title}</div>
-      <div class="article-subtitle">${theatreData.subtitle}</div>
-      ${theatreData.articles.map(a => renderArticle(a)).join("")}
+    <div class="article-inner">
+      <div class="theatre-badge">${theatreData.theatreNum}</div>
+      <div class="article-block">
+        <div class="article-header">
+          <div class="article-title">${theatreData.title}</div>
+          <div class="article-subtitle">${theatreData.subtitle}</div>
+        </div>
+        ${theatreData.articles.map(a => renderArticle(a)).join("")}
+      </div>
     </div>
   `;
 }
@@ -255,7 +299,7 @@ function renderArticle(a) {
   const sources = (a.sources || []).map(s => `<span class="source-tag"># ${s}</span>`).join("");
   const implications = (a.implications || []).length > 0 ? `
     <div class="implication-block">
-      <div class="implication-label">IMPLICATION [${a.implicationLabel}]</div>
+      <div class="implication-label">IMPLICATION <span>[${a.implicationLabel}]</span></div>
       <ul class="implication-points">
         ${a.implications.map(i => `<li>${i}</li>`).join("")}
       </ul>
