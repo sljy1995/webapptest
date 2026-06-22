@@ -183,11 +183,11 @@ html, body {
 
 /* ─── WEEKLY LEFT SIDEBAR ────────────────────────────────────────── */
 .weekly-sidebar {
-  width: 200px;
+  width: 190px;
   flex-shrink: 0;
   background: var(--bg);
-  border-right: 1px solid var(--border);
-  padding: 20px 12px 20px 24px;
+  border-right: none;
+  padding: 20px 8px 20px 40px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -215,30 +215,12 @@ html, body {
   width: 100%;
 }
 
-.status-label {
-  display: flex; align-items: center; justify-content: space-between;
-  cursor: pointer; user-select: none;
-  color: var(--text-muted); padding-right: 4px;
-}
-.status-label:hover { color: var(--text); }
-
-/* Override status-chart-panel to work inside sidebar (no centred width%) */
-.weekly-sidebar .status-chart-panel {
-  width: 100%;
-  overflow-x: auto;
-}
-.weekly-sidebar .status-table { min-width: 520px; font-size: 11px; }
-.weekly-sidebar .st-theatre,
-.weekly-sidebar .st-phase,
-.weekly-sidebar .st-trend,
-.weekly-sidebar .st-progress { padding: 6px 10px; }
-
 /* ─── SIDE NAV (digest sections only) ───────────────────────────── */
 .side-nav {
   width: 185px; flex-shrink: 0;
   background: var(--bg);
   border-right: none;
-  padding: 20px 12px 20px 36px;
+  padding: 20px 8px 20px 40px;
   overflow-y: auto;
   display: flex; flex-direction: column; gap: 4px;
 }
@@ -414,17 +396,20 @@ html, body {
   .theatre-tabs::-webkit-scrollbar { display: none; }
   .theatre-tab { flex-shrink: 0; font-size: 13px; padding: 8px 18px; }
 
-  /* Weekly sidebar → horizontal strips stacked above article */
+  /* Weekly sidebar → horizontal strips above article on mobile */
   .weekly-sidebar {
     width: 100%; flex-direction: column;
     border-right: none; border-bottom: 1px solid var(--border);
-    padding: 10px 14px; gap: 10px; overflow-x: visible;
+    padding: 10px 14px; gap: 8px; overflow-x: visible;
   }
-  .weekly-month-list { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 8px; }
+  .weekly-month-list {
+    flex-direction: row; flex-wrap: nowrap;
+    overflow-x: auto; scrollbar-width: none; gap: 8px;
+  }
   .weekly-month-list::-webkit-scrollbar { display: none; }
   .weekly-month-list li { flex-shrink: 0; padding: 8px 16px; font-size: 12.5px; }
   .week-selector-inline { width: 100%; }
-  .weekly-sidebar .status-chart-panel { max-height: 300px; }
+  .weekly-sidebar-section { gap: 4px; }
 
   /* Side nav (digest): horizontal scroll strip */
   .side-nav {
