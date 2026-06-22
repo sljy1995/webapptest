@@ -1,16 +1,18 @@
 {
   "weeklies": [
+    "2026-04-20",
+    "2026-04-27",
+    "2026-05-04",
+    "2026-05-11",
+    "2026-05-18",
+    "2026-05-25",
     "2026-06-01",
+    "2026-06-08",
+    "2026-06-15",
     "2026-06-22"
   ],
   "digests": [
     "2026-06"
   ],
-  "statusChart": [
-    { "theatre": "Russia\u2013Ukraine",    "id": "russia-ukraine",    "status": "red",   "label": "Active High-Intensity" },
-    { "theatre": "Israel\u2013Lebanon",   "id": "israel-lebanon",   "status": "red",   "label": "Active High-Intensity" },
-    { "theatre": "Israel\u2013Gaza",     "id": "israel-gaza",     "status": "red",   "label": "Active High-Intensity" },
-    { "theatre": "Israel\u2013US\u2013Iran", "id": "israel-us-iran", "status": "amber", "label": "Elevated Tension" },
-    { "theatre": "Thailand\u2013Cambodia","id": "thailand-cambodia","status": "amber", "label": "Low-Intensity / Escalating" }
-  ]
+  "statusChart": []
 }
