@@ -275,7 +275,32 @@ html, body {
 
 /* ─── CONTENT BODY / DIGEST LAYOUT ──────────────────────────────── */
 .content-body {
-  display: flex; flex: 1; overflow: hidden;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr;
+  flex: 1; overflow: hidden;
+}
+
+/* sidebar spans both rows on left */
+.weekly-sidebar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+/* status chart spans article column only, same style as status-bar-wrap */
+.status-chart-fullwidth {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--bg); padding: 10px 0 0; flex-shrink: 0;
+}
+.status-chart-fullwidth .status-bar { width: 90%; }
+.status-chart-fullwidth .status-chart-panel { width: 90%; }
+
+/* article panel in row 2 of article column */
+#articlePanel {
+  grid-column: 2;
+  grid-row: 2;
 }
 .digest-layout {
   display: flex; flex: 1; overflow: hidden;
@@ -404,7 +429,17 @@ html, body {
 @media (max-width: 600px) {
   html, body { height: auto; min-height: 100%; }
   .app-shell { height: auto; min-height: 100vh; overflow: visible; }
-  .content-body, .digest-layout { overflow: visible; height: auto; flex-direction: column; }
+  .content-body {
+    overflow: visible; height: auto;
+    display: flex; flex-direction: column;
+    grid-template-columns: unset; grid-template-rows: unset;
+  }
+  .weekly-sidebar { grid-column: unset; grid-row: unset; }
+  #articlePanel { grid-column: unset; grid-row: unset; }
+  .status-chart-fullwidth { grid-column: unset; grid-row: unset; width: 100%; }
+  .status-chart-fullwidth .status-bar { width: 96%; }
+  .status-chart-fullwidth .status-chart-panel { width: 96%; }
+  .digest-layout { overflow: visible; height: auto; flex-direction: column; }
   .article-panel { overflow: visible; height: auto; }
   .digest-view { overflow: visible; }
 
