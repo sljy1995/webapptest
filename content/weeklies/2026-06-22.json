@@ -1,6 +1,38 @@
 {
   "week": "2026-06-22",
   "label": "Week of 22 Jun 2026",
+  "statusChart": [
+    {
+      "theatre": "Russia\u2013Ukraine",
+      "phase": "Attritional War",
+      "trend": "\u2191 Escalating",
+      "progress": "Ukraine's 992-drone Moscow strike 17\u201318 Jun \u2014 largest of the war; Moscow refinery hit second time in a week; G7 \u00c9vian committed to expanded air defence and sanctions."
+    },
+    {
+      "theatre": "Israel\u2013Lebanon",
+      "phase": "Active Operations",
+      "trend": "\u2191 Escalating",
+      "progress": "IDF reaches Nabatieh; Hezbollah fibre-optic FPV employment defeats EW-based C-UAS; next Washington talks deferred."
+    },
+    {
+      "theatre": "Israel\u2013Gaza",
+      "phase": "Ceasefire",
+      "trend": "\u2192 Holding",
+      "progress": "IDF controls 64% of Gaza; corridor operations ongoing; Phase 2 framework talks continuing via Egyptian mediation."
+    },
+    {
+      "theatre": "Israel\u2013US\u2013Iran",
+      "phase": "Elevated Tension",
+      "trend": "\u2191 Escalating",
+      "progress": "Iran enrichment at 60% U-235; dual US CSG presence maintained; MOU back-channel (Pakistan) remains only active link."
+    },
+    {
+      "theatre": "Thailand\u2013Cambodia",
+      "phase": "Ceasefire",
+      "trend": "\u2192 Holding",
+      "progress": "Three border incidents in Ta Phraya district; ASEAN emergency consultative meeting convened; Malaysia chairing mediation effort."
+    }
+  ],
   "theatres": [
     {
       "id": "russia-ukraine",
