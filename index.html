@@ -45,6 +45,18 @@
     <button class="theatre-tab" data-theatre="thailand-cambodia" onclick="selectTheatre(this)">Thailand–Cambodia</button>
   </div>
 
+  <!-- MONTH NAV STRIP (weeklies only) -->
+  <div class="month-strip" id="monthStripWrap">
+    <ul id="monthStripList">
+      <!-- populated by JS -->
+    </ul>
+  </div>
+
+  <!-- WEEK SELECTOR (weeklies only) -->
+  <div class="week-selector-bar" id="weekSelectorWrap">
+    <select class="week-selector" id="weekSelector"></select>
+  </div>
+
   <!-- CONFLICT STATUS CHART ACCORDION -->
   <div class="status-bar-wrap" id="statusBarWrap">
     <div class="status-bar" id="statusBar" onclick="toggleStatusChart()">
@@ -58,23 +70,8 @@
     </div>
   </div>
 
-  <!-- WEEK SELECTOR (below status chart, weeklies only) -->
-  <div class="week-selector-bar" id="weekSelectorWrap">
-    <select class="week-selector" id="weekSelector"></select>
-  </div>
-
   <!-- WEEKLIES VIEW -->
   <div class="content-body" id="weekliesView">
-    <!-- LEFT: Month nav -->
-    <aside class="month-nav">
-      <ul>
-        <li class="active" onclick="selectMonth(this, 'jun2026')">June 2026</li>
-        <li onclick="selectMonth(this, 'may2026')">May 2026</li>
-        <li onclick="selectMonth(this, 'apr2026')">April 2026</li>
-        <li onclick="selectMonth(this, 'mar2026')">March 2026</li>
-      </ul>
-    </aside>
-
     <!-- MAIN ARTICLE PANEL -->
     <main class="article-panel" id="articlePanel">
       <!-- populated by JS -->
@@ -106,14 +103,14 @@
 
     <div class="digest-layout">
 
-      <!-- LEFT: Section nav -->
-      <aside class="month-nav">
+      <!-- Section nav as horizontal strip -->
+      <div class="month-strip digest-sec-strip">
         <ul>
           <li class="active" data-sec="opportunities"   onclick="selectSec(this)">Opportunities</li>
           <li               data-sec="vulnerabilities"  onclick="selectSec(this)">Vulnerabilities</li>
           <li               data-sec="capdevs"          onclick="selectSec(this)">Capability Dev</li>
         </ul>
-      </aside>
+      </div>
 
       <!-- RIGHT: Content -->
       <main class="article-panel" id="digestContent">
