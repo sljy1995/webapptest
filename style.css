@@ -89,12 +89,8 @@ html, body {
 .topbar-center { display: flex; flex-direction: column; align-items: center; flex: 1; gap: 7px; }
 
 .site-title-link { text-decoration: none; }
-.site-title {
-  font-family: 'Barlow Condensed', 'Agency FB', 'Arial Narrow', Arial, sans-serif;
-  font-size: 28px; font-weight: 700;
-  color: #ffffff; letter-spacing: 0.08em;
-  text-align: center; text-transform: uppercase;
-}
+.site-title { font-family: 'Barlow Condensed', 'Agency FB', 'Arial Narrow', Arial, sans-serif; font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: 0.08em; text-align: center; text-transform: uppercase; }
+.title-amp { color: #f59e0b; }
 
 .digest-cta {
   display: block; background: transparent;
