@@ -138,7 +138,7 @@ html, body {
 
 .site-title {
   font-family: 'Agency FB', 'Arial Narrow', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 0.06em;
@@ -208,7 +208,6 @@ html, body {
   background: var(--bg-dark);
   padding: 10px 0 0;
   flex-shrink: 0;
-  border-bottom: 1px solid var(--border);
 }
 
 .status-bar {
@@ -238,10 +237,13 @@ html, body {
   flex-shrink: 0;
   width: 75%;
   border-radius: 0 0 3px 3px;
+  border: 0px solid transparent;
+}
+.status-chart-panel.open {
+  max-height: 200px;
   border: 1px solid var(--border);
   border-top: none;
 }
-.status-chart-panel.open { max-height: 200px; }
 
 .status-chart-grid {
   display: flex;
@@ -453,31 +455,88 @@ html, body {
 }
 .digest-view.hidden { display: none; }
 
+/* "What Changed this Month" bar — sits at same level as status chart */
+.digest-changed-bar {
+  background: var(--bg-dark);
+  padding: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+.digest-changed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--teal-header);
+  padding: 10px 20px;
+  font-family: 'Georgia', serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  width: 75%;
+  border-radius: 3px 3px 0 0;
+  user-select: none;
+}
+.digest-changed-header:hover { background: #1f4558; }
+.digest-changed-arrow { font-size: 12px; color: var(--gold); transition: transform 0.2s; }
+.digest-changed-arrow.open { transform: rotate(180deg); }
+
+.digest-changed-panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  width: 75%;
+  border-radius: 0 0 3px 3px;
+  background: var(--bg-panel);
+  border: 0px solid transparent;
+}
+.digest-changed-panel.open {
+  max-height: 300px;
+  border: 1px solid var(--border);
+  border-top: none;
+  overflow-y: auto;
+}
+.digest-changed-body {
+  padding: 14px 20px;
+  font-family: 'Georgia', serif;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* Cap tabs — same style as theatre-tabs, centred */
 .cap-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
-  background: var(--bg-panel);
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: var(--bg-dark);
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
+  margin-top: 10px;
 }
+
 .cap-tab {
-  background: none;
-  border: none;
-  border-bottom: 3px solid transparent;
+  background: #1e2e3e;
+  border: 1px solid #2a3e50;
   color: var(--text-muted);
-  padding: 12px 22px;
+  padding: 6px 18px;
   font-family: 'Arial', sans-serif;
   font-size: 13px;
   font-weight: 600;
+  border-radius: 3px;
   cursor: pointer;
   transition: all 0.15s;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
-.cap-tab:hover { color: var(--text-primary); }
+.cap-tab:hover { border-color: var(--gold); color: var(--gold-light); }
 .cap-tab.active {
+  background: #0b1820;
+  border-color: var(--gold);
   color: var(--gold-light);
-  border-bottom-color: var(--gold);
 }
 
 .digest-sections {
