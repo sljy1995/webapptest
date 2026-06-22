@@ -1,0 +1,231 @@
+{
+  "month": "2026-06",
+  "label": "June 2026",
+  "capabilities": {
+    "manoeuvre": {
+      "changed": "For 3 Div, 9 Div and Armour, deep interdiction is now decisive on its own. Ukraine ran its heaviest deep-strike month of the year \u2014 18 oil-and-gas sites plus trains, fuel tankers and highway nodes \u2014 stalling Russian offensives and forcing trucks into armed convoys repainted as civilian traffic, which makes your own fuel and ammunition nodes a primary protected target set. The advance is now conditioned on that effect: ISW\u2019s 24 May \u2018new phase\u2019 had Ukraine time mechanised attacks to the interdiction (Pokrovsk, Borova, Hulyaipole) and retake about 100 square miles in four weeks. And the static hold has become a losing posture \u2014 IDF reached Nabatieh by 30 May, but Hezbollah fired fibre-optic FPVs (6 kg HEAT to 30\u201350 km, no RF to jam) from further out, so EW alone no longer protects armour.",
+      "opportunities": [
+        {
+          "title": "Deep Strike Sequencing",
+          "body": "Timing mechanised operations to the effect of prior deep interdiction generates a multiplicative operational effect \u2014 the window when logistics are degraded but before reconstitution is the decisive manoeuvre window."
+        },
+        {
+          "title": "Corridor Operations as Shaping",
+          "body": "The IDF Rafah model demonstrates that civilian corridor management, when integrated into operational design, can shape enemy freedom of action by constraining their use of the civilian population as cover."
+        },
+        {
+          "title": "Civilian Mobilisation for ISR",
+          "body": "Taiwan\u2019s Kuma Academy model shows that pre-trained civilian observers at scale generate a persistent, low-cost ISR network that military planners can task without consuming military manpower."
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "title": "Fuel & Ammunition Node Exposure",
+          "body": "Russian adaptation \u2014 armed convoys, civilian repainting \u2014 confirms that logistics nodes are a primary target set. Own-force equivalents require hardening, dispersion, and deception as baseline planning assumptions."
+        },
+        {
+          "title": "EW-Only C-UAS is Defeated",
+          "body": "Fibre-optic FPV employment by Hezbollah has demonstrated that RF-based C-UAS provides zero protection against wire-guided systems. Hard-kill integration is now a minimum requirement, not an enhancement."
+        },
+        {
+          "title": "Static Hold Creates Target",
+          "body": "Fixed defensive positions without active interdiction capacity become predictable targets. The IDF Nabatieh experience confirms that static holds require active fires to remain viable."
+        }
+      ],
+      "capdevs": [
+        {
+          "title": "Fibre-Optic FPV (Threat)",
+          "body": "6 kg HEAT warhead, 30\u201350 km range, zero RF emissions. Defeats all current RF-based detection and jamming. Requires hard-kill defeat mechanism and operator/logistics targeting."
+        },
+        {
+          "title": "Civilian GPS-Denied UAS",
+          "body": "Taiwan\u2019s Kuma Academy trains citizens on manual, GPS-free UAS operation. Low-cost, scalable, and optimised for denied electromagnetic environments."
+        },
+        {
+          "title": "Volume-Saturation Drone Doctrine",
+          "body": "Ukraine\u2019s 992-drone strike codifies a fires doctrine: sufficient volume guarantees penetration of any point defence. GBAD architecture must be stress-tested against 500+ simultaneous tracks."
+        }
+      ]
+    },
+    "sense-strike": {
+      "changed": "Sense-Strike domain saw significant ISR integration developments across both theatres. Ukraine\u2019s drone ISR network demonstrated persistent surveillance of Russian rear areas, enabling real-time targeting of logistics nodes. IDF sense-strike integration in urban terrain produced compressed kill chains of under 4 minutes from detection to munition impact.",
+      "opportunities": [
+        {
+          "title": "Persistent Rear-Area ISR",
+          "body": "Ukraine\u2019s model of maintaining persistent UAS coverage over Russian logistics corridors has generated continuous targeting data. A distributed, attritable ISR layer over adversary rear areas produces a targeting environment that overwhelms their reconstitution capacity."
+        },
+        {
+          "title": "Compressed Kill Chains",
+          "body": "IDF demonstrated sub-4-minute sensor-to-shooter cycles in urban terrain using pre-designated target sets and pre-approved engagement authorities. Kill chain compression is primarily a C2 and authority problem, not a technology problem."
+        },
+        {
+          "title": "Cross-Domain Cueing",
+          "body": "Integration of SIGINT cueing with UAS confirmation and precision strike has produced a three-stage sense-strike model that reduces collateral damage risk while maintaining tempo."
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "title": "ISR Attrition Rate",
+          "body": "Ukraine is losing approximately 10,000 UAS per month, primarily to Russian EW and C-UAS. Persistent ISR requires industrial-scale replenishment pipelines that most militaries have not built."
+        },
+        {
+          "title": "Kill Chain Authority Compression",
+          "body": "Compressed kill chains require pre-delegated engagement authority at lower command levels. Existing ROE frameworks in most militaries are not designed for sub-5-minute decision cycles."
+        },
+        {
+          "title": "GPS Dependency",
+          "body": "The majority of precision guided munitions remain GPS-dependent. Russian GPS jamming has produced significant miss distances in several documented strikes, confirming the need for multi-mode guidance as a baseline."
+        }
+      ],
+      "capdevs": [
+        {
+          "title": "AI-Assisted Target Discrimination",
+          "body": "IDF has fielded AI systems that assist analysts in discriminating military from civilian signatures in urban terrain. Reduces analyst load but introduces accountability questions around AI-assisted engagement decisions."
+        },
+        {
+          "title": "Fibre-Optic Ground Sensor Networks",
+          "body": "Ukraine has deployed extensive buried fibre-optic sensor networks along likely Russian manoeuvre axes. Provides seismic and acoustic early warning independent of RF."
+        },
+        {
+          "title": "Software-Defined EW Platforms",
+          "body": "Both sides have demonstrated rapid EW adaptation cycles measured in days rather than months. Software-defined EW platforms that can be updated over-the-air are becoming a competitive baseline requirement."
+        }
+      ]
+    },
+    "combat-support": {
+      "changed": "Combat support domain dominated by logistics adaptation on both sides. Russian forced truck convoy repainting and Ukrainian deep interdiction created a new logistics security paradigm. Medical evacuation under UAS threat has required fundamental procedural changes in both theatres.",
+      "opportunities": [
+        {
+          "title": "Logistics Deception",
+          "body": "Russian civilian-repaint adaptation demonstrates that logistics signature management is a viable force protection measure. Own-force logistics convoys should incorporate signature reduction and deception as standard practice."
+        },
+        {
+          "title": "Pre-Positioned Forward Stocks",
+          "body": "Ukraine\u2019s ability to exploit interdiction windows confirms that forces with pre-positioned forward stocks are more agile than those dependent on just-in-time resupply. Depot positioning is now an operational planning variable."
+        },
+        {
+          "title": "Distributed Medical Posts",
+          "body": "Both theatres have validated the distributed medical post model \u2014 small, dispersed casualty collection points rather than large fixed aid stations \u2014 as the only viable CASEVAC approach under persistent UAS threat."
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "title": "Convoy Signature Exposure",
+          "body": "Fuel and ammunition convoys generate distinctive electromagnetic and visual signatures. Without active deception and signature management, they are persistent targets for ISR-cued deep strike."
+        },
+        {
+          "title": "Fixed Medical Facilities",
+          "body": "Large fixed medical facilities have been struck in both theatres. The transition to distributed medical support has not been completed by most conventional militaries, creating a known vulnerability."
+        },
+        {
+          "title": "Engineer Support Bottleneck",
+          "body": "Bridging and route clearance have become critical bottlenecks in both theatres. Engineer force structure is typically under-resourced relative to operational requirements."
+        }
+      ],
+      "capdevs": [
+        {
+          "title": "Armoured Ambulance Conversion",
+          "body": "Ukraine has fielded modified armoured vehicles as forward ambulances, providing protected CASEVAC under direct and indirect fire. Low-cost conversion using existing platforms."
+        },
+        {
+          "title": "3D-Printed Spare Parts",
+          "body": "Both sides have demonstrated in-theatre 3D printing of non-critical spare parts, reducing logistics tail for high-demand low-complexity components."
+        },
+        {
+          "title": "Commercial Satellite Comms for Logistics",
+          "body": "Starlink integration into logistics C2 has produced significant improvements in convoy tracking and rerouting responsiveness. Commercial satellite communications are now a logistics enabler, not a supplement."
+        }
+      ]
+    },
+    "expeditionary": {
+      "changed": "Expeditionary domain saw focus on force projection sustainability and allied integration. G7 \u00c9vian commitments produced expanded air defence packages for Ukraine, testing allied expeditionary logistics pipelines. Thai-Cambodian border incidents highlighted ASEAN limitations in rapid response.",
+      "opportunities": [
+        {
+          "title": "Allied Air Defence Integration",
+          "body": "G7 \u00c9vian commitments have accelerated the integration of disparate national air defence systems into a common operational picture. The technical and doctrinal lessons from this integration are directly applicable to coalition GBAD planning."
+        },
+        {
+          "title": "Regional Civilian Expertise Networks",
+          "body": "Taiwan\u2019s Kuma Academy demonstrates that pre-crisis civilian capability building creates a latent expeditionary support capacity. Civil-military integration at the pre-crisis phase generates options unavailable once a crisis begins."
+        },
+        {
+          "title": "ASEAN Back-Channel Mechanisms",
+          "body": "The Thai-Cambodia situation confirms that ASEAN\u2019s formal mediation mechanisms are too slow for active border incidents. Back-channel bilateral mechanisms remain the most effective de-escalation tool in the ASEAN context."
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "title": "Allied Logistics Pipeline Capacity",
+          "body": "The pace of G7 air defence system deliveries has been constrained by industrial capacity and logistics pipeline throughput, not political will. Allied expeditionary support is limited by what production lines can sustain."
+        },
+        {
+          "title": "ASEAN Non-Interference Constraints",
+          "body": "ASEAN\u2019s non-interference norm structurally limits its ability to act as a mediator in bilateral disputes between members. Regional mechanisms cannot be relied upon for rapid crisis management."
+        },
+        {
+          "title": "Force Projection Sustainability",
+          "body": "The duration of IDF operations in Lebanon has exceeded initial planning assumptions. Extended expeditionary operations without industrial-scale replenishment degrade readiness in ways that are not immediately visible."
+        }
+      ],
+      "capdevs": [
+        {
+          "title": "Modular Air Defence Packages",
+          "body": "Allied nations have developed modular, mix-and-match air defence packages deployable to a partner nation in under 72 hours. Standardisation of connectors and C2 interfaces is the remaining integration challenge."
+        },
+        {
+          "title": "Commercial Logistics Contracting",
+          "body": "Ukraine has demonstrated large-scale integration of commercial logistics contractors into military supply chains. Provides surge capacity but introduces OPSEC and force protection risks."
+        },
+        {
+          "title": "Digital Border Monitoring",
+          "body": "Thailand has fielded commercially-derived digital border monitoring systems along contested sections. Provides persistent ISR without forward deployed forces, reducing incident escalation risk."
+        }
+      ]
+    },
+    "unmanned": {
+      "changed": "Unmanned systems domain saw the most significant developments this month. Ukraine\u2019s 992-drone strike set a new benchmark for UAS operational scale. Hezbollah\u2019s fibre-optic FPV employment defeated Israeli EW-based C-UAS. Taiwan\u2019s civilian drone programme established a new model for civil-military UAS integration.",
+      "opportunities": [
+        {
+          "title": "Volume Saturation as Doctrine",
+          "body": "Ukraine\u2019s 992-drone strike has codified volume saturation as a viable strategic fires doctrine. GBAD architecture must be sized against saturation, not optimised for efficiency against small numbers of targets."
+        },
+        {
+          "title": "Civil Drone Mobilisation",
+          "body": "Taiwan\u2019s Kuma Academy model provides a replicable framework for building a large civilian drone operator base as a latent ISR and civil defence resource. Pre-crisis investment generates crisis-period capability."
+        },
+        {
+          "title": "Attritable ISR Persistence",
+          "body": "Ukraine\u2019s model of maintaining persistent UAS coverage through volume \u2014 accepting high attrition in exchange for continuous presence \u2014 provides a targeting environment that cannot be maintained by low-density, high-value ISR platforms."
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "title": "UAS Attrition Rate",
+          "body": "Ukraine\u2019s 10,000/month UAS attrition rate requires industrial-scale production to sustain. Most militaries do not have UAS procurement pipelines designed for wartime attrition rates."
+        },
+        {
+          "title": "EW-Only C-UAS Defeated",
+          "body": "Hezbollah\u2019s fibre-optic FPV employment has demonstrated that EW-based C-UAS provides zero protection against wire-guided systems. Hard-kill capability must be integrated as a baseline requirement."
+        },
+        {
+          "title": "GPS Dependency in Navigation",
+          "body": "The majority of UAS platforms remain GPS-dependent for navigation and targeting. Taiwan\u2019s civilian training programme explicitly trains GPS-denied flight, confirming GPS denial is a baseline operational assumption."
+        }
+      ],
+      "capdevs": [
+        {
+          "title": "Fibre-Optic FPV (6 kg HEAT, 30\u201350 km)",
+          "body": "Hezbollah\u2019s operational employment confirms this as a fielded capability. Zero RF emissions defeats all current EW-based detection and defeat. Requires hard-kill defeat and targeting of operator and logistics nodes."
+        },
+        {
+          "title": "GPS-Free Manual UAS",
+          "body": "Taiwanese-made UAS platforms designed for manual GPS-free operation, capable of being flown by trained civilians. Relevant to denied-environment operations and high-intensity conflict planning."
+        },
+        {
+          "title": "Drone Industrial Capacity as Strategic Resource",
+          "body": "Ukraine\u2019s ability to sustain 992-drone single-night operations reflects an industrial production base measured in thousands per month. UAS industrial capacity is now a strategic planning variable alongside conventional munitions production."
+        }
+      ]
+    }
+  }
+}
