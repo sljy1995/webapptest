@@ -74,13 +74,14 @@ html, body {
   background: none; border: none; color: #1a0800;
   font-size: 22px; cursor: pointer; padding: 4px 8px;
   border-radius: 4px; flex-shrink: 0; line-height: 1;
+  width: 38px;
 }
 .hamburger:hover { background: rgba(0,0,0,0.12); }
 
 .topbar-center {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  flex: 1; gap: 7px; text-align: center;
+  flex: 1; gap: 7px; text-align: center; min-width: 0;
 }
 
 .site-title-link { text-decoration: none; display: block; text-align: center; }
@@ -89,7 +90,6 @@ html, body {
   font-size: 28px; font-weight: 700;
   color: #ffffff; letter-spacing: 0.08em;
   text-align: center; text-transform: uppercase;
-  display: block; width: 100%;
 }
 .title-amp { color: #f59e0b; }
 
@@ -181,42 +181,64 @@ html, body {
   min-width: 200px;
 }
 
-/* ─── MONTH NAV BAR ──────────────────────────────────────────────── */
-.month-nav-bar {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  padding: 12px 28px;
+/* ─── WEEKLY LEFT SIDEBAR ────────────────────────────────────────── */
+.weekly-sidebar {
+  width: 200px;
   flex-shrink: 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.month-nav-bar::-webkit-scrollbar { display: none; }
-.month-nav-bar ul {
-  list-style: none;
+  background: var(--bg);
+  border-right: 1px solid var(--border);
+  padding: 20px 12px 20px 24px;
+  overflow-y: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 10px;
+  flex-direction: column;
+  gap: 20px;
 }
-.month-nav-bar li {
-  background: #1a2a3a; border: 1px solid #2a3e52;
+
+.weekly-sidebar-section { display: flex; flex-direction: column; gap: 6px; }
+
+.weekly-month-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.weekly-month-list li {
+  background: #141e2a; border: 1px solid #1e2e3e;
   color: var(--text-muted);
-  padding: 10px 28px;
-  font-size: 14.5px; font-weight: 600;
-  border-radius: 4px; cursor: pointer;
-  transition: all 0.15s; white-space: nowrap;
-  user-select: none; letter-spacing: 0.02em;
+  padding: 10px 14px;
+  font-size: 13px; font-weight: 600;
+  border-radius: 6px; cursor: pointer;
+  transition: all 0.15s; user-select: none;
 }
-.month-nav-bar li:hover { border-color: var(--gold); color: var(--gold-light); }
-.month-nav-bar li.active { background: #0c1820; border-color: var(--gold); color: var(--gold-light); }
+.weekly-month-list li:hover { border-color: var(--gold); color: var(--gold-light); background: #0e1a26; }
+.weekly-month-list li.active { background: #0c1820; border-color: var(--gold); color: var(--gold-light); }
+
+.week-selector-inline {
+  background: #141e2a; border: 1px solid #1e2e3e;
+  color: var(--text); padding: 9px 10px;
+  font-size: 12px; border-radius: 6px; cursor: pointer;
+  width: 100%;
+}
+
+.status-label {
+  display: flex; align-items: center; justify-content: space-between;
+  cursor: pointer; user-select: none;
+  color: var(--text-muted); padding-right: 4px;
+}
+.status-label:hover { color: var(--text); }
+
+/* Override status-chart-panel to work inside sidebar (no centred width%) */
+.weekly-sidebar .status-chart-panel {
+  width: 100%;
+  overflow-x: auto;
+}
+.weekly-sidebar .status-table { min-width: 520px; font-size: 11px; }
+.weekly-sidebar .st-theatre,
+.weekly-sidebar .st-phase,
+.weekly-sidebar .st-trend,
+.weekly-sidebar .st-progress { padding: 6px 10px; }
 
 /* ─── SIDE NAV (digest sections only) ───────────────────────────── */
 .side-nav {
   width: 185px; flex-shrink: 0;
   background: var(--bg);
   border-right: none;
-  padding: 20px 12px 20px 28px;
+  padding: 20px 12px 20px 36px;
   overflow-y: auto;
   display: flex; flex-direction: column; gap: 4px;
 }
@@ -365,7 +387,8 @@ html, body {
   .status-bar { width: 92%; }
   .status-chart-panel { width: 92%; }
   .article-inner { max-width: 100%; }
-  .side-nav { width: 140px; }
+  .side-nav { width: 150px; padding-left: 24px; }
+  .weekly-sidebar { width: 170px; padding-left: 16px; }
 }
 
 @media (max-width: 600px) {
@@ -375,13 +398,13 @@ html, body {
   .article-panel { overflow: visible; height: auto; }
   .digest-view { overflow: visible; }
 
-  /* Topbar — force centre alignment */
-  .topbar { padding: 10px 12px; gap: 8px; }
-  .topbar-center { align-items: center; justify-content: center; width: 100%; }
-  .site-title { font-size: 20px; text-align: center; }
-  .site-title-link { text-align: center; width: 100%; }
-  .digest-cta { padding: 5px 14px; font-size: 12px; align-self: center; }
-  .topbar-right-spacer { display: none; }
+  /* Topbar — hamburger and spacer both 38px so centre is truly centred */
+  .topbar { padding: 10px 12px; gap: 0; }
+  .hamburger { font-size: 22px; width: 38px; padding: 4px 6px; }
+  .topbar-right-spacer { width: 38px; }
+  .topbar-center { gap: 6px; }
+  .site-title { font-size: 20px; }
+  .digest-cta { padding: 5px 14px; font-size: 12px; }
 
   /* Tabs: horizontal scroll strip */
   .theatre-tabs {
@@ -391,42 +414,31 @@ html, body {
   .theatre-tabs::-webkit-scrollbar { display: none; }
   .theatre-tab { flex-shrink: 0; font-size: 13px; padding: 8px 18px; }
 
-  /* Month nav: scroll strip on phone */
-  .month-nav-bar { padding: 8px 12px; justify-content: flex-start; }
-  .month-nav-bar ul { flex-wrap: nowrap; justify-content: flex-start; gap: 8px; min-width: max-content; }
-  .month-nav-bar li { font-size: 13px; padding: 8px 18px; }
+  /* Weekly sidebar → horizontal strips stacked above article */
+  .weekly-sidebar {
+    width: 100%; flex-direction: column;
+    border-right: none; border-bottom: 1px solid var(--border);
+    padding: 10px 14px; gap: 10px; overflow-x: visible;
+  }
+  .weekly-month-list { flex-direction: row; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; gap: 8px; }
+  .weekly-month-list::-webkit-scrollbar { display: none; }
+  .weekly-month-list li { flex-shrink: 0; padding: 8px 16px; font-size: 12.5px; }
+  .week-selector-inline { width: 100%; }
+  .weekly-sidebar .status-chart-panel { max-height: 300px; }
 
-  /* Status bar */
-  .status-bar { width: 96%; font-size: 13px; }
-  .status-chart-panel { width: 96%; }
-  .status-bar-wrap { padding: 8px 0 0; }
-  .status-chart-grid { overflow-x: auto; }
-  .status-table { min-width: 500px; font-size: 12px; }
-
-  /* Week selector */
-  .week-selector-bar { padding: 6px 12px; }
-  .week-selector { min-width: 0; width: 100%; }
-
-  /* Side nav: horizontal scrolling pill strip on phone — NOT clipped */
+  /* Side nav (digest): horizontal scroll strip */
   .side-nav {
     width: 100%; flex-direction: row;
     border-right: none; border-bottom: 1px solid var(--border);
     padding: 10px 14px; gap: 8px;
     overflow-x: auto; overflow-y: visible;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    flex-shrink: 0;
+    scrollbar-width: none; flex-shrink: 0;
   }
   .side-nav::-webkit-scrollbar { display: none; }
   .side-nav-label { display: none; }
-  .side-nav ul {
-    flex-direction: row; gap: 8px;
-    flex-wrap: nowrap; min-width: max-content;
-  }
-  .side-nav li {
-    flex-shrink: 0; padding: 8px 18px;
-    font-size: 13px; border-radius: 4px;
-  }
+  .side-nav ul { flex-direction: row; gap: 8px; flex-wrap: nowrap; min-width: max-content; }
+  .side-nav li { flex-shrink: 0; padding: 8px 18px; font-size: 13px; border-radius: 4px; }
   .side-nav-icon { display: none; }
 
   /* Article */
@@ -435,6 +447,13 @@ html, body {
   .story-card { padding: 14px; }
   .article-title { font-size: 19px; }
   #digestContent { padding: 14px 12px; overflow: visible; }
+
+  /* Status bar (standalone, if ever used outside sidebar) */
+  .status-bar-wrap { padding: 8px 0 0; }
+  .status-bar { width: 96%; font-size: 13px; }
+  .status-chart-panel { width: 96%; }
+  .status-chart-grid { overflow-x: auto; }
+  .status-table { min-width: 500px; font-size: 12px; }
 
   /* Modal */
   .modal { padding: 24px 18px 22px; }
