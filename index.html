@@ -76,21 +76,10 @@
     <button class="theatre-tab" data-theatre="thailand-cambodia" onclick="selectTheatre(this)">Thailand–Cambodia</button>
   </div>
 
-  <!-- CONFLICT STATUS CHART — same style/position as What Changed -->
-  <div class="status-bar-wrap" id="statusBarWrap">
-    <div class="status-bar" onclick="toggleStatusChart()">
-      <span>Conflict Status Chart</span>
-      <span class="status-arrow" id="statusArrow">&#9660;</span>
-    </div>
-    <div class="status-chart-panel" id="statusChartPanel">
-      <div class="status-chart-grid" id="statusChartGrid"></div>
-    </div>
-  </div>
-
   <!-- WEEKLIES VIEW -->
   <div class="content-body" id="weekliesView">
 
-    <!-- LEFT SIDEBAR: month + week only -->
+    <!-- LEFT SIDEBAR: month + week + status chart (order controls mobile stacking) -->
     <aside class="weekly-sidebar" id="weeklySidebar">
 
       <div class="weekly-sidebar-section">
@@ -104,6 +93,18 @@
       </div>
 
     </aside>
+
+    <!-- CONFLICT STATUS CHART — outside sidebar so it spans full width on desktop -->
+    <!-- On mobile this is pushed below sidebar via flex-direction:column order -->
+    <div class="status-chart-fullwidth" id="statusBarWrap">
+      <div class="status-bar" onclick="toggleStatusChart()">
+        <span>Conflict Status Chart</span>
+        <span class="status-arrow" id="statusArrow">&#9660;</span>
+      </div>
+      <div class="status-chart-panel" id="statusChartPanel">
+        <div class="status-chart-grid" id="statusChartGrid"></div>
+      </div>
+    </div>
 
     <!-- MAIN ARTICLE PANEL -->
     <main class="article-panel" id="articlePanel"></main>
@@ -143,7 +144,7 @@
             <span class="side-nav-icon">↓</span>Vulnerabilities
           </li>
           <li data-sec="capdevs" onclick="selectSec(this)">
-            <span class="side-nav-icon">⬡</span>Capability Development
+            <span class="side-nav-icon">⬡</span>Capability Dev
           </li>
         </ul>
       </aside>
