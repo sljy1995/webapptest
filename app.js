@@ -2,8 +2,9 @@
 let currentTheatre  = "russia-ukraine";
 let currentView     = "weeklies";
 let currentCap      = "manoeuvre";
-let currentWeekFile = null;   // e.g. "2026-06-22"
-let currentDigestFile = null; // e.g. "2026-06"
+let currentSec      = "changed";
+let currentWeekFile = null;
+let currentDigestFile = null;
 
 let weeklyCache  = {};  // { "2026-06-22": { ...data } }
 let digestCache  = {};  // { "2026-06": { ...data } }
@@ -211,14 +212,13 @@ function closeSidebar() {
   document.getElementById("sidebarOverlay").classList.remove("active");
 }
 
-// ── VIEW SWITCHING ─────────────────────────────────────────────────────────────
 function showView(view) {
   currentView = view;
-  const weekliesView    = document.getElementById("weekliesView");
-  const digestView      = document.getElementById("digestView");
-  const theatreTabs     = document.getElementById("theatreTabs");
-  const weekWrap        = document.getElementById("weekSelectorWrap");
-  const statusBarWrap   = document.getElementById("statusBarWrap");
+  const weekliesView  = document.getElementById("weekliesView");
+  const digestView    = document.getElementById("digestView");
+  const theatreTabs   = document.getElementById("theatreTabs");
+  const weekWrap      = document.getElementById("weekSelectorWrap");
+  const statusBarWrap = document.getElementById("statusBarWrap");
 
   if (view === "digest") {
     weekliesView.classList.add("hidden");
@@ -226,7 +226,6 @@ function showView(view) {
     theatreTabs.style.display = "none";
     weekWrap.style.display = "none";
     if (statusBarWrap) statusBarWrap.style.display = "none";
-    // Load latest digest if not yet loaded
     if (!currentDigestFile && manifest && manifest.digests.length > 0) {
       loadDigest(manifest.digests[manifest.digests.length - 1]);
     } else {
@@ -317,13 +316,6 @@ function renderArticle(a) {
 }
 
 // ── DIGEST ────────────────────────────────────────────────────────────────────
-function toggleDigestChanged() {
-  const panel = document.getElementById("digestChangedPanel");
-  const arrow = document.getElementById("digestChangedArrow");
-  panel.classList.toggle("open");
-  arrow.classList.toggle("open");
-}
-
 function selectCap(btn) {
   document.querySelectorAll(".cap-tab").forEach(t => t.classList.remove("active"));
   btn.classList.add("active");
@@ -331,43 +323,48 @@ function selectCap(btn) {
   renderDigest();
 }
 
+function selectSec(btn) {
+  document.querySelectorAll(".sec-tab").forEach(t => t.classList.remove("active"));
+  btn.classList.add("active");
+  currentSec = btn.dataset.sec;
+  renderDigest();
+}
+
 function renderDigest() {
   if (!currentDigestFile || !digestCache[currentDigestFile]) return;
   const digestData = digestCache[currentDigestFile];
   const d = digestData.capabilities[currentCap];
-  if (!d) return;
+  const panel = document.getElementById("digestContent");
+  if (!d || !panel) return;
 
-  // Update "What Changed" label with month
-  const label = document.getElementById("digestChangedMonthLabel");
-  if (label && digestData.label) label.textContent = `What Changed — ${digestData.label}`;
+  const secLabels = {
+    changed:         "What Changed this Month",
+    opportunities:   "Opportunities",
+    vulnerabilities: "Vulnerabilities",
+    capdevs:         "Capability Developments"
+  };
 
-  // Populate changed panel
-  document.getElementById("digestChanged").innerHTML =
-    `<p>${d.changed}</p>`;
+  let html = `<div class="digest-content-inner">`;
+  html += `<div class="digest-section-header">${secLabels[currentSec] || currentSec}</div>`;
 
-  document.getElementById("digestOpportunities").innerHTML =
-    d.opportunities.map((o, i) => `
+  if (currentSec === "changed") {
+    html += `<div class="digest-changed-text">${d.changed}</div>`;
+  } else {
+    const items = d[currentSec] || [];
+    const prefix = currentSec === "opportunities" ? "Opportunity"
+                 : currentSec === "vulnerabilities" ? "Vulnerability"
+                 : "CapDev";
+    html += items.map((item, i) => `
       <div class="digest-card">
-        <div class="digest-card-title">Opportunity #${i+1}: ${o.title}</div>
-        <div class="digest-card-body">${o.body}</div>
+        <div class="digest-card-number">${prefix} #${i+1}</div>
+        <div class="digest-card-title">${item.title}</div>
+        <div class="digest-card-body">${item.body}</div>
       </div>
     `).join("");
+  }
 
-  document.getElementById("digestVulnerabilities").innerHTML =
-    d.vulnerabilities.map((v, i) => `
-      <div class="digest-card">
-        <div class="digest-card-title">Vulnerability #${i+1}: ${v.title}</div>
-        <div class="digest-card-body">${v.body}</div>
-      </div>
-    `).join("");
-
-  document.getElementById("digestCapdev").innerHTML =
-    d.capdevs.map((c, i) => `
-      <div class="digest-card">
-        <div class="digest-card-title">CapDev #${i+1}: ${c.title}</div>
-        <div class="digest-card-body">${c.body}</div>
-      </div>
-    `).join("");
+  html += `</div>`;
+  panel.innerHTML = html;
 }
 
 // ── ERROR ─────────────────────────────────────────────────────────────────────
