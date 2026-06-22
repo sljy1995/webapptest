@@ -593,3 +593,136 @@ html, body {
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
 ::-webkit-scrollbar-thumb { background: #2a3e50; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #3a5060; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   MOBILE RESPONSIVE — added after base styles
+   Breakpoints: <600px = phone, 600–900px = tablet, >900px = desktop
+   Strategy: desktop stays 100vh fixed layout; mobile becomes
+   natural-scroll with collapsing chrome
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── TABLET: status/week bar go full-width ── */
+@media (max-width: 900px) {
+  .status-bar { width: 90%; }
+  .status-chart-panel { width: 90%; }
+  .article-inner { max-width: 100%; }
+}
+
+/* ── PHONE: full restructure ── */
+@media (max-width: 600px) {
+
+  /* Switch app shell from fixed-height to natural scroll */
+  html, body { height: auto; min-height: 100%; overflow-x: hidden; }
+
+  .app-shell {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  /* Allow content areas to scroll naturally */
+  .content-body,
+  .digest-layout {
+    overflow: visible;
+    height: auto;
+  }
+
+  .article-panel,
+  .month-nav {
+    overflow: visible;
+    height: auto;
+  }
+
+  /* Topbar: stack title smaller, hide CTA button on very small screens */
+  .topbar {
+    padding: 10px 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .site-title { font-size: 18px; letter-spacing: 0.04em; }
+
+  .digest-cta {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+
+  .topbar-right-spacer { display: none; }
+
+  /* Theatre tabs: horizontal scroll strip instead of wrap */
+  .theatre-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 8px 12px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .theatre-tabs::-webkit-scrollbar { display: none; }
+
+  .theatre-tab {
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 5px 14px;
+  }
+
+  /* Status bar: full width */
+  .status-bar { width: 95%; font-size: 13px; padding: 9px 14px; }
+  .status-chart-panel { width: 95%; }
+  .status-bar-wrap { padding: 8px 0 0; }
+
+  /* Status table: scrollable horizontally */
+  .status-chart-grid { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .status-table { min-width: 520px; font-size: 12px; }
+  .st-theatre, .st-phase, .st-trend, .st-progress { padding: 8px 10px; }
+
+  /* Week selector: full width */
+  .week-selector-bar { padding: 6px 12px 8px; }
+  .week-selector { min-width: 0; width: 100%; }
+
+  /* Month nav: convert to horizontal strip above article */
+  .content-body { flex-direction: column; }
+
+  .month-nav {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 6px 0;
+  }
+  .month-nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 0;
+  }
+  .month-nav ul::-webkit-scrollbar { display: none; }
+  .month-nav li {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .month-nav li.active {
+    border-left-color: transparent;
+    border-bottom-color: var(--gold);
+  }
+
+  /* Article panel: full width, less padding */
+  .article-panel { padding: 16px 12px; }
+  .article-inner { max-width: 100%; }
+
+  .article-block { padding: 16px 14px; }
+  .article-title { font-size: 18px; }
+
+  /* Digest view: same strip treatment for section nav */
+  .digest-view { overflow: visible; }
+  .digest-layout { flex-direction: column; overflow: visible; }
+
+  #digestContent { padding: 16px 12px; overflow: visible; }
+  #digestContent .article-inner { max-width: 100%; }
+}
