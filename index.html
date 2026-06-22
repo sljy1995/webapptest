@@ -76,29 +76,34 @@
     <button class="theatre-tab" data-theatre="thailand-cambodia" onclick="selectTheatre(this)">Thailand–Cambodia</button>
   </div>
 
-  <!-- MONTH NAV — immediately below theatre tabs, always visible for weeklies -->
-  <div class="month-nav-bar" id="monthNavBar">
-    <ul id="monthStripList"></ul>
-  </div>
-
-  <!-- WEEK SELECTOR -->
-  <div class="week-selector-bar" id="weekSelectorWrap">
-    <select class="week-selector" id="weekSelector"></select>
-  </div>
-
-  <!-- CONFLICT STATUS CHART -->
-  <div class="status-bar-wrap" id="statusBarWrap">
-    <div class="status-bar" id="statusBar" onclick="toggleStatusChart()">
-      <span>Conflict Status Chart</span>
-      <span class="status-arrow" id="statusArrow">&#9660;</span>
-    </div>
-    <div class="status-chart-panel" id="statusChartPanel">
-      <div class="status-chart-grid" id="statusChartGrid"></div>
-    </div>
-  </div>
-
-  <!-- WEEKLIES VIEW (no month nav inside — it's above) -->
+  <!-- WEEKLIES VIEW -->
   <div class="content-body" id="weekliesView">
+
+    <!-- LEFT SIDEBAR: month nav + week selector + status chart -->
+    <aside class="weekly-sidebar" id="weeklySidebar">
+
+      <div class="weekly-sidebar-section">
+        <div class="side-nav-label">Month</div>
+        <ul id="monthStripList" class="weekly-month-list"></ul>
+      </div>
+
+      <div class="weekly-sidebar-section" id="weekSelectorWrap">
+        <div class="side-nav-label">Week</div>
+        <select class="week-selector-inline" id="weekSelector"></select>
+      </div>
+
+      <div class="weekly-sidebar-section" id="statusBarWrap">
+        <div class="side-nav-label status-label" onclick="toggleStatusChart()">
+          Conflict Status <span class="status-arrow" id="statusArrow">&#9660;</span>
+        </div>
+        <div class="status-chart-panel" id="statusChartPanel">
+          <div class="status-chart-grid" id="statusChartGrid"></div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- MAIN ARTICLE PANEL -->
     <main class="article-panel" id="articlePanel"></main>
   </div>
 
