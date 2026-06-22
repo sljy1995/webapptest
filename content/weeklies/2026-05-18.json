@@ -1,0 +1,164 @@
+{
+  "statusChart": [
+    {
+      "theatre": "Russia–Ukraine",
+      "phase": "Active Combat",
+      "trend": "↑ Escalating",
+      "progress": "Oreshnik third use; mass strike on Kyiv; nuclear exercises concluded; negotiations dead. Russia holds ~18–20% of Ukraine's pre-war territory; net loss of 29 sq mi in 12–19 May window; Ukrainian counterattacks active in Borova, Kharkiv, Hulyaipole."
+    },
+    {
+      "theatre": "Israel–Lebanon",
+      "phase": "Ceasefire",
+      "trend": "↑ Escalating",
+      "progress": "Hezbollah FPV fibre-optic drone campaign causing IDF casualties; IDF expanding buffer zone north of Litani. Ceasefire extended 45 days at third round of Washington talks; IDF crossed Litani 12 May; 8+ IDF soldiers killed since ceasefire declared."
+    },
+    {
+      "theatre": "Israel–Gaza",
+      "phase": "Ceasefire",
+      "trend": "↑ Deteriorating",
+      "progress": "Hamas reconstituting; ceasefire violations; flotilla interception; humanitarian crisis worsening. 856+ killed since Oct 2025 ceasefire; Hamas reappointed military wing chief; &gt;60% of Gaza under Israeli control."
+    },
+    {
+      "theatre": "Israel–US–Iran",
+      "phase": "Coercive Deterrence",
+      "trend": "→ Holding",
+      "progress": "60-day MOU framework in final stages; Hormuz not yet formally reopened; nuclear enrichment resolution pending. US blockade of Iranian ports maintained; ~25% of global oil disrupted since late Feb; 26 vessels coordinated through Strait per IRGC (20 May); draft MOU terms published 24 May."
+    },
+    {
+      "theatre": "Thailand–Cambodia",
+      "phase": "Ceasefire",
+      "trend": "→ Holding",
+      "progress": "MOU44 terminated 5 May; MOU43 cancellation recommended by Thai Senate committee 18 May; small-arms fire incident 21 May; ASEAN monitoring team active. Ceasefire holding tenuously; Joint Boundary Commission process stalled; Cambodia pursuing UNCLOS compulsory conciliation."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "Theatre 01",
+      "title": "Russia – Ukraine",
+      "subtitle": "Oreshnik IRBM Third Use &amp; Mass Strike Architecture",
+      "articles": [
+        {
+          "tags": [
+            "Fires &amp; Strikes"
+          ],
+          "headline": "Oreshnik IRBM third use and the mass strike architecture against Kyiv",
+          "body": "On the night of 23–24 May 2026, Russia executed its most complex combined strike of the war against the Ukrainian capital: 90 missiles and approximately 600 drones across multiple waves, complemented by the third operational deployment of the Oreshnik IRBM, which struck Bila Tserkva 80 km south of Kyiv. The Oreshnik releases up to six manoeuvrable hypersonic warheads independently, rendering it impractical to intercept with existing Ukrainian GBAD. The strike damaged every district of Kyiv, hit the Cabinet of Ministers, caused cultural patrimony losses at the Chornobyl Museum, and generated nearly 100 casualties. The operational logic is deliberate saturation: Russian planners combined ballistic (Oreshnik, Iskander-M), cruise (Kalibr, Kh-101), and massed one-way attack drone vectors simultaneously to exhaust interceptor magazines and decision cycles. Despite advance warning from Ukrainian and allied ISR, no interception of the Oreshnik component was possible. This marks a qualitative escalation in Russia's strategic strike architecture — the Oreshnik is nuclear-capable, has no precedent for interception, and is now confirmed as an operational weapon against urban centres.<span>isw</span></span> This window saw a systematic escalation of Ukrainian-origin drone incursions into NATO Baltic airspace. Russia and Belarus completed three-day joint nuclear force exercises 18–21 May, explicitly framed by the Kremlin as a signal to NATO.</span>",
+          "sources": [
+            "kyivindependent",
+            "isw",
+            "straitstimes"
+          ],
+          "implicationLabel": "Fires &amp; Strikes",
+          "implications": [
+            "<strong>GBAD must be exercised against layered saturation, not single-threat raids</strong> — Russia's mix of ballistic missiles, cruise missiles, and one-way attack UAS shows that air-defence units must train against simultaneous high-low, fast-slow, and cheap-expensive threat combinations that force prioritisation under limited intercept stocks.",
+            "<strong>Formation survivability depends on dispersion and alternate C2</strong> — the strike on Ukraine's Cabinet of Ministers underscores that headquarters, logistics nodes, and civil-military command posts are targetable; formations should rehearse rapid displacement, alternate command posts, redundant communications, and continuity of orders under partial C2 degradation.",
+            "<strong>Warning is not protection unless units can act on it</strong> — Ukrainian and allied ISR provided warning, but not interception; training should include scenarios where early warning triggers sheltering, route changes, ammunition dispersal, casualty-management posture, or activation of alternate C2 rather than an assumption of successful intercept.",
+            "<strong>Airspace deconfliction affects force manoeuvre and fires</strong> — long-range UAS operating under contested EW may enter third-party airspace or friendly operating areas; brigade and division staffs should rehearse deconfliction between UAS, GBAD engagement zones, artillery fires, and civil aviation notifications during multinational or homeland-support scenarios.",
+            "<strong>Nuclear exercise signals shape readiness posture</strong> — Russia's use of Iskander-M with special munitions in Belarus reinforces that tactical nuclear signalling may accompany conventional operations; intelligence and operations staffs should track nuclear-posture indicators as triggers for force-protection changes, dispersal, CBRN readiness checks, and command-post hardening."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "Theatre 02",
+      "title": "Israel – Lebanon",
+      "subtitle": "Fibre-Optic FPV Drone as a Force-Degrading Weapon",
+      "articles": [
+        {
+          "tags": [
+            "Protection"
+          ],
+          "headline": "Hezbollah fibre-optic FPV drone as a force-degrading weapon",
+          "body": "Hezbollah has operationalised fibre-optic cable-guided first-person-view (FPV) drones as its primary weapon against IDF ground forces in southern Lebanon. The system — costing approximately USD $400 per unit, carrying up to 6 kg of explosives, and controlled through up to 50 km of fibre-optic cable — is functionally unjammable using current radiofrequency countermeasures, as it does not use an RF data link. The drone is locally assemblable inside Lebanon and is resistant to detection methods calibrated to RF-emitting systems. The IDF, which built its border defensive architecture at enormous cost, has found that this architecture provides no protection once forces operate forward of the border; IDF commanders have publicly stated they have \"no clear or definitive solution available.\" Hezbollah is using the system strategically — not to achieve territorial gain, but to prevent IDF from establishing stable operational positions in the buffer zone, thereby forcing daytime operational cancellations and eroding tactical tempo. This is a qualitative shift: a sub-state actor has developed and fielded a counter-force UAS system that defeats a modern military's standard EW countermeasures at sub-$1,000 cost.<span>youtube</span></span>",
+          "sources": [
+            "bbc",
+            "youtube"
+          ],
+          "implicationLabel": "Protection",
+          "implications": [
+            "<strong>Training and C-UAS doctrine</strong> — exercises should include FPV drone threat replication at the unit level, testing whether existing force protection measures and personal protective equipment configurations are adequate. The IDF's experience — daytime mission cancellation, forcing operations to nighttime — illustrates the operational tempo cost.",
+            "<strong>Signature management must become routine at tactical level</strong> — vehicle parks, command posts, casualty collection points, engineer plant, and ammunition distribution points should be trained to reduce visual, thermal, acoustic, and movement signatures observable by camera-guided drones.",
+            "<strong>Engineer protection design</strong> should account for low-altitude, confined-terrain drone approaches against fighting positions, bridging sites, breaching teams, and temporary logistics nodes; overhead cover alone is insufficient if access apertures and approach lanes are not managed.",
+            "<strong>Formation SOPs should assume cheap mass</strong> — because the cost curve favours the attacker, formations need layered low-cost countermeasures, rapid reporting of drone sightings, rehearsed dispersion, and clear authority for movement pauses or route changes."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "Theatre 03",
+      "title": "Israel – Gaza",
+      "subtitle": "Hamas Ceasefire Exploitation as a Doctrinal Lesson",
+      "articles": [
+        {
+          "tags": [
+            "Intelligence / ISR"
+          ],
+          "headline": "Hamas ceasefire exploitation as a doctrinal lesson",
+          "body": "A captured Hamas document — reviewed during IDF operations and published by the Meir Amit Intelligence and Terrorism Information Centre — confirms that Hamas used the January–March 2025 ceasefire as \"a critical window\" for force reconstitution: a structured 7-day accelerated training programme for 121 new Shejaiya Battalion recruits was completed before the ceasefire expired, incorporating lessons from the war and training in Israeli weapons (M16, Tavor), drone combat, and anti-tank tactics. IDF internal intelligence assessed Hamas is currently repeating this pattern under the October 2025 ceasefire — producing hundreds of IEDs and anti-tank rockets monthly, smuggling weapons, and collecting 30% taxes from humanitarian aid merchants to self-fund operations. Hamas has reconstituted its military wing leadership (Odeh replacing Haddad) within days of Haddad's assassination. This confirms a doctrinal pattern: for Hamas, ceasefires are not pauses in hostilities but operational phases in force regeneration.</span>",
+          "sources": [
+            "jpost"
+          ],
+          "implicationLabel": "Intelligence / ISR",
+          "implications": [
+            "<strong>Ceasefire monitoring must include force-regeneration indicators</strong> — staffs supporting observer, stabilisation, or HADR missions should track recruitment, training cycles, weapons production, taxation, movement of military-age personnel, storage activity, and command appointments during ceasefires, rather than treating a reduction in firing as evidence of genuine demobilisation.",
+            "<strong>Urban stabilisation planning must account for rapid command replacement</strong> — Hamas's quick replacement of its military chief shows that leadership decapitation may not translate into organisational paralysis; planners should avoid assuming that targeted strikes or arrests alone reduce adversary control unless paired with persistent presence, population engagement, and disruption of logistics and recruitment networks."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "Theatre 04",
+      "title": "Israel – US – Iran",
+      "subtitle": "Strait of Hormuz as a Sovereign Control Instrument",
+      "articles": [
+        {
+          "tags": [
+            "Sustainment"
+          ],
+          "headline": "Strait of Hormuz as an Iranian sovereign control instrument",
+          "body": "Iran has used the war — and the subsequent negotiations — to attempt to permanently transform the Strait of Hormuz from an international waterway into an Iranian permission-based transit zone. As ISW assessed, Iran published a new maritime control map, deployed its IRGC Navy to \"coordinate\" vessels, and explicitly stated that vessels transiting the strait must receive Iranian approval and follow Iranian-designated routes. Iran's foreign affairs spokesperson stated the strait \"does not concern\" the United States, arguing Iran and Oman should define the management mechanism as coastal states. Even with the draft 60-day MOU in negotiation, Iran's key demand — that it retain some form of Hormuz management authority — appears to be conceded in the draft terms (the MOU defers the sovereignty question, does not resolve it). The practical outcome, if the MOU is signed: the strait reopens, but Iran has established a precedent of conditional access that it will seek to institutionalise. ISW concluded that the strait will not return to normal without either a deal that ends Iranian control or a US-led military operation that forces the strait open. The precedent set by any deal that legitimises Iranian Hormuz management will affect every major energy consumer and maritime nation.<span>isw</span></span>",
+          "sources": [
+            "nyt",
+            "isw"
+          ],
+          "implicationLabel": "Sustainment",
+          "implications": [
+            "For planners, the core lesson is that a maritime chokepoint crisis can translate quickly into a land-force readiness and sustainment problem even without direct deployment to the strait. The IRGC Navy's claimed coordination of vessel passage, publication of control routes, and linkage of Hormuz access to nuclear and sanctions negotiations show that energy access can become a coercive bargaining mechanism before kinetic escalation resumes. Formations should therefore treat fuel availability, ammunition movement, contractor access, training tempo, and mobilisation sustainment as variables that can be affected by distant SLOC coercion. The relevant planning question is not naval escort, but whether land units can preserve readiness, protect key installations, support national resilience tasks, and maintain C2 continuity if energy markets, commercial logistics, or public risk perceptions deteriorate before a formal crisis threshold is declared."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "Theatre 05",
+      "title": "Thailand – Cambodia",
+      "subtitle": "Bilateral Framework Collapse &amp; the Legal Vacuum",
+      "articles": [
+        {
+          "tags": [
+            "Civil-Military"
+          ],
+          "headline": "Bilateral framework collapse and the legal vacuum",
+          "body": "The simultaneous unilateral termination of MOU44 (maritime, 5 May 2026) and the recommended cancellation of MOU43 (land, Senate committee 18 May 2026) has effectively dismantled the existing bilateral institutional architecture for managing Thailand–Cambodia border disputes. Both MOUs collectively covered the full land and maritime boundary, the joint demarcation commission, and the overlapping Gulf of Thailand continental shelf. With no functional joint mechanism remaining, Cambodia has pivoted to UNCLOS compulsory conciliation (maritime) and continues to insist on the JBC framework (land), while Thailand proposes the December 2025 Joint Statement as the new baseline. The absence of an agreed dispute-management framework — combined with active small-arms incidents, ongoing fortification activities (bunkers, observation posts, road-clearing operations by Thai forces), and Cambodia's internal political inability to concede land — creates a structural environment where minor incidents can rapidly escalate without agreed de-escalation channels. The ASEAN Observer Team at Preah Vihear is the only functioning multilateral mechanism, but its mandate and authority are limited.<span>jakartapost</span></span>",
+          "sources": [
+            "nationthailand",
+            "jakartapost"
+          ],
+          "implicationLabel": "Civil-Military · Protection",
+          "implications": [
+            "<strong>Observer and liaison readiness</strong> — planners should track whether any expanded ASEAN Observer Team role requires land-force liaison officers, border-monitoring expertise, CIMIC support, or staff augmentation rather than assuming the issue remains diplomatic.",
+            "<strong>HADR and displacement planning</strong> — previous clashes generated mass evacuations; CIMIC and logistics planners should consider how rapidly a renewed border incident could create shelter, route-control, medical, and distribution requirements under ASEAN mechanisms, especially if civilian displacement occurs near contested temple or crossing areas.",
+            "<strong>Below-threshold territorial creep as an OPFOR model</strong> — Cambodia's reported \"silent offensive\" pattern, including civilian farmers, construction activity, repositioned military bases, and incremental presence near disputed sites, is a useful training scenario because it creates facts on the ground without crossing obvious kinetic thresholds.",
+            "<strong>Small-unit restraint and escalation control</strong> — Thai forces reportedly did not return fire after shots near Surin to avoid revealing positions and escalating; commanders should treat this as a case study in disciplined tactical restraint, incident logging, tactical communications, and evidence collection during ambiguous border provocations."
+          ]
+        }
+      ]
+    }
+  ],
+  "week": "2026-05-18",
+  "label": "Week of 18 May 2026"
+}
