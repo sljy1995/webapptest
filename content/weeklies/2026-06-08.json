@@ -1,0 +1,205 @@
+{
+  "statusChart": [
+    {
+      "theatre": "Russia–Ukraine",
+      "phase": "Attritional War",
+      "trend": "↑ Escalating",
+      "progress": "15 Jun mass assault (70 missiles, 611 drones) hits UNESCO Lavra; Ukraine recaptured 600+ sq km in 2026; Russian gains in Kostiantynivka only; G7 Évian discusses Ukraine."
+    },
+    {
+      "theatre": "Israel–Lebanon",
+      "phase": "Ceasefire",
+      "trend": "↑ Escalating",
+      "progress": "3 Jun joint statement; pilot zones conditional on Hezbollah disarmament; Hezbollah outside talks; 22 Jun Washington round confirmed; Iran–Israel 8 Jun exchange disrupted track temporarily."
+    },
+    {
+      "theatre": "Israel–Gaza",
+      "phase": "Ceasefire",
+      "trend": "→ Holding",
+      "progress": "Cairo talks positive 6–8 Jun; Hamas signals governance transfer but retains weapons; IDF at 64% Gaza control, Netanyahu targeting 70%."
+    },
+    {
+      "theatre": "Israel–US–Iran",
+      "phase": "Ceasefire",
+      "trend": "↓ De-escalating",
+      "progress": "14 Jun US–Iran deal agreed; Hormuz toll-free reopening authorised; Geneva signing 19 Jun; Houthi Red Sea ban reinstated 8 Jun; full implementation uncertain."
+    },
+    {
+      "theatre": "Thailand–Cambodia",
+      "phase": "Ceasefire",
+      "trend": "→ Holding",
+      "progress": "UNCLOS conciliation underway; Thailand appointed conciliators by 3 Jun; bilateral ties frozen; no kinetic incidents."
+    }
+  ],
+  "theatres": [
+    {
+      "id": "russia-ukraine",
+      "theatreNum": "Theatre 01",
+      "title": "Russia – Ukraine",
+      "subtitle": "UNESCO Lavra Burns &amp; Massive Force Build-Up",
+      "articles": [
+        {
+          "tags": [
+            "Fires &amp; Strikes"
+          ],
+          "headline": "15 June mass assault burns UNESCO Lavra in timed operation",
+          "body": "Russia's 15 June assault — 70 missiles and 611 drones — hit Kyiv's Pechersk Lavra Dormition Cathedral (UNESCO World Heritage Site, founded 11th century), setting the roof ablaze; killed five including five firefighters responding to secondary strikes in Kharkiv; injured at least 18 in Kyiv; and destroyed the Dovzhenko Film Studio including Ukraine's largest costume archive. <span class='hl'>The attack on the Lavra caused Kyiv's mayor to report 140,000 residents without power</span>. The attack was deliberately timed to coincide with the opening of the G7 Évian-les-Bains summit — ensuring maximum international media impact and framing the summit's Ukraine discussions against live imagery of a burning Orthodox cathedral. On 9–10 June, Russia separately launched two Iskander-M ballistic missiles and 207–221 drones in overnight attacks. Ukraine continued its reciprocal long-range campaign against Russian oil infrastructure and military sites on 10–11 June.</span>",
+          "sources": [
+            "cnn"
+          ],
+          "implicationLabel": "",
+          "implications": []
+        },
+        {
+          "tags": [
+            "Information Operations"
+          ],
+          "headline": "Russia MoD uses AI-generated footage to fabricate battlefield advances",
+          "body": "Russia's MoD posted footage claiming seizure of Okhrimivka — the same footage was posted the day before by a different Russian channel claiming it showed a strike near Ruska Lozova, 66 km away. <span class='hl'>ISW assessed Russia has increased the sophistication of its cognitive warfare</span>, now producing AI-generated footage and high-production montages to falsely portray the Ukrainian frontline as collapsing — contradicted by all available OSINT.</span>",
+          "sources": [
+            "isw"
+          ],
+          "implicationLabel": "",
+          "implications": []
+        },
+        {
+          "tags": [
+            "Force Development"
+          ],
+          "headline": "Russian force mobilisation &amp; missile industrial output",
+          "body": "Declassified investigative data released by Ukrainian defence research institutes on 13 June revealed a massive surge in Russian domestic defence production, setting a hard baseline for long-range threat planning. <span class='hl'>Russia is now verified to be producing 40–50 Kh-101 cruise missiles, 60–70 Iskander-M ballistic missiles, and ~10 Iskander-K cruise missiles monthly</span>. This enables the Kremlin to continuously field large, diverse strike packages designed to saturate and deplete Western-supplied interceptor stocks. On 12 June, Vladimir Putin signed a state decree officially expanding the authorised end strength of the Russian Armed Forces to 2,399,130 total personnel (including 1,510,000 active military personnel). This represents a direct, ongoing effort to sustain high-attrition ground campaigns through sheer human mass.<span>euromaidanpress</span></span>",
+          "sources": [
+            "newsukraine",
+            "euromaidanpress"
+          ],
+          "implicationLabel": "",
+          "implications": []
+        },
+        {
+          "tags": [
+            "Force Development"
+          ],
+          "headline": "Ukraine institutionalises autonomous warfare",
+          "body": "Demonstrating the strategic elevation of unmanned tech, <span class='hl'>President Volodymyr Zelenskyy signed a decree establishing 11 June as the annual \"Day of the Unmanned Systems Forces\" (USF)</span>. Ukraine continues to aggressively expand this dedicated military branch, implementing flat innovation loops that integrate AI-guided terminal homing and fibre-optic command links to bypass heavy electronic warfare (EW) networks.<span>interfax</span></span>",
+          "sources": [
+            "online.ua",
+            "interfax"
+          ],
+          "implicationLabel": "Fires &amp; Strikes · Force Development",
+          "implications": [
+            "The expandability of the drone-driven \"kill zone\" has suppressed the utility of traditional mechanised manoeuvres. However, Russia's ability to manufacture nearly 100 ballistic and cruise missiles a month means that defence infrastructure must plan for sustained, heavy saturation barrages. Finally, the crippling of Russian oil processing hubs in Tatarstan demonstrates that deep-theatre interdiction of economic centres remains Ukraine's primary asymmetric tool to force kinetic restraint onto the Kremlin."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-lebanon",
+      "theatreNum": "Theatre 02",
+      "title": "Israel – Lebanon",
+      "subtitle": "Israel Outside US–Iran Deal; Daqduq Killed",
+      "articles": [
+        {
+          "tags": [
+            "Diplomacy"
+          ],
+          "headline": "Netanyahu declares Israel outside the US–Iran deal as Dahieh strike nearly kills it",
+          "body": "The 14 June US–Iran preliminary agreement — ceasefire on all fronts, US blockade lifted, Hormuz reopened, signing on 19 June — was nearly derailed by <span class='hl'>Israel's simultaneous strike on Dahieh, which prompted Iranian negotiators to threaten a walkout before Trump intervened</span>. Netanyahu publicly stated Israel is not party to the deal and the IDF will not withdraw from southern Lebanon, treating the US–Iran track as structurally separate from Israel's Hezbollah campaign. This establishes a dual-track reality: a US–Iran diplomatic settlement and an active Israeli military campaign running in parallel, with each capable of collapsing the other at any moment.<span>easternherald</span></span>",
+          "sources": [
+            "isw",
+            "easternherald"
+          ],
+          "implicationLabel": "",
+          "implications": []
+        },
+        {
+          "tags": [
+            "Fires &amp; Strikes"
+          ],
+          "headline": "Daqduq killed in precision strike; Hezbollah telecoms chief eliminated in Dahieh",
+          "body": "<span class='hl'>On 13 June, an IDF precision strike in southern Lebanon killed Ali Musa Daqduq</span> — senior Radwan Force commander, IRGC Quds Force liaison — a significant degradation of Hezbollah's operational leadership and Iran-proxy coordination architecture. On 14 June, a second strike on Dahieh killed Hezbollah's telecommunications chief and struck a command centre in Ghobeiri, killing three and wounding fifteen. Hezbollah responded with sustained indirect fire — rockets, artillery, and drones — against IDF positions in southern Lebanon and communities in Upper Galilee throughout the week.<span>cnbc</span></span>",
+          "sources": [
+            "iranintl",
+            "cnbc"
+          ],
+          "implicationLabel": "Multi-Theatre Coupling · Protection",
+          "implications": [
+            "The Lebanon–Iran structural coupling — one Israeli tactical decision nearly collapsed a multinational diplomatic agreement — is the clearest available evidence that theatre-level C2 isolation assumptions do not hold in coupled conflict environments. Coalition planners must explicitly map cross-theatre escalation triggers as standard planning parameters and never treat a ceasefire in one theatre as stable while kinetic operations in an adjacent theatre remain unconstrained.",
+            "Hezbollah's sustained indirect fire response — rockets, artillery, and drones employed concurrently — is a direct reference case for multi-vector indirect fire threat management. GBAD and force protection units must be trained and postured to manage simultaneous rocket, artillery, and drone threats from the same adversary, not as sequential threats."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-gaza",
+      "theatreNum": "Theatre 03",
+      "title": "Israel – Gaza",
+      "subtitle": "Low-Signature Territorial Consolidation",
+      "articles": [
+        {
+          "tags": [
+            "Manoeuvre"
+          ],
+          "headline": "IDF expands to 64% of Gaza while Netanyahu targets 70%",
+          "body": "<span class='hl'>Israel controls approximately 64% of Gaza</span>, up from 53% under Phase 1 — with Netanyahu publicly directing expansion to 70%. Israeli forces extended earthen berms (the \"Yellow Line\") westward, pushing beyond Phase 1 ceasefire parameters. Systematic demolition and forced evacuation of IDF-controlled areas are creating enduring demographic change in the northern Gaza governorates.</span>",
+          "sources": [
+            "aljazeera"
+          ],
+          "implicationLabel": "Manoeuvre",
+          "implications": [
+            "The incremental territorial expansion during ongoing ceasefire negotiations — using berms, demolitions, and military presence rather than large kinetic assaults — is a low-signature territorial consolidation strategy. For planners, this is a reference case for how ground facts can be altered during a nominally active diplomatic track without triggering formal ceasefire-breakdown declarations."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "israel-us-iran",
+      "theatreNum": "Theatre 04",
+      "title": "Israel – US – Iran",
+      "subtitle": "Historic US–Iran Deal; Hormuz Reopening Authorised",
+      "articles": [
+        {
+          "tags": [
+            "Diplomacy",
+            "SLOC"
+          ],
+          "headline": "US–Iran deal reached 14 June but implementation ambiguities threaten Hormuz reopening timeline",
+          "body": "The 14 June US–Iran agreement — calling for an immediate ceasefire on all fronts, toll-free Hormuz reopening, and US naval blockade removal, with Geneva signing on 19 June — is the most consequential single development in this brief. It ends four months of Hormuz near-closure and the most severe energy security crisis in modern history. However, <span class='hl'>ISW's 14 June special report explicitly assessed that Iran has not publicly confirmed the toll-free condition</span>; mine clearance will take time regardless of political agreement; and the Houthi Red Sea ban remains active.</span>",
+          "sources": [
+            "isw"
+          ],
+          "implicationLabel": "Sustainment · C2",
+          "implications": [
+            "Security guarantees or diplomatic frameworks with major global powers do not ensure operational alignment during high-intensity regional crises. In a localised crisis (e.g., flashpoints in adjacent waterways), planners must maintain absolute, autonomous operational C2, assuming that international partners may pursue rapid, independent de-escalation tracks that conflict with local sovereignty priorities."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thailand-cambodia",
+      "theatreNum": "Theatre 05",
+      "title": "Thailand – Cambodia",
+      "subtitle": "Chinese Tanks Delivered Under Pre-Conflict Cover",
+      "articles": [
+        {
+          "tags": [
+            "Manoeuvre",
+            "Grey-Zone"
+          ],
+          "headline": "China delivers 39 T-59D tanks to Cambodia as Hun Sen weaponises trade blockade",
+          "body": "On 11 June, China delivered 39 refurbished T-59D main battle tanks to Cambodia via Sihanoukville port — <span class='hl'>the first batch of an order totalling 93 tanks, with a second delivery expected shortly</span>. A Chinese military attaché confirmed to Thai authorities that the delivery is a pre-conflict agreement originating from joint exercise arrangements dating to 2016. Hun Sen dismissed concerns on 11 June, stating the tanks have not left their containers and are \"solely for self-defence\" — but Thai Defence Minister Lt Gen Adul confirmed Thai intelligence cannot yet account for their deployment status and that Thai forward observation units are on heightened alert. <span class='hl'>Thai analysts from Thairath assessed that Cambodia's military strengthening with Chinese arms</span>, combined with Thailand's slower response, is creating a border force imbalance that disadvantages Thailand at Preah Vihear.<span>thairath</span></span> Simultaneously, <span class='hl'>Hun Sen issued a 13 June decree declaring all Thai goods entering Cambodia via land routes \"illegal, smuggled items that harm the nation and insult national dignity\"</span> — triggering synchronised raids on warehouses in Phnom Penh and border provinces, with four individuals charged by the Phnom Penh Municipal Court on 15 June under customs and rules-of-origin laws. ASEAN Observer Team (AOT) physical inspections at key checkpoints including Chey Chomneas could not be publicly released due to critically low political trust between parties.</span>",
+          "sources": [
+            "thestar",
+            "thairath",
+            "thestar"
+          ],
+          "implicationLabel": "Grey-Zone Capability Injection",
+          "implications": [
+            "China's tank delivery into an active ceasefire zone is a textbook grey-zone capability-building operation. The delivery is technically legal — pre-conflict agreement, confirmed by a Chinese military attaché — but its timing, scale (93 tanks total), and covert nighttime movement to port constitute deliberate military signalling under the cover of procedural normalcy. Planners should document this as a reference case: grey-zone capability injection during a ceasefire period, using prior contractual cover, is an increasingly common adversary escalation method that generates operational disadvantage without triggering formal ceasefire violation. Contingency planning must include protocols for monitoring and responding to third-party military equipment deliveries to adversary forces during ceasefire periods."
+          ]
+        }
+      ]
+    }
+  ],
+  "week": "2026-06-08",
+  "label": "Week of 8 Jun 2026"
+}
