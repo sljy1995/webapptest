@@ -76,10 +76,21 @@
     <button class="theatre-tab" data-theatre="thailand-cambodia" onclick="selectTheatre(this)">Thailand–Cambodia</button>
   </div>
 
+  <!-- CONFLICT STATUS CHART — centred accordion bar, same as What Changed -->
+  <div class="status-bar-wrap" id="statusBarWrap">
+    <div class="status-bar" onclick="toggleStatusChart()">
+      <span>Conflict Status Chart</span>
+      <span class="status-arrow" id="statusArrow">&#9660;</span>
+    </div>
+    <div class="status-chart-panel" id="statusChartPanel">
+      <div class="status-chart-grid" id="statusChartGrid"></div>
+    </div>
+  </div>
+
   <!-- WEEKLIES VIEW -->
   <div class="content-body" id="weekliesView">
 
-    <!-- LEFT SIDEBAR: month nav + week selector + status chart -->
+    <!-- LEFT SIDEBAR: month nav + week selector -->
     <aside class="weekly-sidebar" id="weeklySidebar">
 
       <div class="weekly-sidebar-section">
@@ -90,15 +101,6 @@
       <div class="weekly-sidebar-section" id="weekSelectorWrap">
         <div class="side-nav-label">Week</div>
         <select class="week-selector-inline" id="weekSelector"></select>
-      </div>
-
-      <div class="weekly-sidebar-section" id="statusBarWrap">
-        <div class="side-nav-label status-label" onclick="toggleStatusChart()">
-          Conflict Status <span class="status-arrow" id="statusArrow">&#9660;</span>
-        </div>
-        <div class="status-chart-panel" id="statusChartPanel">
-          <div class="status-chart-grid" id="statusChartGrid"></div>
-        </div>
       </div>
 
     </aside>
