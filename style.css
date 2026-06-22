@@ -137,12 +137,13 @@ html, body {
 }
 
 .site-title {
-  font-family: 'Georgia', serif;
-  font-size: 22px;
+  font-family: 'Agency FB', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
   font-weight: 700;
-  color: #1a1000;
-  letter-spacing: 0.03em;
+  color: #ffffff;
+  letter-spacing: 0.06em;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .digest-cta {
@@ -162,25 +163,16 @@ html, body {
 }
 .digest-cta:hover { background: rgba(139,48,32,0.12); }
 
-.topbar-right {
+.topbar-right-spacer {
+  width: 40px;
   flex-shrink: 0;
-}
-
-.week-selector {
-  background: #d0d0d0;
-  border: 1px solid #aaa;
-  color: #222;
-  padding: 6px 10px;
-  font-size: 13px;
-  border-radius: 3px;
-  cursor: pointer;
-  font-family: 'Arial', sans-serif;
 }
 
 /* ─── THEATRE TABS ──────────────────────────────────────────────── */
 .theatre-tabs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 6px;
   padding: 10px 14px;
   background: var(--bg-dark);
@@ -209,6 +201,16 @@ html, body {
 }
 
 /* ─── STATUS BAR / ACCORDION ────────────────────────────────────── */
+.status-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-dark);
+  padding: 10px 0 0;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--border);
+}
+
 .status-bar {
   display: flex;
   align-items: center;
@@ -220,8 +222,8 @@ html, body {
   font-weight: 600;
   letter-spacing: 0.05em;
   cursor: pointer;
-  flex-shrink: 0;
-  border-bottom: 1px solid var(--teal-accent);
+  width: 75%;
+  border-radius: 3px 3px 0 0;
   user-select: none;
 }
 .status-bar:hover { background: #1f4558; }
@@ -230,19 +232,23 @@ html, body {
 
 .status-chart-panel {
   background: var(--bg-panel);
-  border-bottom: 1px solid var(--border);
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease;
   flex-shrink: 0;
+  width: 75%;
+  border-radius: 0 0 3px 3px;
+  border: 1px solid var(--border);
+  border-top: none;
 }
 .status-chart-panel.open { max-height: 200px; }
 
 .status-chart-grid {
   display: flex;
-  gap: 12px;
+  gap: 20px;
   padding: 14px 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .status-item {
   display: flex;
@@ -260,6 +266,28 @@ html, body {
 .status-dot.green  { background: var(--status-green); }
 .status-dot.amber  { background: var(--status-amber); }
 .status-dot.red    { background: var(--status-red); }
+
+/* ─── WEEK SELECTOR BAR ─────────────────────────────────────────── */
+.week-selector-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0 10px;
+  background: var(--bg-dark);
+  flex-shrink: 0;
+}
+
+.week-selector {
+  background: #1e2e3e;
+  border: 1px solid var(--teal-accent);
+  color: var(--text-primary);
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  min-width: 200px;
+}
 
 /* ─── CONTENT BODY ──────────────────────────────────────────────── */
 .content-body {
