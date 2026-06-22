@@ -46,7 +46,7 @@
   </div>
 
   <!-- CONFLICT STATUS CHART ACCORDION -->
-  <div class="status-bar-wrap">
+  <div class="status-bar-wrap" id="statusBarWrap">
     <div class="status-bar" id="statusBar" onclick="toggleStatusChart()">
       <span>Conflict Status Chart</span>
       <span class="status-arrow" id="statusArrow">&#9660;</span>
@@ -83,7 +83,18 @@
 
   <!-- MONTHLY DIGEST VIEW -->
   <div class="digest-view hidden" id="digestView">
-    <!-- Capability tabs -->
+    <!-- "What Changed this Month" bar — mirrors status chart position -->
+    <div class="digest-changed-bar" id="digestChangedBar">
+      <div class="digest-changed-header" onclick="toggleDigestChanged()">
+        <span id="digestChangedMonthLabel">What Changed this Month</span>
+        <span class="digest-changed-arrow" id="digestChangedArrow">&#9660;</span>
+      </div>
+      <div class="digest-changed-panel" id="digestChangedPanel">
+        <div class="digest-changed-body" id="digestChanged"></div>
+      </div>
+    </div>
+
+    <!-- Capability tabs — centred, same style as theatre tabs -->
     <div class="cap-tabs">
       <button class="cap-tab active" data-cap="manoeuvre" onclick="selectCap(this)">Manoeuvre</button>
       <button class="cap-tab" data-cap="sense-strike" onclick="selectCap(this)">Sense-Strike</button>
@@ -91,12 +102,9 @@
       <button class="cap-tab" data-cap="expeditionary" onclick="selectCap(this)">Expeditionary</button>
       <button class="cap-tab" data-cap="unmanned" onclick="selectCap(this)">Unmanned Systems</button>
     </div>
-    <!-- Digest sub-sections -->
+
+    <!-- Digest sub-sections (no What Changed here) -->
     <div class="digest-sections">
-      <div class="digest-section">
-        <div class="digest-section-label">What Changed this Month</div>
-        <div class="digest-section-body" id="digestChanged"></div>
-      </div>
       <div class="digest-section">
         <div class="digest-section-label">Opportunities</div>
         <div class="digest-section-body" id="digestOpportunities"></div>
