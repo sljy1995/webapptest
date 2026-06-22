@@ -2,7 +2,7 @@
 let currentTheatre  = "russia-ukraine";
 let currentView     = "weeklies";
 let currentCap      = "manoeuvre";
-let currentSec      = "changed";
+let currentSec      = "opportunities";
 let currentWeekFile = null;
 let currentDigestFile = null;
 
@@ -323,8 +323,12 @@ function renderArticle(a) {
 }
 
 // ── DIGEST ────────────────────────────────────────────────────────────────────
+function toggleDigestChanged() {
+  document.getElementById("digestChangedPanel").classList.toggle("open");
+  document.getElementById("digestChangedArrow").classList.toggle("open");
+}
+
 function selectCap(btn) {
-  // cap tabs live inside #capTabsRow and use .theatre-tab class
   document.querySelectorAll("#capTabsRow .theatre-tab").forEach(t => t.classList.remove("active"));
   btn.classList.add("active");
   currentCap = btn.dataset.cap;
@@ -332,7 +336,6 @@ function selectCap(btn) {
 }
 
 function selectSec(el) {
-  // sec buttons are <li> inside digest .month-nav
   document.querySelectorAll("#digestView .month-nav li").forEach(li => li.classList.remove("active"));
   el.classList.add("active");
   currentSec = el.dataset.sec;
@@ -346,32 +349,30 @@ function renderDigest() {
   const panel = document.getElementById("digestContent");
   if (!d || !panel) return;
 
+  // Populate "What Changed" bar text
+  const changedBody = document.getElementById("digestChangedBody");
+  if (changedBody) changedBody.textContent = d.changed || "";
+
   const secLabels = {
-    changed:         "What Changed this Month",
     opportunities:   "Opportunities",
     vulnerabilities: "Vulnerabilities",
     capdevs:         "Capability Developments"
   };
 
+  const items = d[currentSec] || [];
+  const prefix = currentSec === "opportunities" ? "Opportunity"
+               : currentSec === "vulnerabilities" ? "Vulnerability"
+               : "CapDev";
+
   let html = `<div class="article-inner">`;
   html += `<div class="digest-section-header">${secLabels[currentSec] || currentSec}</div>`;
-
-  if (currentSec === "changed") {
-    html += `<div class="digest-changed-text">${d.changed}</div>`;
-  } else {
-    const items = d[currentSec] || [];
-    const prefix = currentSec === "opportunities" ? "Opportunity"
-                 : currentSec === "vulnerabilities" ? "Vulnerability"
-                 : "CapDev";
-    html += items.map((item, i) => `
-      <div class="digest-card">
-        <div class="digest-card-number">${prefix} #${i+1}</div>
-        <div class="digest-card-title">${item.title}</div>
-        <div class="digest-card-body">${item.body}</div>
-      </div>
-    `).join("");
-  }
-
+  html += items.map((item, i) => `
+    <div class="digest-card">
+      <div class="digest-card-number">${prefix} #${i+1}</div>
+      <div class="digest-card-title">${item.title}</div>
+      <div class="digest-card-body">${item.body}</div>
+    </div>
+  `).join("");
   html += `</div>`;
   panel.innerHTML = html;
 }
