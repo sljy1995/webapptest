@@ -220,15 +220,15 @@ function showView(view) {
   const theatreTabs    = document.getElementById("theatreTabs");
   const weekWrap       = document.getElementById("weekSelectorWrap");
   const statusBarWrap  = document.getElementById("statusBarWrap");
-  const monthStripWrap = document.getElementById("monthStripWrap");
+  const monthNavBar    = document.getElementById("monthNavBar");
 
   if (view === "digest") {
     weekliesView.classList.add("hidden");
     digestView.classList.remove("hidden");
     theatreTabs.style.display = "none";
     weekWrap.style.display = "none";
-    if (statusBarWrap)  statusBarWrap.style.display  = "none";
-    if (monthStripWrap) monthStripWrap.style.display = "none";
+    if (statusBarWrap) statusBarWrap.style.display = "none";
+    if (monthNavBar)   monthNavBar.style.display   = "none";
     if (!currentDigestFile && manifest && manifest.digests.length > 0) {
       loadDigest(manifest.digests[manifest.digests.length - 1]);
     } else {
@@ -239,10 +239,17 @@ function showView(view) {
     weekliesView.classList.remove("hidden");
     theatreTabs.style.display = "";
     weekWrap.style.display = "";
-    if (statusBarWrap)  statusBarWrap.style.display  = "";
-    if (monthStripWrap) monthStripWrap.style.display = "";
+    if (statusBarWrap) statusBarWrap.style.display = "";
+    if (monthNavBar)   monthNavBar.style.display   = "";
     renderArticles();
   }
+}
+
+function openAbout() {
+  document.getElementById("aboutOverlay").classList.remove("hidden");
+}
+function closeAbout() {
+  document.getElementById("aboutOverlay").classList.add("hidden");
 }
 
 // ── THEATRE TABS ──────────────────────────────────────────────────────────────
@@ -286,18 +293,8 @@ function renderArticles() {
     return;
   }
 
-  // Infographic link — check for week-specific file, fall back to methodology.png
-  const infraLink = `
-    <a href="content/methodology.png" target="_blank" class="infographic-link">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-      View Infographic
-      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:0.5"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
-    </a>
-  `;
-
   panel.innerHTML = `
     <div class="article-inner">
-      ${infraLink}
       <div class="article-theatre-header">
         <div class="article-title">${theatreData.title}</div>
         ${theatreData.subtitle ? `<div class="article-subtitle">${theatreData.subtitle}</div>` : ''}
