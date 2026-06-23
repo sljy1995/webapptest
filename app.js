@@ -72,23 +72,18 @@ function formatWeekLabel(dateStr) {
 
 // ── BUILD MONTH NAV ───────────────────────────────────────────────────────────
 function buildMonthNav() {
-  const ul = document.getElementById("monthStripList");
-  if (!ul) return;
-  ul.innerHTML = "";
+  const sel = document.getElementById("monthSelector");
+  if (!sel) return;
   const months = [];
   const seen = new Set();
   [...manifest.weeklies].reverse().forEach(w => {
     const ym = w.slice(0, 7);
     if (!seen.has(ym)) { seen.add(ym); months.push(ym); }
   });
-  months.forEach((ym, i) => {
-    const li = document.createElement("li");
-    li.textContent = formatMonthLabel(ym);
-    li.dataset.ym = ym;
-    if (i === 0) li.classList.add("active");
-    li.addEventListener("click", () => selectMonth(li, ym));
-    ul.appendChild(li);
-  });
+  sel.innerHTML = months.map(ym =>
+    `<option value="${ym}">${formatMonthLabel(ym)}</option>`
+  ).join("");
+  sel.addEventListener("change", () => selectMonth(sel.value));
 }
 
 function formatMonthLabel(ym) {
@@ -114,10 +109,9 @@ async function loadWeekly(dateStr) {
 
   const ym = dateStr.slice(0, 7);
 
-  // Sync month strip active state
-  document.querySelectorAll("#monthStripList li").forEach(li => {
-    li.classList.toggle("active", li.dataset.ym === ym);
-  });
+  // Sync month dropdown
+  const monthSel = document.getElementById("monthSelector");
+  if (monthSel) monthSel.value = ym;
 
   // Rebuild week selector to show this month's weeks, select current
   const sel = document.getElementById("weekSelector");
@@ -252,13 +246,13 @@ function selectTheatre(btn) {
 }
 
 // ── MONTH NAV ─────────────────────────────────────────────────────────────────
-async function selectMonth(el, ym) {
-  document.querySelectorAll("#monthStripList li").forEach(li => li.classList.remove("active"));
-  el.classList.add("active");
+async function selectMonth(ym) {
+  const monthSel = document.getElementById("monthSelector");
+  if (monthSel) monthSel.value = ym;
 
-  const sel = document.getElementById("weekSelector");
+  const weekSel = document.getElementById("weekSelector");
   const weeksInMonth = manifest.weeklies.filter(w => w.startsWith(ym)).reverse();
-  sel.innerHTML = weeksInMonth.map(w =>
+  weekSel.innerHTML = weeksInMonth.map(w =>
     `<option value="${w}">${formatWeekLabel(w)}</option>`
   ).join("");
 
