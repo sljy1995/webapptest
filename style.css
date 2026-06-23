@@ -196,17 +196,6 @@ html, body {
 
 .weekly-sidebar-section { display: flex; flex-direction: column; gap: 6px; }
 
-.weekly-month-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-.weekly-month-list li {
-  background: #141e2a; border: 1px solid #1e2e3e;
-  color: var(--text-muted);
-  padding: 10px 14px;
-  font-size: 13px; font-weight: 600;
-  border-radius: 6px; cursor: pointer;
-  transition: all 0.15s; user-select: none;
-}
-.weekly-month-list li:hover { border-color: var(--gold); color: var(--gold-light); background: #0e1a26; }
-.weekly-month-list li.active { background: #0c1820; border-color: var(--gold); color: var(--gold-light); }
 
 .week-selector-inline {
   background: #141e2a; border: 1px solid #1e2e3e;
